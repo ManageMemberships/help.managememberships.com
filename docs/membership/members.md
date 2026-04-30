@@ -120,6 +120,36 @@ Access the full member management interface with organized sections:
 - **Pause/Resume** - Temporary subscription holds
 - **Cancel** - With or without penalty fees
 
+### 📅 Updating Billing Dates & Pausing Subscriptions
+
+You can modify a member's next billing date or pause their subscription directly from the subscription details panel.
+
+<div style={{position: "relative", paddingBottom: "calc(66.66666666666666% + 27px)", height: 0, width: "100%"}}>
+  <iframe src="https://demo.managememberships.com/demo/cmohs6r6m3ft4za2i9pp5vlvb" loading="lazy" title="Modify Subscription Billing Dates &amp; Pausing" allow="clipboard-write" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
+</div>
+
+#### Updating the Next Invoice Date
+If you want to keep a member's account active but delay their next charge:
+1. Navigate to the member's **Subscriptions** tab
+2. Click **Update Next Invoice** on the subscription
+3. Select the new billing date
+4. Click **Save** to confirm the change
+
+:::tip When to Use
+Updating the billing date is ideal when a member needs a short break but you want to keep their account active and their access uninterrupted.
+:::
+
+#### Pausing a Subscription
+If a member needs to temporarily stop their subscription entirely:
+1. Navigate to the member's **Subscriptions** tab
+2. Click the **Pause** button on the subscription
+3. Optionally enter a **resume date** to automatically restart billing
+4. Click **Confirm Pause** to apply
+
+:::info Pause vs. Update Billing Date
+**Pausing** makes the subscription inactive — the member loses access while paused. **Updating the billing date** keeps the subscription active and the member's access intact, it just delays when they're next charged.
+:::
+
 ---
 
 ## 💰 Credit Balance Management
