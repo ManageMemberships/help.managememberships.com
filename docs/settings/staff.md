@@ -47,13 +47,20 @@ If you want a staff member to be bookable or assignable to a class as a trainer,
 
 **Trainer or Available for Classes**
 
-Once enabled
+Once enabled, additional fields appear:
 
+* **Trainer Headshot** — Upload a profile photo (1:1 crop, max 2MB). This photo is displayed on the class booking page and the public Instructors page so members can see who is teaching.
+* **Trainer Bio / Expertise** — A short description of the trainer's background, certifications, and specialties (max 500 characters). Example: *"Expertise: Wrestling, Boxing. 12 years coaching experience. Former amateur boxing champion."*
+* **Sensitive Staff (Hidden from Members)** — When checked and [Privacy Controls](/docs/settings/privacy-controls) are enabled, this trainer will not appear on the public Instructors page and their profile will return a 404 for non-staff users. Staff and owners can still see them in admin views.
 * An **Availability** section appears when editing that staff member
 * You can define time blocks such as Monday Wednesday Friday 9am to 12pm
 * The user can only be assigned during their available times
 
 Trainers who are unavailable will not appear for scheduling during conflicting times.
+
+### Public Instructors Page
+
+Your member portal includes an **Instructors** page at `/instructors` that displays all active trainers with their headshot, bio, and the classes they teach. Members can click any trainer to see their full profile and browse their class schedule. Each class view page also links to the assigned trainer's profile and shows a "See all instructors" link.
 
 ---
 

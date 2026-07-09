@@ -49,6 +49,43 @@ Each door can be assigned to specific **Membership Levels**. Only users in those
 
 ---
 
+## 🔍 Door Access Debugger
+
+At the bottom of the Doors settings page, you'll find the **Door Access Debugger**. This tool lets you test why a specific member is being granted or denied access to a door — without needing to contact support.
+
+### How to use it
+
+1. **Search for a member** by name or email
+2. **Select a door** from the dropdown
+3. Click **Test Access**
+
+The debugger runs through every access check in order and shows you exactly what passed or failed:
+
+| Check | What it verifies |
+|-------|-----------------|
+| **Door exists** | The selected door is configured for your account |
+| **User exists** | The member was found in your system |
+| **Door hours** | Whether the current time falls within the door's open/close schedule (skipped if 24/7) |
+| **Staff bypass** | Owners, managers, and staff always get access when active |
+| **Membership level** | Whether the member's membership level (including add-on subscriptions) matches the door's allowed levels |
+| **Valid subscription** | Whether the member has an active, non-paused, non-expired subscription with no failed payments |
+| **Agreements signed** | Whether the member has signed all required agreements for their membership level |
+| **User active** | Whether the member's account is marked as active |
+
+The result shows **Granted** or **Denied** with the specific reason, so you can quickly resolve access issues.
+
+### Renewal Status & Door Access
+
+Door access checks whether a member's subscription has failed payments by looking at the **renewal status**. This status now updates automatically whenever a payment is settled (Stripe or manual billing), so members regain access immediately after paying.
+
+If a member just paid but is still showing as denied, you can force a refresh from their profile:
+
+1. Go to **Members > [Member Name] > Subscriptions**
+2. Click the **Refresh Renewal** button in the top-right of the subscriptions section
+3. The renewal status will re-sync with Stripe and update immediately
+
+---
+
 ## ⚠️ Deletion Protection
 
 Doors that are associated with active memberships **cannot be deleted** until those associations are removed. This helps prevent accidental disruptions to your member access.

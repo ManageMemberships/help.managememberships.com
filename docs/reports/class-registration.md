@@ -44,7 +44,14 @@ Sometimes members may call or request a spot without registering online. You can
 3. **Select a Member**
    - Use the **"Select Member"** dropdown to choose the member you are booking for.
 
-4. **Select Date**
+4. **Select Attendee (Family/Bundle Members)**
+   - If the selected member has **child accounts** or **bundle members**, an **"Attendee"** dropdown will appear.
+   - Use this to select which family member is actually attending the class.
+   - For example, if a parent (TJ Young) has a child (Jamaal Young) on their account, select TJ Young as the member, then pick Jamaal Young as the attendee.
+   - The attendee name will appear on the roster next to the parent's name.
+   - You can also **search by a bundle member's name** in the member filter — it will find the parent account that contains that bundle member.
+
+5. **Select Date**
    - Choose the date of the class from the **"Select Date"** dropdown.
    - Only available dates will be shown.
 
@@ -91,12 +98,36 @@ Sometimes members may call or request a spot without registering online. You can
 
 ---
 
+## **Attendance Tracking**
+
+You can mark each booking as **Attended** or **No-Show** directly from the class registration list:
+
+1. Select a class and timeslot to view the roster
+2. Each member row has **Attended** and **No-Show** buttons
+3. Click to toggle the status — the button highlights to confirm
+4. Attendance data is saved immediately
+
+Attendance data feeds into the [Trainer Reports](./trainer-reports) and is used to calculate attendance rates per trainer and per class. Consistently marking attendance helps you:
+- Identify no-show patterns (members who book but don’t show)
+- Track which classes have the best turnout
+- Evaluate trainer performance
+
+---
+
+## **CSV Export**
+
+Click the **Export CSV** button to download the current roster as a spreadsheet. The export includes member name, tickets, amount paid, attendance status, and any custom fields configured for the class.
+
+---
+
 ## **Summary**
 
 The Class Reports page is designed to give you full control over your class schedules and attendance records. You can:
 - Quickly find which members are registered for each class.
 - View payments and agreements.
+- Mark attendance (attended or no-show) for each booking.
 - Add last-minute or offline bookings with the Manual Registration tool.
 - Deduct bookings from a member’s **check-in quota** when applicable.
+- Export rosters to CSV.
 
 This ensures that all class data is consistent and up to date, whether members register online, through your staff, or using their prepaid check-ins.

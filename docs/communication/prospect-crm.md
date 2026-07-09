@@ -1,10 +1,12 @@
 ---
-sidebar_position: 15
+sidebar_position: 6
 ---
 
 # Prospect CRM
 
 The **Prospect CRM** is a customer relationship management tool for tracking potential members (leads/prospects) through your sales pipeline. It provides both a list view and a kanban board view for managing prospect stages.
+
+Find it under **Communication → Prospects CRM**. Prospects can be added manually, or captured automatically from [Squeeze Pages](./squeeze-pages.md).
 
 ---
 

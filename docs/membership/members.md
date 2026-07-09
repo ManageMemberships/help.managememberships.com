@@ -30,7 +30,7 @@ The member overview provides at-a-glance insights into your membership base:
 | 🖼️ **Profile Pic** | Member's profile photo | Hidden (saves space) |
 | 👤 **Name** | Full name + bundled members listed below | ✅ Visible |
 | 📦 **Bundled Members** | Hidden searchable column for bundle member names | Hidden |
-| 💵 **Cash Member** | "Yes" for manually managed (non-subscription) members | ✅ Visible |
+| 💵 **Cash Member** | "Yes" for manually managed (non-subscription) members — can be toggled from the badge on the member details page | ✅ Visible |
 | 📧 **Email** | Member's email address | Hidden |
 | 🏷️ **Membership** | Current membership level name | ✅ Visible |
 | 📈 **Subscription Status** | Active, Expired, Paused, Failed, Cash, etc. | ✅ Visible |
@@ -98,6 +98,15 @@ Use combination filters to create targeted member lists. For example: "Payment F
 
 #### ⚙️ Comprehensive Edit Panel
 Access the full member management interface with organized sections:
+
+#### 💵 Cash / Card Billing Toggle
+Next to the Active/Inactive status at the top of the member details page, a badge shows the member's billing type: **Cash Member** or **Card Billing**.
+
+- **Click the badge** to toggle between the two billing types (a confirmation is shown before the change is applied)
+- **Safe to use** — the toggle only changes how the member is classified; it does **not** modify their subscriptions, payment methods, or billing dates
+- **Audit logged** — every change is recorded in the member's audit log
+- **When to use it** — handy when a member was set up with the wrong billing type, e.g. imported as a cash member but actually paying by card
+- Requires the *Manage Memberships* permission
 
 ---
 
@@ -280,10 +289,41 @@ Ideal for tracking multiple members under one billing account:
 - **Delivery Tracking** - Confirmation of email receipt
 
 ### 📱 SMS Messaging
-- **Text Message History** - Complete SMS conversation log
-- **Automated Messages** - System-generated notifications
-- **Two-Way Communication** - Handle member replies
-- **Opt-Out Management** - Respect communication preferences
+
+:::note Plan Restrictions
+Sending text messages and viewing the send text form requires a **Core**, **Growth**, or **Premium** plan. Text message history is visible on all plans if messages exist.
+:::
+
+#### Sending Texts
+From a member's profile, you can send an individual text message directly:
+1. Navigate to the member's **Activity** section
+2. Type your message in the text area (160-character limit with a live character counter)
+3. Click **Send Text**
+
+The system checks that the member has a phone number on file and has not opted out before sending.
+
+#### Receiving Texts
+When a member replies to a text message, the system automatically:
+- **Logs the message** in the member's text message history with a "Received" label
+- **Notifies the portal owner** via email with the member's name, phone number, message content, and a direct link to the member's profile. The email reply-to is set to the member's email for easy follow-up.
+- **Notifies the admin** with additional domain context
+
+If a member's phone number exists across multiple portals, the system will skip processing and alert the admin to avoid cross-tenant issues.
+
+#### Text Message History
+The Activity section displays a complete two-way conversation log in a table with:
+- **Date** — When the message was sent or received
+- **Direction** — A color-coded badge: blue for **Received**, green for **Sent**
+- **Message** — The full message content
+
+#### Opt-Out Handling
+When a member replies **STOP**, the system automatically:
+- Marks them as opted out so no future texts are sent
+- Removes their phone number from any prospect records
+- Sends a confirmation reply: *"Thank you for opting out. You will no longer receive messages from us."*
+- Notifies the admin
+
+Delivery failures (e.g., invalid numbers, carrier blocks) also automatically opt the member out to prevent repeated failed sends.
 
 ---
 

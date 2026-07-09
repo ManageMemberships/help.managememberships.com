@@ -22,6 +22,11 @@ Toggle the trigger on or off. Set to **Active** to enable or **Inactive** to pau
 Choose when the trigger fires:
 - **Scheduled** - Runs on a recurring schedule
 - **On Invalid Door Scan** - Fires when a member scans a door but is denied access
+- **On First Class Booking** - Fires when a member books their very first class ever
+
+#### First Class Booking Template
+
+A pre-built template is available for the "First Class Booking" trigger. Click the **First class booking** template button to auto-fill a trigger with citizenship documentation email, "forever" deduplication (so each member only receives it once), and a pre-written email body.
 
 ### Schedule
 When using a **Scheduled** trigger type, choose how often it runs:

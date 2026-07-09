@@ -52,6 +52,20 @@ Click **"New Available Class"** to open the class editor. This will open a side 
 - Each user can only use the code once, and it's only valid for this specific class.
 - Leave blank if no promotional pricing is needed.
 
+#### **Promo Codes**
+- Create one or more discount codes for a class. Each code can be used once per user.
+- Click **Add Promo Code** to add a new code. Each promo code has:
+  - **Code** — the text the member enters at registration (e.g., `SUMMER10`). Case-insensitive.
+  - **Type** — the kind of discount:
+    - **Free (100% off)** — waives the full class fee. Limited to 1 ticket per use.
+    - **BOGO (Buy 1 Get 1)** — the member is billed for half the tickets (rounded up). For example, 3 tickets would bill for 2.
+    - **% Off** — a percentage discount on the per-ticket price.
+    - **$ Off** — a flat dollar amount off the per-ticket price.
+  - **Amount** — required for **% Off** and **$ Off** types. Enter the percentage (0–100) or dollar amount.
+  - **Display Name** (optional) — a friendly label shown on the invoice (e.g., "Summer Special").
+- Promo codes and membership-level discounts **do not stack**. If a promo code is applied, membership discounts are skipped.
+- When a member enters a valid promo code during registration, the price updates in real time and a confirmation message is shown.
+
 ---
 
 ### Schedule & Timing
@@ -99,7 +113,18 @@ If toggled off:
 - Select which waivers (if any) must be signed to register for this class.
 
 #### **Registration Questions**
-- Add registration-time questions. You can mark them as required (e.g., "Do you have any injuries?").
+- Add registration-time questions. Each question has:
+  - **Question** — the question text (e.g., "Do you have any injuries?")
+  - **Answer Type** — choose from:
+    - **Short Text** — single-line free-form input
+    - **Long Text** — multi-line text area
+    - **Dropdown** — select one option from a list
+    - **Radio Buttons** — select one option, all choices visible
+    - **Checkboxes** — select multiple options
+    - **Number** — numeric input
+    - **Date** — date picker
+  - **Options** — for Dropdown, Radio Buttons, and Checkboxes, enter comma-separated choices (e.g., "Beginner, Intermediate, Advanced")
+  - **Required** — toggle to make the question mandatory
 
 ---
 
@@ -109,7 +134,10 @@ If toggled off:
 - Select which membership levels can register. Leaving this blank means **no one can register**.
 
 #### **Membership Level Discounts**
-- Offer percentage-based discounts to specific membership levels.
+- Offer discounts to specific membership levels.
+- **Discount Type**: Choose between **% Off** (percentage) or **$ Off** (flat dollar amount).
+  - **% Off**: Enter a percentage (0-100).
+  - **$ Off**: Enter a fixed dollar amount to subtract from the class price. Useful when a percentage would produce repeating decimals (e.g., use $10 off instead of 66.67% off).
 
 ---
 
@@ -129,6 +157,15 @@ If toggled off:
 
 #### **Reminder Settings**
 - Configure email reminders to be sent to registered members before class starts. Enter hours before class (e.g., 24, 48, 168 for 7 days).
+
+---
+
+### Class Credits
+
+#### **Allow Class Credits**
+- When enabled (default), members with credit packs can use their class credits to book this class instead of paying.
+- When disabled, the "Use Class Credits" option will not appear for this class, even if the member has credits available.
+- Useful for premium or special classes that should always require payment.
 
 ---
 
@@ -153,6 +190,54 @@ Click the **"Duplicate"** action from the class table to quickly create a copy o
 - Is set to **inactive** by default so you can safely make adjustments before making it live
 
 Use this feature to easily reuse common formats or seasonal class templates without starting from scratch.
+
+---
+
+## Waitlist
+
+When a class reaches its **Max Participants** limit, members will see a **"Join Waitlist"** button instead of the normal registration form.
+
+- Members are added to the waitlist in the order they join (first come, first served).
+- When a booked member cancels, the first person on the waitlist is **automatically booked** into the class and receives an email notification.
+- If the first person on the waitlist requested more tickets than are available (e.g., they want 3 but only 1 spot opened), they stay on the waitlist and are not promoted.
+- Members can see their waitlisted classes on their **dashboard**.
+
+---
+
+## Cancellation Window
+
+Members can cancel their class bookings up until the **cancellation window** closes. The cancellation window is configured in **Settings > Portal Settings > Cancellation Window (Hours)**.
+
+- If set to 8 hours, a member cannot cancel a class that starts in less than 8 hours.
+- The cancel button will not appear on the member dashboard once the window has passed.
+- This setting applies to classes, events, and resource bookings.
+
+---
+
+## Using Class Credits
+
+Members who have purchased a credit pack (see [Membership Levels](../membership/membership-levels)) can use their credits to book classes at no cost.
+
+- When viewing a class, members with available credits will see a **"Use Class Credits"** checkbox.
+- Checking the box hides the payment fields and changes the button to **"Book"**.
+- Whether credits are deducted at booking time or check-in time depends on the **Consume Credits On** setting in Portal Settings.
+- If credits were consumed at booking and the member cancels within the cancellation window, their credits are restored.
+- Owners can disable credit usage for specific classes using the **Allow Class Credits** toggle in the class settings.
+- Owners and trainers can also consume a member's credits when manually booking from the **Class Registrations** page.
+
+---
+
+## Advanced Registration Limits
+
+Owners can set a monthly cap on how many classes a member can book more than 7 days in advance, per membership level.
+
+- Go to **Membership Levels** and edit a level
+- Set the **Advance Booking Limit** field (e.g., 1 or 2)
+- Members on that level can only book that many classes per month when the class is more than 7 days away
+- Same-week bookings (within 7 days) are always unlimited
+- The limit resets at the start of each calendar month
+
+This is useful for preventing members from reserving too many spots far in advance while still allowing flexible same-week bookings.
 
 ---
 

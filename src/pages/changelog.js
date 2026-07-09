@@ -31,6 +31,98 @@ export default function Home() {
         <p>All notable changes to the platform will be documented here.</p>
         <hr/>
 
+        <h2>[Upcoming]</h2>
+
+<h3>Added</h3>
+<ul>
+  <li><strong>Gift Card Sync</strong> &mdash; ManageRegister can now push gift card balances (credits, debits) into ManageMemberships in real-time with overdraft protection and idempotent transactions</li>
+  <li><strong>Charge Card on File (POS)</strong> &mdash; ManageRegister can charge a member's saved payment method for merchandise purchases. Works with both Stripe and CardPointe. Toggled per-portal.</li>
+  <li><strong>Citizenship Verification</strong> &mdash; owners can mark members as citizenship-verified from the member detail page, exposed via member API</li>
+  <li><strong>Birth Date in Member API</strong> &mdash; member search and detail API endpoints now include birth_date for age verification workflows</li>
+  <li><strong>First Class Booking Trigger</strong> &mdash; new automation trigger fires when a member books their first-ever class, with a pre-built template and deduplication</li>
+  <li><strong>Advanced Registration Limits</strong> &mdash; membership levels can set a monthly limit on advance class bookings (more than 7 days out). Same-week bookings are unlimited.</li>
+  <li><strong>Automatic Certificate Generation</strong> &mdash; certificates are automatically created when a member is marked as attended in class reports</li>
+  <li><strong>PDF Certificates</strong> &mdash; downloadable branded PDF certificates with portal logo, gold border, official seal, and certificate number</li>
+  <li><strong>Sub-Account Breakout</strong> &mdash; owners can promote a child/sub-account into a standalone member, preserving all history</li>
+  <li><strong>Privacy/Visibility Controls</strong> &mdash; resources can be set to public, members-only, or staff-only. Trainers can be marked as sensitive staff. Toggled per-portal.</li>
+  <li><strong>Walk-In Queue</strong> &mdash; manage walk-in queues via ManageRegister with real-time dashboard and member queue position display</li>
+  <li><strong>Guest resource viewing</strong> &mdash; resources can now be viewed by guests without signing in</li>
+  <li><strong>Minimum booking lead time for resources</strong> &mdash; per-resource configurable lead time that prevents last-minute bookings</li>
+  <li><strong>Resource booking options</strong> &mdash; resources can now have multiple pricing options (e.g. &quot;Single Rider&quot;, &quot;Double Rider&quot;)</li>
+  <li><strong>Door Access Debugger</strong> &mdash; test why a member is granted or denied door access with step-by-step diagnostics</li>
+  <li><strong>New IP login alerts for staff</strong> &mdash; email alerts when staff accounts are accessed from unrecognized IP addresses</li>
+  <li><strong>Kiosk password protection</strong> &mdash; optional password gate for kiosk access</li>
+  <li><strong>CardPointe (Fiserv) integration</strong> &mdash; card-not-present via hosted iFrame tokenizer, card-on-file support, recurring billing</li>
+  <li><strong>Searchable portal settings</strong> &mdash; search bar on the settings page to quickly find any setting</li>
+  <li><strong>Instant renewal refresh</strong> &mdash; renewal status updates immediately when a payment is settled, so door access reflects the latest payment state without waiting for the scheduled sync</li>
+  <li><strong>Manual renewal refresh button</strong> &mdash; &quot;Refresh Renewal&quot; button on member subscriptions page to force-sync renewal status from Stripe on demand</li>
+</ul>
+
+<h3>Fixed</h3>
+<ul>
+  <li>Door access not recognizing subscription item add-ons</li>
+  <li>Resource booking crash for members without membership level</li>
+  <li>Invoice processing fee double-charge</li>
+  <li>Google Wallet generation failures no longer block notification emails</li>
+  <li>Invoice backfill N+1 query replaced with bulk insert</li>
+  <li>Server IP logging no longer generates false-positive security alerts</li>
+  <li>Triggers page error when template contained Blade-like syntax</li>
+</ul>
+
+<h3>Improved</h3>
+<ul>
+  <li>WCAG 2.2 AA accessibility improvements</li>
+</ul>
+
+<hr/>
+
+<h2>[1.23.0] - 2026-05-20</h2>
+
+<h3>Added</h3>
+<ul>
+  <li>Product images on store items</li>
+  <li>New product page for purchases</li>
+  <li>Can now set unpause date for memberships</li>
+  <li>Owner now gets email when accounts upgrade</li>
+  <li>Owner can now text member from member details page</li>
+  <li>Bundle membership levels are now more easily editable</li>
+  <li>Charge card on file or mark unpaid on manual event registration</li>
+  <li>Total tickets purchased now shows on event report</li>
+  <li>Enhanced logging for privileged account access</li>
+  <li>CRM prospect detail now shows linked customer's texts, emails, and class bookings</li>
+  <li>Global task/todo list view across all prospects and members</li>
+  <li>Custom fields inside agreements</li>
+  <li>Failed payment notifications now sent to member, owner, and additional recipients</li>
+  <li>Clickable student names on class registrations report</li>
+  <li>CSV export on class registrations roster</li>
+  <li>Attendance tracking on class registrations &mdash; mark attended/no-show per booking</li>
+  <li>&quot;Last Accessed&quot; sortable column on member list</li>
+</ul>
+
+<h3>Improved</h3>
+<ul>
+  <li>Calendar view added to class management</li>
+  <li>Manually added class tickets can now be marked unpaid</li>
+  <li>Contact info now required on waiver</li>
+  <li>Tooltip helpers for more guidance</li>
+  <li>Improved flow for multiple copies of waivers</li>
+  <li>Bundle account relationship is easier to edit</li>
+  <li>ManageRegister inventory sync now respects source-of-truth setting</li>
+</ul>
+
+<h3>Fixed</h3>
+<ul>
+  <li>MRR calculation bug after manual member charging</li>
+  <li>Registration crash when sub-account fields are empty</li>
+  <li>Product sync marking items out of stock incorrectly</li>
+  <li>Duplicate email blocking on kiosk waiver &mdash; now assigns placeholder email</li>
+  <li>Quote from calendar reservation not attaching customer name</li>
+  <li>Chrome autofill treating search inputs as password fields</li>
+  <li>Kiosk waiver unique email check was globally scoped instead of tenant-scoped</li>
+</ul>
+
+<hr/>
+
         <h2>[1.22.0] - 2026-03-17</h2>
 
 <h3>Added</h3>

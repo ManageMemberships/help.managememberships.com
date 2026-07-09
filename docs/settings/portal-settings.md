@@ -10,6 +10,8 @@ To get started, navigate to **Settings → Portal Settings** in your admin dashb
 
 > ⚠️ **Important:** Your portal will not function correctly until these settings are configured.
 
+Use the **search bar** at the top of the settings page to quickly find any setting by name.
+
 ---
 
 ## Basic Information
@@ -98,6 +100,16 @@ When enabled, billing aligns to calendar months rather than the member's signup 
 
 When checked, a **small processing surcharge** is added to member payments to share payment processing fees with them.
 
+### Cancellation Window (Hours)
+
+The number of hours before a class, event, or resource booking that a member is allowed to cancel. For example, setting this to **8** means members cannot cancel within 8 hours of the start time. Default is **24**.
+
+### Consume Credits On
+
+Controls when class credits are deducted from a member's balance:
+- **Check-in** (default) — Credits are consumed when the member checks in at the kiosk or is marked as attended.
+- **Booking** — Credits are consumed immediately when the member books the class. If they cancel (within the cancellation window), credits are restored.
+
 ### Hide Self-Cancellation
 
 If enabled, members must **contact you** directly to cancel their subscriptions.
@@ -113,6 +125,22 @@ If your jurisdiction requires tax collection, enter your tax ID here to enable a
 ### Email on Payment Failure
 
 Toggles whether or not to send an email to members when their payment fails asking them to update their payment method. Default is **on**.
+
+### Enhanced Payment Form (Apple Pay & Link)
+
+When enabled, the registration form uses Stripe's modern Payment Element with support for **Apple Pay** and **Stripe Link** in addition to standard credit card entry. This also enables 3D Secure (SCA) support for cards that require it.
+
+**Requirements:**
+- Portal must use **Stripe** as the payment processor (not CardPointe)
+- For Apple Pay: your subdomain must be registered as a payment method domain in Stripe. Contact support to set this up.
+- Apple Pay only appears for users on **Safari** (iPhone, iPad, Mac) with a card added to their device's Wallet
+- Stripe Link appears for all users and enables one-tap checkout with saved payment info
+
+When this toggle is **off**, the registration form uses the standard credit card input. Existing portals are unaffected — this is off by default.
+
+### Late Fee Amount
+
+A flat dollar amount automatically added to a member's invoice when their payment fails. The fee is only charged **once per billing period** — if payment fails multiple times in the same period, the fee is not duplicated. Leave empty to disable.
 
 ### Suppress Owner Welcome Emails
 

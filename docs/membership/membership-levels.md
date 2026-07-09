@@ -123,6 +123,14 @@ Membership levels define the structure of your offerings, including pricing, bil
 
 ---
 
+#### **Advance Booking Limit**
+- Optional field that limits how many classes a member on this level can book more than 7 days in advance per month.
+- Same-week bookings (within 7 days) are always unlimited.
+- Resets at the start of each calendar month.
+- Leave blank for no limit.
+
+---
+
 ### 💲 Additional Pricing Options
 
 #### **Additional Price Options**
@@ -147,9 +155,29 @@ Membership levels define the structure of your offerings, including pricing, bil
 - Indicates whether this membership auto-renews (i.e., subscription).
 - If disabled, you can set:
   - **Expiration Days** – How long the membership lasts before expiring.
-  - **Number of Check-ins** *(fixed-term only)* – Sets a fixed allowance of check-ins for the membership.  
-    - This number is added to the member’s **check-in quota** and is deducted when registering them for classes.
-    - Useful for packages like private training or limited-session programs where the membership is not time-based but usage-based.
+
+#### **Number of Check-ins / Class Credits**
+- Sets a fixed allowance of check-ins or class bookings for the membership.
+- This number is added to the member’s **check-in quota** and is deducted when registering for classes.
+- Works with **both recurring and non-recurring memberships**:
+  - **Recurring memberships**: The quota automatically resets each billing cycle when the invoice is paid. For example, a $29/month plan with 4 class credits gives the member 4 fresh credits every month.
+  - **Non-recurring memberships**: The quota is assigned once on purchase and does not reset.
+- Useful for:
+  - Monthly plans with limited class access (e.g., "Basic: 4 classes/month")
+  - Punch cards and fixed-session programs
+  - Private training packages
+
+#### **Additive Credits (Class Pack)**
+- Visible when class credits are enabled on any membership type.
+- When enabled, purchasing this membership **adds** credits to the member’s existing balance instead of replacing it.
+- Example: A member has 5 credits remaining and purchases a "10 Swim Credits" pack — they now have **15 credits**.
+- When disabled, the member’s credit balance is reset to the new total (e.g., 5 remaining becomes 10, not 15).
+- For recurring memberships with additive credits, each billing cycle adds a fresh allotment on top of any remaining credits.
+
+#### **Credits Never Expire**
+- Visible when class credits are enabled on any membership type.
+- When enabled, the member’s credits have no expiration date.
+- When disabled, credits expire based on the **Expiration Days** setting (for non-recurring) or reset on next billing cycle (for recurring).
 
 ---
 

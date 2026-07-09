@@ -58,6 +58,16 @@ You can build logic in your booking system to check if a user’s selected time 
 
 ---
 
+## 💸 Membership Discounts
+
+Packages support membership-level discounts, allowing you to offer reduced pricing for specific membership tiers.
+
+- **Discount Type**: Choose between **% Off** (percentage) or **$ Off** (flat dollar amount).
+  - **% Off**: Enter a percentage (0-100) to discount.
+  - **$ Off**: Enter a fixed dollar amount to subtract from the package price.
+
+---
+
 ## 📝 Editing & Deleting Packages
 
 Click the **edit icon** on any row to modify the package. All fields can be adjusted in real time.
