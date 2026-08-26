@@ -115,6 +115,44 @@ On completed/viewed agreements:
 
 ---
 
+## 📋 Publishing a New Version (Re-sign Requests)
+
+When your agreement text changes — updated liability language, new policies, revised terms — you can publish a new version and require all active members to re-sign.
+
+### How to Publish a New Version
+
+1. Go to **Agreements & Waivers** in the owner dashboard.
+2. Click the **"Publish New Version"** action on the agreement you want to update.
+3. In the slide-over panel:
+   - **Body** — edit the agreement text (pre-filled with the current version).
+   - **Grace Period (days)** — how many days members have to sign before access is restricted (minimum 1, default 7).
+4. Click **Publish**. The system:
+   - Saves the new version (v1, v2, …) with the updated text.
+   - Creates a re-sign request for every currently active member linked to that agreement's membership levels.
+   - Sends each member an email with a direct link to sign.
+
+### Member Experience
+
+| State | Dashboard | Door Access |
+|-------|-----------|-------------|
+| Pending (within grace period) | Yellow banner with "Sign Now" button | Full access |
+| Overdue (past deadline) | Red banner with "Sign Now" button | **Denied** (`denied-agreements`) |
+| Signed | No banner | Full access |
+
+Members who haven't signed by the deadline are held at their dashboard and denied at doors until they complete the re-sign. A reminder email is sent automatically 3 days before the deadline.
+
+### Version History
+
+The **Agreements & Waivers** table shows a **Latest Version** column with the current version number, publish date, and how many members have a pending re-sign request (e.g., `v2 — Jul 22, 2026 (14 pending re-sign)`).
+
+On the **Member Details** page, each signed agreement shows a version badge (e.g., **v2**) so you can confirm which version a member signed.
+
+### What Counts as "Active" for Re-sign Requests
+
+Members with an `active` or `trialing` subscription on any level linked to the agreement (excluding paused or ended subscriptions) receive a re-sign request when a new version is published. Members who join after publication sign the latest version at registration and are not sent a separate re-sign request.
+
+---
+
 ## 🔐 Important
 
 Make sure every active **membership level** has an associated agreement. This ensures your business is protected and that members have agreed to all necessary terms.

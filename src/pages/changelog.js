@@ -31,10 +31,32 @@ export default function Home() {
         <p>All notable changes to the platform will be documented here.</p>
         <hr/>
 
-        <h2>[Upcoming]</h2>
+        <h2>[Unreleased]</h2>
 
 <h3>Added</h3>
 <ul>
+  <li><strong>Bulk Check-In</strong> &mdash; new page under Reports &rarr; Bookings for checking a whole class in at once. Pick the class, date, and time slot, then type names: booked members get one-click check-in buttons and are marked attended, everyone else is recorded as a walk-in. Supports past dates for retroactive attendance, quota enforcement, duplicate protection, and one-click undo.</li>
+  <li><strong>Walk-ins on the Class Calendar</strong> &mdash; the Class Calendar now shows kiosk and bulk check-ins the same way the Daily Roster does: events display a walk-in count, sessions attended only by walk-ins show green instead of empty, and the session detail popup gains a Walk-Ins tile plus a walk-in list with check-in times. Booked members who checked in at the kiosk now show as Checked In.</li>
+  <li><strong>Daily Roster in the Reports menu</strong> &mdash; the read-only front-desk roster is now linked from Reports &rarr; Bookings &rarr; Daily Roster, so you no longer need to type the /kiosk/roster URL.</li>
+  <li><strong>Check-In Report time slots</strong> &mdash; classes that run multiple times a day (e.g. 9 AM and 5 PM) now report as separate sessions, with the time shown next to the class name in the table and chart.</li>
+</ul>
+
+<h3>Fixed</h3>
+<ul>
+  <li><strong>Check-In Report timezone</strong> &mdash; check-ins are now filtered and grouped by your business's timezone; a late-night check-in no longer shows up under the next day.</li>
+</ul>
+
+        <h2>[2.3.0] - 2026-08-25</h2>
+
+<h3>Added</h3>
+<ul>
+  <li><strong>Chat Widget</strong> &mdash; opt-in floating &quot;Message us&quot; bubble on your public homepage, blog, and landing pages. Visitors leave their name, phone, and a message; each submission becomes a prospect in your CRM and triggers a new-lead email to you (plus optional extra recipients). Enable it under Settings &rarr; Portal Settings &rarr; Chat Widget.</li>
+  <li><strong>Average LTV widget</strong> &mdash; opt-in dashboard widget estimating average member lifetime value: average monthly-normalized recurring subscription value multiplied by average membership length. Enable it under Settings &rarr; Dashboard Widgets.</li>
+  <li><strong>At Risk Customers widget</strong> &mdash; opt-in dashboard widget listing active members with no check-in and no login in 16+ days, so you can reach out before they cancel. Enable it under Settings &rarr; Dashboard Widgets.</li>
+  <li><strong>Minimum Class Size</strong> &mdash; classes can require a minimum number of registrants. Optionally warn registrants by email when an upcoming session is under-enrolled, and/or automatically cancel the session at a configurable cut-off &mdash; cancelling all bookings, refunding card payments, restoring class credits, and notifying every registrant. The owner receives a warning email one day before a session is auto-cancelled, with time to boost enrollment or adjust the settings. Cancelled sessions are removed from the calendar and cannot be booked or waitlist-promoted.</li>
+  <li><strong>Dunning Automation</strong> &mdash; automatic payment retry sequence with staged escalation (day 0, 3, 7, 14, 19, 25 after failure). Members receive branded email and SMS notifications at each stage with a secure card-update link. Access is suspended at day 14 and fully cancelled at day 25 if unresolved. Toggle per-portal under Settings.</li>
+  <li><strong>Dunning Templates</strong> &mdash; fully customizable email and SMS messages for each retry stage, found under Communication. Supports variable substitution for member name, amount, membership name, gym name, and a secure card-update link.</li>
+  <li><strong>Self-serve card update page</strong> &mdash; members can update their payment method and trigger an immediate retry from a secure link in any dunning message, no login required.</li>
   <li><strong>Gift Card Sync</strong> &mdash; ManageRegister can now push gift card balances (credits, debits) into ManageMemberships in real-time with overdraft protection and idempotent transactions</li>
   <li><strong>Charge Card on File (POS)</strong> &mdash; ManageRegister can charge a member's saved payment method for merchandise purchases. Works with both Stripe and CardPointe. Toggled per-portal.</li>
   <li><strong>Citizenship Verification</strong> &mdash; owners can mark members as citizenship-verified from the member detail page, exposed via member API</li>

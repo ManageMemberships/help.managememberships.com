@@ -145,6 +145,16 @@ If you use the external registration button, complete your signup on the linked 
 
 ---
 
+## 🗑️ Deleting an Event
+
+Owners and staff can delete an event from the events table using the **"Delete"** action — even if the event already has registrations.
+
+- All **registrations and payment history are preserved**, and the Event Registration report for the deleted event remains fully available (including CSV export and payment collection).
+- The event immediately disappears from the portal and the events list.
+- If the event has registrations, the confirmation dialog will show how many. Deleting does **not** cancel or refund registrations, so notify registered members before deleting an upcoming event.
+
+---
+
 ## 🚩 Troubleshooting
 
 - If you cannot select tickets, the event may be full or closed.

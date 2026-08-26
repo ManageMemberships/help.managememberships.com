@@ -156,6 +156,16 @@ Membership levels define the structure of your offerings, including pricing, bil
 - If disabled, you can set:
   - **Expiration Days** – How long the membership lasts before expiring.
 
+#### **After Expiration, Convert Members To**
+- Optional: automatically move members to another membership level when their subscription on this level expires.
+- Great for trial-style offers — e.g., a **"10 days for $10"** level that automatically upgrades to **Unlimited** when it expires, or downgrading lapsed members to a Drop-In level.
+- Billing follows the **target** level:
+  - **Recurring with a price** – A new subscription is created and the member's card on file is charged that night. Recurring billing starts from the day of conversion (prorated on calendar-billing portals). **No signup fee is charged.** Failed charges follow the normal failed-invoice retry flow.
+  - **Free** – The member is moved and keeps an active (unbilled) membership. No charge.
+  - **Non-recurring (drop-in / day pass)** – The member is just moved. **No charge is ever made** — they pay per visit as usual.
+- Conversions run nightly. Members who already signed up for another membership on their own are skipped, and only recently expired memberships are converted — turning this on does **not** retroactively convert members who expired long ago.
+- Pair it with the **"On Membership Auto-Conversion"** instant trigger (Communication → Triggers) to email or text the member (or staff) when a conversion happens. Template variables: `old_level`, `new_level`, and `price`.
+
 #### **Number of Check-ins / Class Credits**
 - Sets a fixed allowance of check-ins or class bookings for the membership.
 - This number is added to the member’s **check-in quota** and is deducted when registering for classes.

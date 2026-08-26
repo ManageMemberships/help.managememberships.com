@@ -30,6 +30,15 @@ If your account includes **family members or dependents**, you’ll see a list o
 - View membership level names for each linked user.
 - See which classes are available to each user.
 
+### Sub accounts checking in bundle members
+
+If you are a **sub account** (e.g., a spouse linked to a primary account), you can also check in dependents on the primary account. When you enter your own email at the kiosk:
+
+1. Your own check-in button appears at the top.
+2. Bundle members from the primary account appear below — tap any of them to check that person in.
+
+Bundle member check-ins are recorded against the primary account’s history and quota, exactly as if the primary account holder had checked them in.
+
 ---
 
 ## Agreements

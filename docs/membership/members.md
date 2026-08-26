@@ -64,6 +64,7 @@ Use combination filters to create targeted member lists. For example: "Payment F
 - **📅 Renewal Date Range** – Target upcoming, current, or past renewals
 - **🔄 Renewal Status** – Focus on `failed`, `paused`, or `good` statuses
 - **✅ Signed All** – Members with complete agreement status
+- **🔖 Has Subscription For** – Filter members who have an active subscription tied to one or more specific membership levels. Matches both primary subscription items and add-ons. Select multiple levels to find members with any of them. Paused, canceled, and expired subscriptions are excluded — only active or trialing subscriptions count.
 
 ---
 
@@ -108,6 +109,14 @@ Next to the Active/Inactive status at the top of the member details page, a badg
 - **When to use it** — handy when a member was set up with the wrong billing type, e.g. imported as a cash member but actually paying by card
 - Requires the *Manage Memberships* permission
 
+#### 🏆 Award Points
+The **Award Points** section on the Overview tab lets staff manually award points and review the member's point history.
+
+- **Award manually** — enter an amount and an optional reason (e.g. "Shared us on Instagram") and click **Award**
+- **Full history** — every point transaction is listed: amount, source (check-in, class attended, first class booking, trigger, or manual), reason, who awarded it, and when
+- **Audit logged** — manual awards are recorded in the member's audit log with the before/after balance
+- Points are earned automatically from check-ins and class attendance — see [Points & Leaderboard](./points-leaderboard.md) for configuration
+
 ---
 
 ## 💳 Subscription & Billing Management
@@ -118,10 +127,26 @@ Next to the Active/Inactive status at the top of the member details page, a badg
 - **Billing History** - Complete payment and invoice timeline
 
 ### ➕ Adding Subscriptions
+
+#### Single Subscription
 1. **Select Membership Level** from available tiers
 2. **Choose Pricing** - Full price or half-off discounts
 3. **Quota Assignment** - Direct quota to main or child accounts
 4. **Immediate Billing** - Prorated charges processed instantly
+
+#### Adding Multiple Subscriptions at Once
+You can add several subscriptions in a single action without repeating the form:
+
+1. Open the member's **Subscriptions** tab and expand the **Add Subscription** panel
+2. Click **+ Add Row** to add another subscription line
+3. For each row, select a **Membership Level**, set the **Quantity**, optionally pick a **Coupon**, and enable a **Trial** with an end date if needed
+4. Click **Add All (N)** to submit every row at once
+
+Each subscription is processed independently — if one row is invalid (missing membership level, bad trial date), the whole batch is rejected before any are created, so you won't end up with a partial result.
+
+:::tip
+The row count and per-row quantity are both capped at 10. If a membership level includes a check-in quota, it is applied immediately for each row dispatched.
+:::
 
 ### 🔧 Subscription Modifications
 - **Add Items** - Attach recurring services with prorated billing
@@ -188,6 +213,33 @@ The credit system allows you to:
 1. **Enter Amount** - Specify dollar amount (minimum $0.01)
 2. **Confirm** - Verify the credit purpose and amount
 3. **Applied Immediately** - Credit is added to the member's balance right away
+
+### ➖ Removing Credits
+
+:::note Manual billing members only
+The Remove Credits controls are only available for manual billing members. For Stripe-billed members, manage credits directly in Stripe.
+:::
+
+You can reduce a member's credit balance two ways:
+
+| Action | When to use |
+|--------|-------------|
+| **Remove Credits** | Deduct a specific dollar amount (e.g. correct an overage) |
+| **Clear balance to $0** | Zero out the entire balance at once |
+
+#### Remove Credits process:
+1. Enter the dollar amount to deduct in the **Amount to Remove** field
+2. Click **Remove** — a confirmation modal appears showing the exact amount
+3. Confirm to apply; the balance updates immediately
+
+#### Clear balance to $0:
+- Click the **Clear balance to $0** link (only visible when balance > 0)
+- Confirm in the modal — the entire balance is removed in one action
+- Bypasses the $10,000 per-submission cap since accumulated balances can exceed that limit
+
+:::warning Audit trail
+Both remove and clear actions write a `manual_credit_removed` audit entry recording the old balance, new balance, amount removed, and the staff member who performed the action.
+:::
 
 ### 📊 Credit Usage
 - **Automatic Application** - Credits used for future invoices

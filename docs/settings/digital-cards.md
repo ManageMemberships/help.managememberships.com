@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Digital Cards
@@ -47,6 +47,34 @@ If you're using our **door access system with QR code scanners**, the digital ca
 ## 📆 Class Check-Ins
 
 You can also place a QR scanner at your **self-check-in kiosk**, allowing members to scan their card and register attendance for scheduled classes.
+
+---
+
+## 🔑 QR Code Types
+
+Card Management lets you choose what your members' QR codes actually contain. All three types work at doors and kiosks.
+
+| Type | What the QR contains | Best for |
+|------|----------------------|----------|
+| **Email (legacy)** | The member's email address | Default — how cards have always worked |
+| **Static** | An opaque, non-guessable token | Better security with no member impact — codes reveal nothing about the member and can't be guessed from a known email |
+| **Dynamic** | A rotating code that changes every hour | Maximum security — a photographed or shared QR code stops working within the hour |
+
+### Things to know
+
+- **Existing portals stay on Email** — nothing changes until you change this setting.
+- **Apple Wallet doesn't support rotating codes.** In Dynamic mode, Apple Wallet passes are unavailable — iPhone members scan the QR code from their member dashboard (or the mobile app) instead. Google Wallet cards fall back to a static, non-expiring code.
+- **The mobile app always shows the right code** for your portal's setting and refreshes automatically in Dynamic mode.
+
+### Allow Legacy Email QR Codes at Doors
+
+When you switch from Email to Static or Dynamic, wallet cards your members added **before** the switch still contain their old email-based code. The **"Allow legacy email QR codes at doors"** toggle (on by default) keeps those old cards working during the transition.
+
+Once your members have re-added their wallet cards or use the mobile app, turn the toggle off to fully retire email-based codes — after that, anyone scanning an old email QR is denied (and the attempt appears in your Door Access report as `denied-legacy-email`).
+
+:::tip Recommended rollout
+Switch the QR type, leave legacy email codes **enabled** for a few weeks, remind members to re-add their wallet cards, then disable legacy codes.
+:::
 
 ---
 

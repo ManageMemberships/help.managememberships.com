@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 14
 ---
 
 # Triggers
@@ -22,7 +22,19 @@ Toggle the trigger on or off. Set to **Active** to enable or **Inactive** to pau
 Choose when the trigger fires:
 - **Scheduled** - Runs on a recurring schedule
 - **On Invalid Door Scan** - Fires when a member scans a door but is denied access
+- **On Invalid Kiosk Check-in** - Fires when a kiosk or quick-kiosk check-in is rejected
 - **On First Class Booking** - Fires when a member books their very first class ever
+
+#### Invalid Kiosk Check-in
+
+Fires in two situations:
+
+- **A known member is rejected** — no valid subscription, check-in quota exceeded or expired, etc. Both the member and Custom-recipient actions can be delivered. Rate limited to 2 notifications per member per 30 minutes.
+- **The input matches nobody in the system** — e.g., someone types a name or scans a code that isn't recognized. Since there's no matched member, only **Custom-recipient** actions are delivered (use this as an owner/staff alert). The `attempted_input` variable contains exactly what was typed. Rate limited to 5 notifications per location per 30 minutes.
+
+A pre-built template is available via the **Invalid kiosk check-in** button.
+
+Message variables for this trigger: `{{ name }}`, `{{ email }}`, `{{ status }}`, `{{ reason }}` (why the check-in was rejected), and `{{ attempted_input }}` (unknown-person attempts only).
 
 #### First Class Booking Template
 
@@ -75,6 +87,11 @@ Each trigger can perform one or more actions when conditions are met:
 - **Send To** - The matched member or a custom email address
 - **Email Subject** - The subject line
 - **Email Content** - The email body
+
+### Award Points
+- **Points to award** - How many points the matched member receives when the trigger fires
+- Points are credited instantly, with the trigger's name recorded as the reason in the member's point history
+- See [Points & Leaderboard](../membership/points-leaderboard.md) for how points work
 
 ---
 

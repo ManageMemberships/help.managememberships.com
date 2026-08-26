@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Doors
@@ -83,6 +83,28 @@ If a member just paid but is still showing as denied, you can force a refresh fr
 1. Go to **Members > [Member Name] > Subscriptions**
 2. Click the **Refresh Renewal** button in the top-right of the subscriptions section
 3. The renewal status will re-sync with Stripe and update immediately
+
+---
+
+## 📲 Denied Scan Notifications
+
+When a known member scans a door and is denied, they are automatically notified with a specific reason — no action required on your end.
+
+**How it works:**
+- If the member has a phone number and has not opted out of texts, they receive an SMS
+- If they have opted out or have no phone number on file, they receive a branded email instead
+- Notifications are rate-limited to **once per member per door per 24 hours** to avoid spam
+
+**What the message says (by denial reason):**
+
+| Reason | Message sent to member |
+|--------|----------------------|
+| Membership not active | "Your scan at [Door] was blocked — your membership is not currently active. Visit [portal] to resolve this." |
+| Payment issue | "Your scan at [Door] was blocked — your membership may have a payment issue. Visit [portal] to resolve this." |
+| Facility closed | "Your scan at [Door] was blocked — the facility is currently closed. Visit [portal] or contact us for help." |
+| Unsigned agreements | "Your scan at [Door] was blocked — you have unsigned agreements on file. Visit [portal] to resolve this." |
+
+Members can log in directly at your portal URL to update their payment method, sign agreements, or contact you for help.
 
 ---
 
