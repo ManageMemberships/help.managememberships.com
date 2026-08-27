@@ -47,6 +47,20 @@ If any **waivers or agreements** are pending, you’ll be prompted to sign them 
 
 ---
 
+## Check In Anyway (Overriding a Blocked Check-In)
+
+When a check-in is blocked — either by the subscription check (*"Member does not have valid subscription"*) or by pending agreements — a yellow **Check In Anyway** button appears under the message.
+
+Tapping it lets the member proceed past that block and continue to the normal class selection. If a member is blocked by both (no valid subscription *and* unsigned agreements), tap **Check In Anyway** on each message in turn — the kiosk remembers the first override while applying the second.
+
+A few things to know:
+
+- **It's recorded.** An overridden check-in is stamped with the reason it was overridden (`subscription_override`, `waiver_override`, or both), so it stays distinguishable from a normal check-in.
+- **It's scoped to that member.** The override only applies to the member who was blocked, and it resets as soon as a new search is started or the panel is dismissed — it never carries over to the next person at the kiosk.
+- **When to use it** — the front desk knows something the system doesn't yet: the member just paid cash, their renewal is being processed, or they'll sign the waiver after class. Use it as a bridge, then fix the underlying issue (record the payment, activate the subscription, or have them sign) so they aren't blocked again tomorrow.
+
+---
+
 ## Available Classes
 
 After validating your account:
@@ -74,6 +88,6 @@ When a class is shown:
 |----------------------------------|----------------------------------------------------------------------|
 | `Member not found`               | Your input didn’t match any users. Try again.                        |
 | `Multiple matches found`         | Choose from the list shown to continue.                             |
-| `Member does not have valid subscription` | Your membership may be inactive or expired.                         |
-| `You have agreements to sign`   | You need to sign documents before check-in.                         |
+| `Member does not have valid subscription` | Your membership may be inactive or expired. Staff can tap **Check In Anyway** to override. |
+| `You have agreements to sign`   | You need to sign documents before check-in. Staff can tap **Check In Anyway** to override. |
 | `You are now checked in`        | Success! You’re marked present for your class.                      |
