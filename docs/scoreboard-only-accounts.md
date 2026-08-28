@@ -12,14 +12,6 @@ Challenges, events, or any situation where you want a leaderboard up and running
 
 ---
 
-## Signing Up
-
-Scoreboard-only sign-up isn't linked from the main registration page — it's reachable only via a direct link (`/register/scoreboard`) that you share with the person creating the account.
-
-The form only asks for a name, email, phone, password, and a subdomain. There's no plan selector and no payment step — the account is ready to use as soon as it's created.
-
----
-
 ## What's Included
 
 A scoreboard-only owner's dashboard is limited to four areas: **Dashboard**, **Check In**, **Members**, and **Check-In Report**. Everything else — the class calendar, billing tools, staff management, and so on — isn't part of this account type.
