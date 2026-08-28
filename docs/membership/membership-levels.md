@@ -169,9 +169,10 @@ Membership levels define the structure of your offerings, including pricing, bil
 #### **Number of Check-ins / Class Credits**
 - Sets a fixed allowance of check-ins or class bookings for the membership.
 - This number is added to the member’s **check-in quota** and is deducted when registering for classes.
+- Each time the credits are granted they form their own **pack**, with its own size and expiration — see [Class Credits & Packs](./class-credits.md).
 - Works with **both recurring and non-recurring memberships**:
-  - **Recurring memberships**: The quota automatically resets each billing cycle when the invoice is paid. For example, a $29/month plan with 4 class credits gives the member 4 fresh credits every month.
-  - **Non-recurring memberships**: The quota is assigned once on purchase and does not reset.
+  - **Recurring memberships**: A fresh allotment is granted each billing cycle when the invoice is paid. For example, a $29/month plan with 4 class credits gives the member 4 fresh credits every month.
+  - **Non-recurring memberships**: The credits are assigned once on purchase and are not renewed.
 - Useful for:
   - Monthly plans with limited class access (e.g., "Basic: 4 classes/month")
   - Punch cards and fixed-session programs
@@ -179,15 +180,15 @@ Membership levels define the structure of your offerings, including pricing, bil
 
 #### **Additive Credits (Class Pack)**
 - Visible when class credits are enabled on any membership type.
-- When enabled, purchasing this membership **adds** credits to the member’s existing balance instead of replacing it.
-- Example: A member has 5 credits remaining and purchases a "10 Swim Credits" pack — they now have **15 credits**.
-- When disabled, the member’s credit balance is reset to the new total (e.g., 5 remaining becomes 10, not 15).
-- For recurring memberships with additive credits, each billing cycle adds a fresh allotment on top of any remaining credits.
+- When enabled, purchasing this membership **adds** a new pack of credits alongside the member’s existing packs instead of replacing them.
+- Example: A member has 5 credits remaining and purchases a "10 Swim Credits" pack — they now have **15 credits**, held as two packs that expire independently.
+- When disabled, the member’s existing packs are cleared and replaced by the new allotment (e.g., 5 remaining becomes 10, not 15).
+- For recurring memberships with additive credits, each billing cycle adds a fresh pack on top of any remaining credits. Credits are always spent from the pack expiring soonest.
 
 #### **Credits Never Expire**
 - Visible when class credits are enabled on any membership type.
-- When enabled, the member’s credits have no expiration date.
-- When disabled, credits expire based on the **Expiration Days** setting (for non-recurring) or reset on next billing cycle (for recurring).
+- When enabled, credits granted by this level have no expiration date.
+- When disabled, each granted pack expires **Expiration Days** after the day it was granted. On a recurring plan that means each cycle’s credits carry their own deadline rather than sharing one — January’s credits can lapse while February’s are still good.
 
 ---
 
