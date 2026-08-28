@@ -82,6 +82,7 @@ Use combination filters to create targeted member lists. For example: "Payment F
 | ❌ **Unmark as Athlete** | Clear athlete designation | Remove team status |
 | ✅ **Mark as Active** | Reactivate suspended accounts | Bulk account restoration |
 | 🚫 **Mark as Inactive** | Suspend accounts (non-destructive) | Temporary deactivation |
+| 📥 **Export Contact Info (CSV)** | Download contact details for the selected members | Mailing lists, class rosters, offline outreach |
 
 ![Bulk Actions Menu](/img/bulk1.png)
 
@@ -443,6 +444,28 @@ Streamlined cash transaction recording:
 - **Receipt Generation** - Automatic payment confirmations
 - **Tax Handling** - Proper tax calculation and reporting
 - **Balance Updates** - Immediate account credit application
+
+### 📥 Export CSV
+Download member contact info as a spreadsheet.
+
+**Export CSV** in the header exports **every member matching your current search and filters** — so filter the list first, then export. To export only specific people instead, tick their checkboxes and use the **Export Contact Info (CSV)** bulk action.
+
+Either way you get a file named `members-YYYY-MM-DD.csv` containing:
+
+| Column | Notes |
+|---|---|
+| Name, Email, Phone | Phone falls back to the secondary number when no mobile is on file |
+| Address, City, State, Zip | Blank where the member hasn't provided them |
+| Membership Level | Blank for members without a level |
+| Role | Member, staff, manager, or accountant |
+| Account Active | Yes or No |
+| Joined | The date the account was created |
+
+The export never includes your own account or other portals' members, and exporting with no matching members shows a warning instead of downloading an empty file.
+
+:::note
+Exports are logged for security review, including who exported and how many records. Member contact details are personal data — handle the file accordingly and delete it when you're done.
+:::
 
 ---
 

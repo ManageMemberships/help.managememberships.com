@@ -93,11 +93,13 @@ If toggled off:
 - On its own this field does nothing — pair it with one or both of the settings below. See [Minimum Class Size](#minimum-class-size) for how the warnings and auto-cancellation work.
 
 #### **Warn If Under Minimum**
-- How many days before the class registrants should receive a heads-up email if enrollment is still below the minimum. Leave blank to disable warnings.
-- If you also use auto-cancellation, the warning must be set to go out **earlier** than the auto-cancel point (a larger number of days).
+- How long before the class registrants should receive a heads-up email if enrollment is still below the minimum. Leave blank to disable warnings.
+- Choices range from **6 hours before** up to **2 weeks before**, so same-day classes can be handled as well as ones booked weeks out.
+- If you also use auto-cancellation, the warning must be set to go out **earlier** than the auto-cancel point (a longer lead time).
 
 #### **Auto-Cancel If Under Minimum**
-- How many days before the class it should be automatically cancelled if enrollment is still below the minimum. Registrants are refunded and notified. Leave blank to disable auto-cancellation.
+- How long before the class it should be automatically cancelled if enrollment is still below the minimum. Registrants are refunded and notified. Leave blank to disable auto-cancellation.
+- Same range as the warning — from **6 hours before** to **2 weeks before**. A 6 PM class set to auto-cancel 6 hours out is decided at noon that day, rather than the previous morning.
 
 #### **Available Days**
 - Select the days of the week this class can occur. Multiple days supported.
@@ -263,20 +265,24 @@ If a class isn't worth running below a certain headcount, set **Minimum Particip
 
 ### Low-Enrollment Warning
 
-With **Warn If Under Minimum** set, the system checks each upcoming session daily. When a session is the configured number of days away and still below the minimum, every registrant receives an email letting them know the class may be cancelled if enrollment doesn't pick up.
+With **Warn If Under Minimum** set, the system checks each upcoming session every hour. When a session reaches the configured lead time and is still below the minimum, every registrant receives an email letting them know the class may be cancelled if enrollment doesn't pick up.
 
 - Each registrant is warned **once per session** — no repeat emails on later days.
 - Sessions with no registrants yet aren't marked as warned, so anyone who books later can still be notified.
 
 ### Owner Warning Before Auto-Cancellation
 
-When auto-cancellation is enabled, **you get a heads-up too**: one day before a session reaches its auto-cancel point while still under the minimum, the account owner receives an email showing current vs. required enrollment and how many bookings would be affected. That gives you one last day to:
+When auto-cancellation is enabled, **you get a heads-up too**: about 24 hours before a session reaches its auto-cancel point while still under the minimum, the account owner receives an email showing current vs. required enrollment and how many bookings would be affected. That gives you a day to:
 
 - Rally enrollment up to the minimum
 - Lower **Minimum Participants** on the class
 - Change or clear **Auto-Cancel If Under Minimum**
 
-Any of those changes takes effect before the next daily check, and the session runs as scheduled. The owner warning is sent once per session — you won't be re-emailed about the same one.
+Any of those changes takes effect at the next hourly check, and the session runs as scheduled. The owner warning is sent once per session — you won't be re-emailed about the same one.
+
+:::note
+If you set an auto-cancel lead time shorter than 24 hours, there isn't room for a full day of notice — the owner warning still goes out, but closer to the cancellation point.
+:::
 
 ### Automatic Cancellation
 
@@ -288,7 +294,7 @@ With **Auto-Cancel If Under Minimum** set, a session that is still below the min
 - Only that specific session is cancelled. The class itself stays active, and all other dates and time blocks are unaffected.
 
 :::tip
-Set the warning a few days ahead of the auto-cancel point (e.g., warn 5 days before, cancel 2 days before). That gives registrants time to rally friends into the class before it's called off. The class editor requires the warning lead time to be longer than the auto-cancel lead time.
+Set the warning well ahead of the auto-cancel point (e.g., warn 2 days before, cancel 12 hours before). That gives registrants time to rally friends into the class before it's called off. The class editor requires the warning lead time to be longer than the auto-cancel lead time.
 :::
 
 :::note
