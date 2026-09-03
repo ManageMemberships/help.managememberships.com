@@ -106,6 +106,32 @@ An optional email sent to members when they upgrade their membership level.
 
 ---
 
+### Class Booking Controls
+
+Two settings that change what members see on a class page. Both are **on by default**, matching how class booking has always worked — turn them off only if the behaviour below doesn't suit how you run classes.
+
+#### Allow Booking Extra Tickets For Guests
+
+**On (default):** members choose how many tickets to buy and see a note explaining that guests without an account must sign a waiver before attending. This is how a parent books a second seat for a sibling.
+
+**Off:** the quantity field disappears and every booking is one seat, for the member themselves. Use this when you need to vet people before they attend — for example when a class is pitched at a particular skill level and you want to check a newcomer is a fit before they turn up.
+
+Turning this off also stops a member booking the **same session twice**. Once they hold a seat, the booking form is replaced with a short confirmation and a link to cancel from their dashboard. A class that runs more than one session on the same day still offers whichever session they haven't booked.
+
+:::note
+This is enforced when the booking is submitted, not just hidden on the page.
+:::
+
+#### Show Recent Booking Activity
+
+**On (default):** class pages show a line such as *"🎟️ 4 tickets purchased today across all dates"*. It counts tickets bought **today by anyone** for that class, across every date the class runs — it is a popularity signal, not a reflection of the viewer's own bookings.
+
+**Off:** the line is hidden everywhere on the class page.
+
+Members who already hold a seat never see this line. They see *"✓ You are already booked for this class on this date"* instead, so the two can't be confused.
+
+---
+
 ### Email Settings
 
 Manage sender information, notification recipients, and the email template.

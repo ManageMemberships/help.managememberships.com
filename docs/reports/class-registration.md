@@ -120,6 +120,30 @@ Click the **Export CSV** button to download the current roster as a spreadsheet.
 
 ---
 
+## **Cancelling a Session**
+
+When a single session can't run — weather, a sick coach, a court double-booked — you can cancel that one date without touching the rest of the schedule.
+
+1. Select the class, then select the timeslot for the date you're cancelling.
+2. Click **Cancel this session**. The button shows how many bookings will be affected.
+3. Choose a **reason**, and add a note if you pick "Other".
+4. Confirm.
+
+What happens:
+
+- Every active booking for that date is cancelled. Bookings already cancelled are left alone.
+- **Class credits go back** to the packages they came from, so a member who paid with a punch-card isn't charged for a class that didn't run.
+- The reason you chose is recorded against each member's activity log, so the cause is visible later.
+- The session stops appearing on the calendar and can no longer be booked.
+
+Only this one date is affected. The class continues to run on every other date as scheduled.
+
+:::note
+Each booking is cancelled independently. If one fails, the rest still go through rather than the whole session being left half-cancelled — the page tells you how many succeeded and how many failed.
+:::
+
+---
+
 ## **Summary**
 
 The Class Reports page is designed to give you full control over your class schedules and attendance records. You can:
@@ -129,5 +153,6 @@ The Class Reports page is designed to give you full control over your class sche
 - Add last-minute or offline bookings with the Manual Registration tool.
 - Deduct bookings from a member’s **check-in quota** when applicable.
 - Export rosters to CSV.
+- Cancel a single session and automatically return members' class credits.
 
 This ensures that all class data is consistent and up to date, whether members register online, through your staff, or using their prepaid check-ins.

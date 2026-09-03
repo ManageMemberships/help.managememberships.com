@@ -153,7 +153,32 @@ The row count and per-row quantity are both capped at 10. If a membership level 
 - **Add Items** - Attach recurring services with prorated billing
 - **Remove Items** - Cancel add-ons with immediate adjustment
 - **Pause/Resume** - Temporary subscription holds
-- **Cancel** - With or without penalty fees
+- **Cancel** - End at the end of the paid period, or immediately, with or without a penalty fee
+
+### ❌ Cancelling a Subscription
+
+Click **Cancel** on the subscription you want to end. You'll be asked *how* it should end:
+
+| Option | What happens |
+|---|---|
+| **At end of paid period** | The member keeps access through the period they've already paid for, then the subscription stops. No further billing. The date is worked out for you and shown on the button — you don't need to look it up or type it in. |
+| **End immediately (today)** | Access stops right now, including any time already paid for. |
+
+You can also tick **Charge the cancellation penalty fee** with either option. The amount comes from the penalty settings on the member's membership level.
+
+:::tip Which one should I pick?
+**At end of paid period** is almost always the right choice, and it's selected by default. It's what a member expects when they say "cancel" — they've paid through a date, so they keep access until it. Ending immediately takes away time the member already paid for, so save it for situations where you genuinely need to cut access off today.
+:::
+
+:::info "End immediately" is the only option available
+That means we don't have a paid-through date on file for this subscription — most often on a cash membership where no next invoice date has been set.
+
+If the member *has* paid beyond today, close the box, use **Update Next Invoice** to set the date they're paid through, then cancel again. The period-end option will then be available with the right date.
+:::
+
+:::warning Cancel vs. Pause
+**Cancelling** ends the subscription for good — you'd need to create a new one to bring the member back. **Pausing** is a temporary hold you can lift at any time. If a member is coming back after a few weeks away, pause them instead.
+:::
 
 ### 📅 Updating Billing Dates & Pausing Subscriptions
 
