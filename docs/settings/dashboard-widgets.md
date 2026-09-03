@@ -80,7 +80,7 @@ A good habit is to check this list weekly and reach out personally — a quick "
 
 ## Leaderboard
 
-Shows your top 10 members by points earned, toggleable between **This Month** and **This Year**. Points come from check-ins, class attendance, first class bookings, manual awards, and automation triggers — see [Points & Leaderboard](../membership/points-leaderboard.md) for how earning works and how to configure point values.
+Shows your top 10 members by points earned, toggleable between **This Month**, **This Year**, and **Lifetime**. Points come from check-ins, class attendance, first class bookings, manual awards, and automation triggers — see [Points & Leaderboard](../membership/points-leaderboard.md) for how earning works and how to configure point values.
 
 Members can see their own version of this ranking on the portal's Leaderboard page (top 50), controlled by the **Show Public Leaderboard** toggle in Portal Settings → Points.
 

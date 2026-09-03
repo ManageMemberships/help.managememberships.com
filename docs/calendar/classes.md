@@ -205,8 +205,8 @@ If your class runs at the same time every day, you don't need schedule groups â€
 
 ### Class Credits
 
-#### **Allow Class Credits**
-- When enabled (default), members with credit packs can use their class credits to book this class instead of paying.
+#### **Allow class credits (quota)**
+- When enabled (default), members with credit packs can use their class credits to book this class instead of paying. This is the same balance shown as **Check-in Quota** on a member's Account tab.
 - When disabled, the "Use Class Credits" option will not appear for this class, even if the member has credits available.
 - Useful for premium or special classes that should always require payment.
 
@@ -315,13 +315,15 @@ Members can cancel their class bookings up until the **cancellation window** clo
 
 ## Using Class Credits
 
-Members who have purchased a credit pack (see [Membership Levels](../membership/membership-levels)) can use their credits to book classes at no cost.
+Members who have purchased a credit pack (see [Class Credits & Packs](../membership/class-credits.md)) can use their credits to book classes at no cost.
 
 - When viewing a class, members with available credits will see a **"Use Class Credits"** checkbox.
 - Checking the box hides the payment fields and changes the button to **"Book"**.
 - Whether credits are deducted at booking time or check-in time depends on the **Consume Credits On** setting in Portal Settings.
-- If credits were consumed at booking and the member cancels within the cancellation window, their credits are restored.
-- Owners can disable credit usage for specific classes using the **Allow Class Credits** toggle in the class settings.
+- Credits come out of the member's pack that expires soonest, so they never lose credits they could have used.
+- If credits were consumed at booking and the member cancels within the cancellation window, they are returned to the pack they came from. A credit whose pack has since expired comes back expired â€” it isn't usable again.
+- Members whose credits have all lapsed see **"Your class credits have expired"** rather than a "not enough credits" message.
+- Owners can disable credit usage for specific classes using the **Allow class credits (quota)** toggle in the class settings.
 - Owners and trainers can also consume a member's credits when manually booking from the **Class Registrations** page.
 
 ---

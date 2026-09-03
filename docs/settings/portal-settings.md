@@ -222,7 +222,7 @@ The number of hours before a class, event, or resource booking that a member is 
 
 Controls when class credits are deducted from a member's balance:
 - **Check-in** (default) — Credits are consumed when the member checks in at the kiosk or is marked as attended.
-- **Booking** — Credits are consumed immediately when the member books the class. If they cancel (within the cancellation window), credits are restored.
+- **Booking** — Credits are consumed immediately when the member books the class. If they cancel (within the cancellation window), credits are returned to the pack they were drawn from. See [Class Credits & Packs](../membership/class-credits.md).
 
 ### Hide Self-Cancellation
 
