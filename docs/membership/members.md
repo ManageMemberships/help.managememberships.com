@@ -110,6 +110,17 @@ Next to the Active/Inactive status at the top of the member details page, a badg
 - **When to use it** — handy when a member was set up with the wrong billing type, e.g. imported as a cash member but actually paying by card
 - Requires the *Manage Memberships* permission
 
+#### 🎓 Staff Access Toggle
+Also on the Overview tab, a **Staff Access** toggle next to Active lets you promote a member to staff or convert a staff member back to a regular member — without deleting the account.
+
+- **Promote to staff** — sets the account's role to Staff and applies the default Staff permission set, the same defaults used when adding a new staff member from the [Staff](/docs/settings/staff) page
+- **Demote to member** — clears the account's permissions immediately and converts the role back to Member
+- **Membership is untouched either way** — the member's membership level and subscription are never changed by this toggle, since staff status is independent of billing
+- **Member ↔ Staff only** — this toggle only switches between Member and Staff. To change someone to Manager or Accountant, or to fine-tune their permissions, use the [Staff](/docs/settings/staff) page's Edit action instead
+- **Confirmation required** — a modal confirms the change before it's applied
+- **Not available for your own account** — you can't change your own staff status from here
+- Requires the *Manage Staff* permission
+
 #### 🏆 Award Points
 The **Award Points** section on the Overview tab lets staff manually award points and review the member's point history.
 

@@ -18,6 +18,10 @@ You can invite additional users to help manage your business through the **Staff
 
 You can assign or change roles by editing a staff member from the Staff list.
 
+:::info Promoting a member to staff
+To turn an existing **member** into staff, or convert staff back to a member, use the **Staff Access** toggle on that person's [Member Details](/docs/membership/members) page instead — that conversion isn't done from this Staff list. Once someone is staff, you can change them between Manager, Staff, and Accountant here as usual.
+:::
+
 ---
 
 ## 🔒 Permissions
