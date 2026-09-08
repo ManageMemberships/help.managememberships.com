@@ -102,7 +102,10 @@ If your resource has multiple pricing tiers (e.g., "Single Rider - $100" and "Do
 ## 💸 Membership Controls
 
 #### **Membership Levels**
-- Only users with these membership levels will be able to see or book the resource.
+- Only members in these levels will be able to see or book the resource.
+- **Leave this empty to make the resource open to every member.** An empty list means "no membership restriction", not "no one allowed" — so if you want to restrict a resource, you have to select at least one level. Selecting none is the same as selecting all.
+- Members whose level is not on the list do not see the resource in the portal listing at all, rather than seeing it and being refused at booking.
+- This restriction applies to members only. Guests browsing the public resource page are never filtered by it — see the **Guest Viewing** section below.
 
 #### **Membership Discounts**
 - Offer discounts to members of specific levels.
@@ -148,7 +151,7 @@ When editing a resource, a **Public View Link** is displayed showing the direct 
 Resource pages are publicly accessible — visitors do not need to be signed in to view available dates, times, and pricing. This works the same way as classes, packages, and events.
 
 - **Guests** see all available timeslots but are prompted to **sign in or create an account** to book.
-- **Members** see timeslots with direct booking links, filtered by their membership level access.
+- **Members** see timeslots with direct booking links, filtered by their membership level access — unless the resource's **Membership Levels** list is empty, in which case every member sees it.
 
 This makes it easy to share resource links on social media, your website, or in marketing emails without requiring login first.
 
