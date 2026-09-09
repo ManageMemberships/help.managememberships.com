@@ -21,9 +21,12 @@ Toggle the trigger on or off. Set to **Active** to enable or **Inactive** to pau
 ### Trigger Type
 Choose when the trigger fires:
 - **Scheduled** - Runs on a recurring schedule
+- **On Successful Door Scan** - Fires when a member is granted door access
 - **On Invalid Door Scan** - Fires when a member scans a door but is denied access
 - **On Invalid Kiosk Check-in** - Fires when a kiosk or quick-kiosk check-in is rejected
 - **On First Class Booking** - Fires when a member books their very first class ever
+- **On Class Check-in** - Fires when a member checks in to a class
+- **On Merchandise Purchase** - Fires when a member buys a product
 
 #### Invalid Kiosk Check-in
 
@@ -46,13 +49,40 @@ When using a **Scheduled** trigger type, choose how often it runs:
 - **Hourly**
 
 ### Cooldown (days)
-The minimum number of days that must pass before the same member can trigger this automation again. Prevents members from receiving duplicate messages.
+The minimum number of days that must pass before the same **member** can be messaged by this automation again. Prevents members from receiving duplicate messages.
 
-### Dedupe Scope
-Controls the deduplication window:
-- **Day** - One trigger per member per day
-- **Week** - One trigger per member per week
-- **Forever** - Each member can only be triggered once
+Applies to actions sent to the member (**Matched user** recipient). It does **not** apply to staff alerts — see [Staff alerts vs. member messages](#staff-alerts-vs-member-messages) below.
+
+### Sending limit
+Controls how often the same **member** can be messaged by this trigger:
+- **Every time** - No limit; the member is messaged on every occurrence
+- **Day** - At most once per member per day
+- **Week** - At most once per member per week
+- **Year** - At most once per member per year
+- **Forever** - Each member can only be messaged once
+
+Like Cooldown, this applies only to actions sent to the member.
+
+### Staff alert burst guard
+*Event triggers only.*
+
+Staff alerts (**Custom recipient** actions) are sent on **every** event — they are never limited by Cooldown or Sending limit. The burst guard is the one control over their volume: if the *same member* sets the same trigger off repeatedly, only one alert is sent per this many minutes.
+
+- **0** (default) - No guard. Every event produces an alert.
+- **10** - Default for newly created triggers. Collapses accidental double-scans while still alerting on every genuine visit.
+
+Set this if a single member can realistically fire the same event many times in a row — for example, someone repeatedly scanning a door they don't have access to. Real repeat visits are normally hours apart, so a short window rarely suppresses anything you wanted to see.
+
+### Staff alerts vs. member messages
+
+The two are throttled independently, which matters when a trigger does both:
+
+| | Cooldown / Sending limit | Staff alert burst guard |
+|---|---|---|
+| **Matched user** (the member) | Applies | Does not apply |
+| **Custom recipient** (staff) | Does not apply | Applies |
+
+A trigger set to "At most once a week" that also texts an owner will still text that owner on **every** event. The weekly limit only governs what the member receives.
 
 ---
 

@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Class Registrations
 
-The **Class Reports** page allows owners and administrators to view class bookings, see which members are registered for each timeslot, and manually add bookings for users who did not register themselves.
+The **Class Reports** page allows owners and administrators to view class bookings, see which members are registered for each timeslot, manually add bookings for users who did not register themselves, and keep a staff note against any individual session.
 
 ---
 
@@ -120,6 +120,29 @@ Click the **Export CSV** button to download the current roster as a spreadsheet.
 
 ---
 
+## **Staff Notes**
+
+Each session can carry a private note — who actually taught it, why attendance was light, an incident worth remembering, anything the next person opening the roster should know. The note belongs to that one date, not to the class as a whole.
+
+1. Select the class, then select the timeslot.
+2. Click **Add/Edit Note**.
+3. Type the note and click **Save Note**.
+
+Once saved, the note appears under the class date whenever anyone opens that session, and the **Add/Edit Note** button shows a blue dot so you can tell at a glance that a note exists.
+
+A few things worth knowing:
+
+- **One note per session.** Saving again replaces what was there — it does not append. If you want to keep the earlier text, copy it before you overwrite it.
+- **Closing discards an unsaved draft.** Text you typed but didn't save is gone when you reopen the note.
+- **The note follows a moved session.** If you move a session to a new date or time, its note moves with it. If the destination already had its own note, the two are combined rather than one replacing the other, separated by a horizontal rule.
+- **Cancelling a session leaves the note in place**, so the record of why it was cancelled stays with the date.
+
+:::note
+Notes are visible to everyone who can open Class Registrations, including staff accounts. Saving or editing one requires the same access level as cancelling or moving a session, so staff without membership-management rights can read notes but not change them. Keep that in mind before recording anything sensitive about a member.
+:::
+
+---
+
 ## **Cancelling a Session**
 
 When a single session can't run — weather, a sick coach, a court double-booked — you can cancel that one date without touching the rest of the schedule.
@@ -153,6 +176,7 @@ The Class Reports page is designed to give you full control over your class sche
 - Add last-minute or offline bookings with the Manual Registration tool.
 - Deduct bookings from a member’s **check-in quota** when applicable.
 - Export rosters to CSV.
+- Leave a staff note on a single session that travels with it if the session moves.
 - Cancel a single session and automatically return members' class credits.
 
 This ensures that all class data is consistent and up to date, whether members register online, through your staff, or using their prepaid check-ins.
