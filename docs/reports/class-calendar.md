@@ -28,6 +28,38 @@ The **Class Calendar** report allows owners and administrators to see upcoming c
 
 ---
 
+## **Resources View**
+
+If your business has bookable resources (lanes, rooms, courts, equipment, etc.), you can switch the calendar to show those instead of classes.
+
+1. **Switch to Resources**
+   - Use the **"Resources (Day)"** or **"Resources (Week)"** buttons in the calendar toolbar, next to Month/Week/Day/List.
+   - Each resource appears as its own row, with bookings and blocked-off periods shown along that row — so you can see what's booked or unavailable at a glance.
+
+2. **Mark a Resource Unavailable**
+   - Click and drag across an empty time slot on a resource's row to block it off.
+   - A confirmation box shows the resource and the time range you selected, with an optional **Reason** field (e.g., "Maintenance", "Private event").
+   - Click **Mark Unavailable** to confirm. The blocked-off period then appears on the calendar in red.
+   - **Overlap warning:** if the time you selected overlaps an existing booking on that resource, the confirmation box warns you before you continue — it does not stop you, so you can still mark it unavailable if you mean to.
+
+3. **Remove an Unavailable Block**
+   - Click an existing blocked-off (red) period, then confirm to remove it. The slot becomes bookable again immediately.
+
+4. **View a Booking (Read-Only)**
+   - Clicking an existing booking (not a blocked-off period) shows who booked it: **Name**, **Phone**, and **Membership Level**. This is a quick look-up only — it doesn't let you edit or cancel the booking from here.
+
+---
+
+:::info Resources view vs. the Resources page
+This calendar view is for seeing and blocking off time at a glance. To add a new resource, or change its hours, pricing, or membership rules, use the [Resources](/docs/calendar/resources) page instead — marking a slot unavailable here has the same effect as adding an entry under that page's **Unavailable Dates** field.
+:::
+
+:::info Permission required
+Creating or removing a blocked-off period requires the **Manage Resources** permission. Staff with only **View Class Reports** can still see the Resources view and any existing blocked-off periods, but selecting a slot or clicking a block to change it shows a permission message instead. See [Staff](/docs/settings/staff) to manage permissions.
+:::
+
+---
+
 ## **Viewing a Class Roster**
 
 1. **Click on an Event**
