@@ -206,6 +206,12 @@ Membership levels define the structure of your offerings, including pricing, bil
 #### **Publicly Visible**
 - Controls whether this membership level appears on the public registration page.
 
+#### **Single Use**
+- When enabled, anyone who has ever held this membership level before — even if they later canceled, or their account was removed — cannot select it or be signed up for it again using the same email address.
+- Applies whether the member signs up themselves on the registration page or is added manually by staff.
+- Intended for one-time intro or promotional levels, so they can't be reused as a repeat discount.
+- ❗ This only recognizes someone by the email address they use. If they sign up again with a **different** email, there is no way to know it's the same person, so this will not catch that case.
+
 #### **Public Link**
 - If editing an existing membership, this will show the **registration link** users can use to sign up for it.
 
