@@ -347,6 +347,15 @@ Settings that affect how the calendar and scheduling features are displayed.
 
 When enabled, overlapping events on the calendar are shown side-by-side rather than stacked.
 
+#### Resource Booking Buffer
+
+Turnaround time required between two bookings on the same resource, in minutes. A new booking can't start within this many minutes of an existing one ending, or end within this many minutes of one starting.
+
+- **Default is 0**, which allows back-to-back bookings — the previous behavior. Nothing changes for your portal until you set this.
+- Use it when a resource needs time between sessions: a cleandown, a reset, or a walk from one bay to the next.
+- This is the portal-wide default. An individual resource can override it — including setting its own buffer to **0** to keep running back-to-back while the rest of your resources have a gap. See [Resources → Booking Buffer Between Sessions](../calendar/resources.md#booking-buffer).
+- The buffer applies everywhere a resource is booked — members booking themselves, staff booking at the register, and rescheduling an existing booking. Packages that bundle several resources are the one exception.
+
 #### Facility Closures
 
 Block specific dates or recurring days on the calendar system-wide (such as holidays or planned outages).

@@ -149,6 +149,10 @@ Same authentication (`X-System-Key`) as the classes completions endpoint. Respon
 
 Each package can have one or more **resources** attached, with a duration for each. When a booking is created, those resources are automatically blocked for the duration so they can't be double-booked.
 
+:::note Booking buffer
+Package bookings block the resource for their own duration only. The [Booking Buffer](./resources.md#booking-buffer) configured on a resource is **not** applied to package bookings, so a package can sit directly against another booking on the same resource even when that resource is set to require a gap.
+:::
+
 Add resources in the **Resources repeater** on the package form. Each entry needs:
 - **Resource** — select from your configured resources.
 - **Duration Minutes** — how long that resource is reserved as part of this package.

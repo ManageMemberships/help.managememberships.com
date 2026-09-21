@@ -61,6 +61,12 @@ Click **"New Resource"** to open the resource editor panel.
 - For example, setting this to 2 means members cannot book a slot starting less than 2 hours from now.
 - Set to 0 (default) for no restriction.
 
+#### **Booking Buffer (Minutes)**
+- Turnaround time required between two bookings on **this** resource.
+- **Leave blank to use the portal-wide default** set in Portal Settings.
+- Enter **0** to allow back-to-back bookings on this resource even when the portal default is higher.
+- See [Booking Buffer Between Sessions](#booking-buffer) below for how it behaves.
+
 ---
 
 ## 🏷️ Booking Options
@@ -92,13 +98,63 @@ If your resource has multiple pricing tiers (e.g., "Single Rider - $100" and "Do
 
 ---
 
-## ⏱️ Booking Buffer Between Sessions
+## ⏱️ Booking Buffer Between Sessions {#booking-buffer}
 
-Every resource enforces a fixed **10-minute buffer** between bookings — a new booking can't start within 10 minutes of an existing one ending, or end within 10 minutes of one starting, on the same resource.
+A resource can require a gap between bookings — a new booking then can't start within that many minutes of an existing one ending, or end within that many minutes of one starting, on the same resource.
 
-- This applies when staff book a resource for a walk-in or over the phone at an arbitrary time — not the member self-serve booking grid.
-- The buffer is not configurable. It applies to every resource the same way, and it's separate from **Minimum Booking Lead Time** above — lead time controls how soon before now a booking can start, the buffer controls spacing between two bookings.
-- If a booking is attempted too close to an existing one, it's rejected so staff can pick a different time.
+Use it where a resource needs turnaround time between sessions: a cleandown, a reset, or a walk from one bay to the next.
+
+### Where it's set
+
+The buffer is configured in two places, and the resource always wins:
+
+| Setting | Where | What it does |
+|---|---|---|
+| **Resource Booking Buffer** | Portal Settings → Store & Scheduling → Calendar & Display Settings | The default for every resource in your portal. |
+| **Booking Buffer (Minutes)** | On the individual resource | Overrides the portal default for that one resource. Blank = use the portal default. |
+
+**The default for both is 0 — no buffer, back-to-back bookings allowed.** This is how resources behaved before the setting existed, so nothing changes for your portal until you set it.
+
+### Mixing buffered and back-to-back resources
+
+Because a resource's own buffer can be set to **0**, the two settings together cover a mixed facility. For example, with a portal default of **15**:
+
+- Massage rooms and treatment bays (blank) → inherit the 15-minute gap for cleandown.
+- Squash courts (set to **0**) → keep running back-to-back on the hour.
+- A piece of equipment needing a longer reset (set to **30**) → gets 30 minutes.
+
+:::tip Blank and 0 are different
+**Blank** means "use the portal default." **0** means "no buffer on this resource," even when the portal default is higher. If you want a resource to run back-to-back on a portal that otherwise enforces a gap, enter 0 — don't clear the field.
+:::
+
+### What it applies to
+
+The buffer applies everywhere a resource is booked:
+
+- **Members booking themselves** — a slot that falls inside the buffer is shown as unavailable on the resource's booking grid, the same as a slot that's already taken.
+- **Staff booking at an arbitrary time** — a walk-in, over the phone, or at the register. If a booking is attempted too close to an existing one, it's rejected so staff can pick a different time.
+- **Rescheduling an existing booking** — a move into another booking's buffer is rejected the same way.
+
+It's separate from **Minimum Booking Lead Time** above: lead time controls how soon before now a booking can start, the buffer controls spacing between two bookings.
+
+:::note Package bookings
+Packages that bundle several resources together use their own availability check and do not apply the buffer yet.
+:::
+
+#### Example
+
+A resource with a 10-minute buffer and an existing 10:00–11:00 booking:
+
+| Requested time | Result |
+|---|---|
+| 11:00 – 12:00 | ❌ Unavailable — starts the moment the previous booking ends |
+| 11:05 – 12:05 | ❌ Unavailable — inside the 10-minute buffer |
+| 11:10 – 12:10 | ✅ Available — the next real opening |
+| 09:50 – 10:00 | ❌ Unavailable — ends the moment the next booking starts |
+
+Members see these as greyed-out slots on the booking grid; staff booking at the register get a rejection message.
+
+A buffer can also reach across midnight — a booking ending at 11:59 PM with a 10-minute buffer closes a 12:00 AM slot the following day.
 
 ---
 
