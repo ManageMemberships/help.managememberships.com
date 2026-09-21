@@ -92,6 +92,16 @@ If your resource has multiple pricing tiers (e.g., "Single Rider - $100" and "Do
 
 ---
 
+## ⏱️ Booking Buffer Between Sessions
+
+Every resource enforces a fixed **10-minute buffer** between bookings — a new booking can't start within 10 minutes of an existing one ending, or end within 10 minutes of one starting, on the same resource.
+
+- This applies when staff book a resource for a walk-in or over the phone at an arbitrary time — not the member self-serve booking grid.
+- The buffer is not configurable. It applies to every resource the same way, and it's separate from **Minimum Booking Lead Time** above — lead time controls how soon before now a booking can start, the buffer controls spacing between two bookings.
+- If a booking is attempted too close to an existing one, it's rejected so staff can pick a different time.
+
+---
+
 ## 👤 Trainer & Restrictions
 
 #### **Trainers**
