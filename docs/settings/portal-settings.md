@@ -355,6 +355,7 @@ Turnaround time required between two bookings on the same resource, in minutes. 
 - Use it when a resource needs time between sessions: a cleandown, a reset, or a walk from one bay to the next.
 - This is the portal-wide default. An individual resource can override it — including setting its own buffer to **0** to keep running back-to-back while the rest of your resources have a gap. See [Resources → Booking Buffer Between Sessions](../calendar/resources.md#booking-buffer).
 - The buffer applies everywhere a resource is booked — members booking themselves, staff booking at the register, and rescheduling an existing booking. Packages that bundle several resources are the one exception.
+- On a resource using [Let Members Pick Any Start Time](../calendar/resources.md#any-start-time), the buffer is what decides when the next person may start — book 11:10 on a 60-minute resource with a 10-minute buffer and the next opening is 12:20.
 
 #### Facility Closures
 
