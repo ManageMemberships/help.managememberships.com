@@ -61,6 +61,22 @@ Click **"New Resource"** to open the resource editor panel.
 - For example, setting this to 2 means members cannot book a slot starting less than 2 hours from now.
 - Set to 0 (default) for no restriction.
 
+#### **Let Members Pick Any Start Time**
+- **Off (default)** — members book from the fixed slot grid built from your operating hours and Duration.
+- **On** — members choose their own start time. The page shows the free windows for the day instead of slots, so someone walking in at 11:05 can start at 11:10 rather than waiting for the top of the hour.
+- Best for resources people use on arrival: saunas, cold plunges, massage chairs, ranges, simulators.
+- See [Letting Members Pick Any Start Time](#any-start-time) below.
+
+#### **Booking Buffer (Minutes)**
+- Turnaround time required between two bookings on **this** resource.
+- **Leave blank to use the portal-wide default** set in Portal Settings.
+- Enter **0** to allow back-to-back bookings on this resource even when the portal default is higher.
+- See [Booking Buffer Between Sessions](#booking-buffer) below for how it behaves.
+
+:::tip Duration is the session length, the buffer is the gap
+**Duration** controls how long a booking lasts. **Booking Buffer** only controls how soon the *next* booking may start. If you want people booking in 15-minute sessions, set Duration to 15 — changing the buffer will never shorten a session.
+:::
+
 ---
 
 ## 🏷️ Booking Options
@@ -89,6 +105,110 @@ If your resource has multiple pricing tiers (e.g., "Single Rider - $100" and "Do
 
 #### **Unavailable Dates**
 - Define exceptions when the resource is not available, with a reason and time range.
+
+---
+
+## 🕒 Letting Members Pick Any Start Time {#any-start-time}
+
+By default a resource is booked from a fixed grid: if it opens at 9:00 AM with a 60-minute Duration, members are offered 9:00, 10:00, 11:00 and so on. That works for things people schedule in advance, but not for a sauna or a plunge someone wants to use *now* — arriving at 11:05, they'd have to wait until noon.
+
+Turn on **Let Members Pick Any Start Time** on the resource and the grid is replaced by:
+
+- a list of the **free windows** for that day, and
+- a **time field** where the member types the start time they want.
+
+### What the member sees
+
+For a resource with 60-minute sessions, a 10-minute buffer, and an existing 10:00–11:00 booking:
+
+```
+Available windows — start any time inside one:
+  11:10 AM – 5:00 PM   (last start 4:00 PM)
+
+  [ 11:10 ]   Book 60 minutes
+```
+
+The window opens at **11:10** because the existing booking ends at 11:00 and the buffer is 10 minutes. **Last start** is the latest minute a full session still fits before the resource closes.
+
+### What happens when someone books
+
+Each booking removes its own span, plus the buffer on each side, from the day. Everything left over stays bookable.
+
+If that member books 11:10, their session runs to 12:10, and with a 10-minute buffer the next person can start at **12:20**. Reload the page and it now reads:
+
+```
+Available windows:
+  12:20 PM – 5:00 PM
+```
+
+So the available times move through the day as people book, rather than resetting to the hour.
+
+### Notes
+
+- **Session length is still Duration.** Members choose *when* to start, not how long to stay.
+- **Everything else still applies** — operating hours, closed dates, unavailable dates, trainer availability and minimum booking lead time all work exactly as they do on the grid.
+- **Windows too short to hold a session are not offered.** A 50-minute gap on a resource with 60-minute sessions simply doesn't appear.
+- **Existing resources are unaffected.** The setting is off everywhere until you turn it on.
+
+---
+
+## ⏱️ Booking Buffer Between Sessions {#booking-buffer}
+
+A resource can require a gap between bookings — a new booking then can't start within that many minutes of an existing one ending, or end within that many minutes of one starting, on the same resource.
+
+Use it where a resource needs turnaround time between sessions: a cleandown, a reset, or a walk from one bay to the next.
+
+### Where it's set
+
+The buffer is configured in two places, and the resource always wins:
+
+| Setting | Where | What it does |
+|---|---|---|
+| **Resource Booking Buffer** | Portal Settings → Store & Scheduling → Calendar & Display Settings | The default for every resource in your portal. |
+| **Booking Buffer (Minutes)** | On the individual resource | Overrides the portal default for that one resource. Blank = use the portal default. |
+
+**The default for both is 0 — no buffer, back-to-back bookings allowed.** This is how resources behaved before the setting existed, so nothing changes for your portal until you set it.
+
+### Mixing buffered and back-to-back resources
+
+Because a resource's own buffer can be set to **0**, the two settings together cover a mixed facility. For example, with a portal default of **15**:
+
+- Massage rooms and treatment bays (blank) → inherit the 15-minute gap for cleandown.
+- Squash courts (set to **0**) → keep running back-to-back on the hour.
+- A piece of equipment needing a longer reset (set to **30**) → gets 30 minutes.
+
+:::tip Blank and 0 are different
+**Blank** means "use the portal default." **0** means "no buffer on this resource," even when the portal default is higher. If you want a resource to run back-to-back on a portal that otherwise enforces a gap, enter 0 — don't clear the field.
+:::
+
+### What it applies to
+
+The buffer applies everywhere a resource is booked:
+
+- **Members booking themselves** — a slot that falls inside the buffer is shown as unavailable on the resource's booking grid, the same as a slot that's already taken. On a buffered resource the grid also offers the **next real opening**: after a 10:00–11:00 booking with a 15-minute buffer you'll see the 11:00 slot struck out and **11:15** offered beneath it, so the buffer costs fifteen minutes rather than the whole hour. (On resources using [any start time](#any-start-time), there's no grid to work around in the first place.)
+- **Staff booking at an arbitrary time** — a walk-in, over the phone, or at the register. If a booking is attempted too close to an existing one, it's rejected so staff can pick a different time.
+- **Rescheduling an existing booking** — a move into another booking's buffer is rejected the same way.
+
+It's separate from **Minimum Booking Lead Time** above: lead time controls how soon before now a booking can start, the buffer controls spacing between two bookings.
+
+:::note Package bookings
+Packages that bundle several resources together use their own availability check and do not apply the buffer yet.
+:::
+
+#### Example
+
+A resource with a 10-minute buffer and an existing 10:00–11:00 booking:
+
+| Requested time | Result |
+|---|---|
+| 11:00 – 12:00 | ❌ Unavailable — starts the moment the previous booking ends |
+| 11:05 – 12:05 | ❌ Unavailable — inside the 10-minute buffer |
+| 11:10 – 12:10 | ✅ Available — the next real opening |
+| 09:50 – 10:00 | ❌ Unavailable — ends the moment the next booking starts |
+
+Members see these as greyed-out slots on the booking grid; staff booking at the register get a rejection message.
+
+A buffer can also reach across midnight — a booking ending at 11:59 PM with a 10-minute buffer closes a 12:00 AM slot the following day.
 
 ---
 
