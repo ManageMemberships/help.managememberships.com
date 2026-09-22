@@ -421,7 +421,8 @@ Delivery failures (e.g., invalid numbers, carrier blocks) also automatically opt
 ### 🧾 Invoice System
 - **Generate Invoices** - Create custom billing statements
 - **Payment Processing** - Accept online payments
-- **Manual Payments** - Record cash/check transactions
+- **Mark Paid** - Mark a pending invoice as fully paid in one click, no charge attempted
+- **Record Payment** - Log a partial cash payment against an invoice's remaining balance; the invoice shows the updated balance still owed until it's paid in full
 - **Refund Processing** - Handle payment reversals
 
 ### 💳 Payment Methods

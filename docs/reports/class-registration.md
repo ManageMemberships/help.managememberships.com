@@ -167,6 +167,29 @@ Each booking is cancelled independently. If one fails, the rest still go through
 
 ---
 
+## **Swapping the Trainer for a Session**
+
+If your regular trainer can't make one date of a recurring class, you can substitute someone else for that date only — the rest of the series keeps its regular trainer.
+
+1. Select the class, then select the timeslot for the date you're covering.
+2. Click **Swap trainer**, next to **Move this session**.
+3. Choose the substitute from the dropdown, or leave it blank to remove an existing swap and go back to the regular trainer.
+4. Save.
+
+What happens:
+
+- Only that one date changes. Every other occurrence of the class keeps its regular trainer.
+- The substitute is credited for that one session in [Trainer Reports](./trainer-reports), and the regular trainer's credit for that session is removed.
+- **No one is notified.** The swap doesn't email or otherwise alert either trainer — let them know yourself if they need to hear it from you.
+
+The **Swap trainer** button shows who's currently assigned to that date, so you can tell at a glance whether a session has already been covered.
+
+:::note
+A swap only updates bookings that already exist for that date. If a member registers for that session afterward, they're assigned the substitute automatically, the same as if the swap had always been there.
+:::
+
+---
+
 ## **Summary**
 
 The Class Reports page is designed to give you full control over your class schedules and attendance records. You can:
@@ -178,5 +201,6 @@ The Class Reports page is designed to give you full control over your class sche
 - Export rosters to CSV.
 - Leave a staff note on a single session that travels with it if the session moves.
 - Cancel a single session and automatically return members' class credits.
+- Swap the trainer for a single session without affecting the rest of the series.
 
 This ensures that all class data is consistent and up to date, whether members register online, through your staff, or using their prepaid check-ins.

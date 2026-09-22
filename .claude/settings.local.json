@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(textutil:*)",
+      "Bash(grep -l \"agreement\" /Users/jklem/projects/manage-memberships/app/Http/Controllers/*.php)",
+      "Bash(npm start:*)"
+    ]
+  }
+}
