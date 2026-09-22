@@ -205,6 +205,7 @@ Membership levels define the structure of your offerings, including pricing, bil
 
 #### **Publicly Visible**
 - Controls whether this membership level appears on the public registration page.
+- Turning this **off** also removes the level as a bundle option everywhere it is used. If another plan offers it under **Allow Bundles**, you'll get a warning naming those plans so you can update them — see [Allow Bundles](#allow-bundles) below.
 
 #### **Public Link**
 - If editing an existing membership, this will show the **registration link** users can use to sign up for it.
@@ -231,6 +232,10 @@ Membership levels define the structure of your offerings, including pricing, bil
 - Useful when members want to purchase **add-ons** (e.g., `Monthly Membership + Coaching`).
 - If enabled:
   - A multi-select appears to choose which other memberships can be bundled.
+  - At least one of the levels you pick must be **Publicly Visible**. Members are only ever offered publicly visible levels, so a bundle made up entirely of hidden ones would show them an empty dropdown.
+  - Levels that are not publicly visible still appear in the picker, marked `(not publicly visible — members cannot see this)`. They're kept so an existing selection isn't silently dropped, but they don't count toward the requirement above.
+
+> ⚠️ **If you later hide every level a bundle points at**, that plan's bundle section simply stops appearing on the registration page. Members can still sign up for the plan itself — they just won't be offered the add-ons. Re-enable **Publicly Visible** on one of the bundled levels, or edit the plan to pick a visible one, to bring it back.
 
 ---
 

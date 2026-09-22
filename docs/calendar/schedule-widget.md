@@ -20,8 +20,16 @@ Go to **Schedule → Schedule Widget** in the owner navigation. The builder lets
 |--------|-------------|
 | **Calendar view** | **List** (default) — shows upcoming classes in a clean list. **Week** — a 7-day time grid. **Month** — a full month grid. |
 | **Show on widget** | Choose which content types appear: **Classes** and/or **Events**. Classes is on by default. |
-| **Accent color** | The color used for buttons and event highlights. Defaults to blue (`#2563eb`). Pick any color to match your brand. |
+| **Accent color** | Colors the events on the calendar, the navigation buttons, and the Book button. Defaults to blue (`#2563eb`). Pick any color to match your brand. |
 | **Widget height** | Height of the iframe in pixels (300–1200 px). Adjust until the preview looks right for your page layout. |
+
+---
+
+:::note Styling the widget from your own site
+The widget loads inside an iframe, which means your website's stylesheet can't reach the calendar inside it — you can style the iframe itself (its size, border, or the space around it) but not the events, text, or the pop-up. Everything inside is controlled by the builder options above and the URL parameters at the bottom of this page.
+
+If you need a color the builder doesn't cover, tell us what you're trying to match and we'll look at adding it.
+:::
 
 ---
 
