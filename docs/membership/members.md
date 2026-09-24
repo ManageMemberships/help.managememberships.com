@@ -84,6 +84,10 @@ Use combination filters to create targeted member lists. For example: "Payment F
 | 🚫 **Mark as Inactive** | Suspend accounts (non-destructive) | Temporary deactivation |
 | 📥 **Export Contact Info (CSV)** | Download contact details for the selected members | Mailing lists, class rosters, offline outreach |
 
+:::tip Voiding pending invoices when marking members inactive
+If any of the selected members have pending invoices, **Mark as Inactive** will also ask whether you want to void them. If you don't, the system keeps trying to collect on those invoices even though the members are now inactive. A partially paid invoice is never voided by this option, and it only appears for staff with the *Manage Memberships* permission.
+:::
+
 ![Bulk Actions Menu](/img/bulk1.png)
 
 ---
@@ -100,6 +104,15 @@ Use combination filters to create targeted member lists. For example: "Payment F
 
 #### ⚙️ Comprehensive Edit Panel
 Access the full member management interface with organized sections:
+
+#### ⚡ Active / Inactive Toggle
+At the top of the member details page, the **Active** toggle marks the member active or inactive.
+
+- **Turning a member Active** — takes effect immediately
+- **Turning a member Inactive, with pending invoices** — you'll be asked whether to also void them. If you don't, the system keeps trying to collect on those invoices even though the member is now inactive
+- **Turning a member Inactive, with no pending invoices** — takes effect immediately, no prompt
+- A partially paid invoice is never voided by this option
+- The option to void invoices only appears for staff with the *Manage Memberships* permission
 
 #### 💵 Cash / Card Billing Toggle
 Next to the Active/Inactive status at the top of the member details page, a badge shows the member's billing type: **Cash Member** or **Card Billing**.
@@ -177,6 +190,8 @@ Click **Cancel** on the subscription you want to end. You'll be asked *how* it s
 
 You can also tick **Charge the cancellation penalty fee** with either option. The amount comes from the penalty settings on the member's membership level.
 
+If the subscription has pending invoices, you can also tick **Void pending invoices for this subscription**. If you don't, the system keeps trying to collect on those invoices even after the subscription is cancelled. This only appears when there's something to void, and only for staff with the *Manage Memberships* permission — and it only affects invoices tied to this specific subscription, so a member's other subscriptions are untouched. A partially paid invoice, or the cancellation penalty invoice this same cancellation may create, is never voided.
+
 :::tip Which one should I pick?
 **At end of paid period** is almost always the right choice, and it's selected by default. It's what a member expects when they say "cancel" — they've paid through a date, so they keep access until it. Ending immediately takes away time the member already paid for, so save it for situations where you genuinely need to cut access off today.
 :::
@@ -189,6 +204,10 @@ If the member *has* paid beyond today, close the box, use **Update Next Invoice*
 
 :::warning Cancel vs. Pause
 **Cancelling** ends the subscription for good — you'd need to create a new one to bring the member back. **Pausing** is a temporary hold you can lift at any time. If a member is coming back after a few weeks away, pause them instead.
+:::
+
+:::tip Quick End button
+Each subscription row also has a quick **End** button that cancels immediately without opening the popup above. If that subscription has pending invoices, clicking it now asks whether to void them first, the same way; otherwise it still cancels immediately with no prompt, just as before.
 :::
 
 ### 📅 Updating Billing Dates & Pausing Subscriptions
@@ -423,6 +442,7 @@ Delivery failures (e.g., invalid numbers, carrier blocks) also automatically opt
 - **Payment Processing** - Accept online payments
 - **Mark Paid** - Mark a pending invoice as fully paid in one click, no charge attempted
 - **Record Payment** - Log a partial cash payment against an invoice's remaining balance; the invoice shows the updated balance still owed until it's paid in full
+- **Void** - Stop collection on a pending invoice; it's marked "Voided" and the system no longer tries to collect it. You can void one directly, or choose to void them when marking a member Inactive or cancelling a subscription (see above)
 - **Refund Processing** - Handle payment reversals
 
 ### 💳 Payment Methods
