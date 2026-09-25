@@ -42,11 +42,25 @@ Changes take effect immediately after you click **Save**. The dashboard cache is
 | Open Deals by Stage | Hidden | CRM permission, non-free plan |
 | Conversions by Month | Hidden | CRM permission, non-free plan |
 | Avg Days to Convert | Hidden | CRM permission, non-free plan |
+| Collected MRR | Hidden | Financial permission, non-free plan |
 | Average LTV | Hidden | Financial permission |
 | At Risk Customers | Hidden | Members permission |
 | Leaderboard | Visible | None (always accessible) |
 
 Widgets marked **Hidden** by default are opt-in — they won't appear until you explicitly enable them. This keeps the dashboard focused for most users while making advanced reporting available to those who want it.
+
+---
+
+## Collected MRR
+
+Shows your Monthly Recurring Revenue (MRR) due this billing period, from monthly-recurring memberships only — annual, quarterly, semi-annual, and weekly memberships aren't included. A pie chart breaks that total into what's already been collected this period and what's still outstanding.
+
+- "This billing period" is the current calendar month to date.
+- Collected reflects net revenue actually received this period from monthly-recurring members, with any refunds already netted out.
+- Outstanding is the remaining balance still expected from those same monthly-recurring members before the total is fully collected. It's never shown as a negative number.
+- The MRR total and the collected figure are drawn from slightly different underlying data, so they can occasionally not add up exactly — for example, right after a member changes plans mid-period. Small mismatches like this are expected and not a sign of a data error.
+
+Use it to gauge collection health at a glance during the month — a large outstanding slice partway through the billing period may be worth following up on with members whose payments have declined.
 
 ---
 
