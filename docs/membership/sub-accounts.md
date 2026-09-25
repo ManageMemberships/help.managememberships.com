@@ -31,6 +31,8 @@ You can dismiss the prompt without adding a subscription. It won't come back on 
 
 Click **Remove** next to a bundle member to take them off the account. If they have a linked subscription from the flow above, you'll be prompted to cancel it at the same time.
 
+If that subscription has pending invoices, the cancel prompt also offers to void them. If you don't, the system keeps trying to collect on those invoices even after the subscription is cancelled. Only staff with the *Manage Memberships* permission see this option.
+
 ---
 
 ## Sub-Accounts
