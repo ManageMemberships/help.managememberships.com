@@ -7,6 +7,13 @@ sidebar_label: Sub-Accounts
 
 ManageMemberships supports two types of linked accounts: **Bundle Accounts** and **Sub-Accounts**.
 
+The practical difference for a parent is where they can check their family in:
+
+| | Kiosk | Parent's app |
+|---|---|---|
+| **Bundle account** | ✅ | ✅ |
+| **Sub-account** | ✅ | Only after you turn on **App Check-In** (below) |
+
 ---
 
 ## Bundle Accounts
@@ -40,6 +47,22 @@ Sub-accounts are child accounts **with their own login**. They have their own em
 - Added from the member detail page > Account tab > Sub-Accounts
 - Can link an existing user or create a new one
 - Each sub-account has its own class bookings, check-ins, and history
+
+---
+
+## Letting a Parent Check In a Sub-Account From the App
+
+A sub-account can always check in at the kiosk. It does **not** appear in the parent's app until you enable it, because the app only offers the people listed on the parent's bundle.
+
+This catches out gyms that have moved over from another system. Mindbody, for example, stores every child as its own separate client, so an import brings them in as sub-accounts — they work at the kiosk, and then a parent asks why their child isn't in the app.
+
+To fix it, go to the parent's member detail page > **Account** tab > **Sub-Accounts**, and click **Enable App Check-In** next to the child. The child then appears in the parent's app straight away, and the button is replaced by a green **App check-in on** label.
+
+**Nothing else about the child changes.** They keep their own login, their class bookings, their check-in history, their certificates and their achievements. The child is simply added to the parent's bundle as well, so the app can see them. Turning this on does not create a second membership or a second charge.
+
+:::tip Have a whole roster to convert?
+If an import left you with a lot of children as sub-accounts, contact support rather than clicking through them one at a time — there's a bulk tool that does the whole gym in one pass.
+:::
 
 ---
 
