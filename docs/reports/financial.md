@@ -8,8 +8,8 @@ You can view all incoming payments, fees, and net totals for your gym using the 
 
 ## Getting Started
 
-1. Select a **start date** and an **end date** using the date pickers at the top of the page.
-2. Once you choose both dates, the report will automatically load transactions between the selected range.
+1. When you open the report, it automatically loads transactions for the **current month** — from the 1st through today — so you don't have to pick a date range just to see this month's activity.
+2. To see a different period, change the **start date** and/or **end date** using the date pickers at the top of the page; the table reloads automatically once both dates are set.
 3. The system will automatically correct the date range if your start date is after the end date.
 
 ## Filtering Options
@@ -29,12 +29,21 @@ The report displays transactions in a table format:
 
 - **Date** - Transaction date in "MMM DD, YYYY" format
 - **User** - Member name who made the transaction
+- **Actions** - Quick links to cancel the member's subscription (see below)
 - **Description** - Transaction description or type
 - **Amount In** - Total amount charged to the customer
 - **Fee** - Processing or platform fees deducted
 - **Net Amount** - Your gym's final amount
 
 Alternating row colors (gray/white) improve readability for large transaction lists.
+
+### Cancel with Penalty / Cancel without Penalty
+
+For any transaction tied to a member's active subscription, the Actions column shows two links: **Cancel with penalty** and **Cancel without penalty**. This is a quick way to cancel a subscription for a member whose card keeps declining, without having to look them up separately first.
+
+Clicking either link asks you to confirm, then opens that member's own subscription page in a new tab. From there, you finish the cancellation the normal way — choosing to cancel immediately or at the end of their current billing period — exactly as if you had canceled from the member's page directly. Choosing "with penalty" or "without penalty" here just pre-selects that option for you on their page; nothing is canceled until you confirm it there.
+
+These links only appear for staff with permission to manage memberships, and only for a transaction whose subscription hasn't already been canceled.
 
 At the bottom of the table, you'll see totals for the selected date range:
 - **Amount In** - Sum of all incoming payments
