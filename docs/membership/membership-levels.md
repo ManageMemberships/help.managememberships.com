@@ -32,11 +32,7 @@ Use the **Active** filter at the top of the table to narrow results:
 
 ## ✏️ Editing a Membership Level
 
-Click the **edit icon** on any row to open a slide-over form where you can update:
-- Name
-- Price
-- Billing interval
-- Other fields described below
+Click the **edit icon** on any row to open a slide-over form with the same layout as creating one (see [How the form is organized](#how-the-form-is-organized) below). When you edit, any section that holds a setting this level already uses opens on its own, so nothing that's switched on stays hidden.
 
 ---
 
@@ -54,14 +50,30 @@ If the level is in use:
 
 Membership levels define the structure of your offerings, including pricing, billing frequency, trial logic, and bundling options. These configurations determine how members are billed and what options are available to them during sign-up or renewal.
 
+### How the form is organized
+
+Most levels only need a name, price, signup fee, billing interval, agreements and a description, so those sit in the **Basics** section, which is always open. Everything else is grouped into sections you can expand when you need them:
+
+| Section | What's in it |
+|---|---|
+| **Basics** (always open) | Name, Free Membership, Price, Signup Fee, Billing Interval, Is Recurring, Expiration Days, Associated Agreements, Publicly Visible, Description, Public Link |
+| **Pricing options** | Trial Membership, Max Billing Cycles, Additional Price Options |
+| **Family & bundles** | Multi-Member, Flat Rate Pricing, Allow Bundles (paid SaaS plans only) |
+| **Check-ins & credits** | Class credits, Additive Credits, Credits Never Expire, Advance Booking Limit, Single Use |
+| **Eligibility & approval** | Min/Max Age, Requires Approval |
+| **Expiration & renewal** | After Expiration Convert To, Annual Renewal, Months Penalty |
+| **Custom fields** | Extra signup questions for this level |
+
+- When you **create** a level, every section except Basics starts collapsed.
+- When you **edit** a level, a section opens on its own if the level uses anything in it.
+- A collapsed section still saves its settings. If one of its fields has a problem when you save, the section opens and scrolls to the error.
+
 ---
 
-### 🧾 Required Fields
+### 🧾 Basics
 
 #### **Name**
 - A unique name for this membership (e.g., `Monthly Adult`, `Quarterly Family`).
-
----
 
 #### **Free Membership**
 - Indicates this level is free.
@@ -71,42 +83,13 @@ Membership levels define the structure of your offerings, including pricing, bil
   - Billing interval defaults to monthly.
 - Free users (on the Free SaaS plan) are **required** to mark memberships as free.
 
----
-
-#### **Trial Membership**
-- Enables a trial period where the member is not billed immediately.
-- If checked, the following field appears:
-  - **Number of periods for free** – The number of days/weeks/months the member can use the membership for free before billing begins.
-
----
-
 #### **Price**
 - Numeric field that sets the base price of the membership.
 - Must be `$0` or `$1+`.
-- ❗ Once created, the price is **read-only** and cannot be changed.
-
----
+- You can change it later, but a new price **only applies to new signups**. Existing members keep billing at the rate they signed up at.
 
 #### **Signup Fee**
 - One-time fee charged in addition to the base price during initial signup.
-
----
-
-#### **Description**
-- Rich text description of the membership level. Shown to prospective members during registration.
-
----
-
-#### **Associated Agreements**
-- Specify which agreements must be signed for this membership level.  You will see a warning if there are no agreements.
-
----
-
-#### **Min/Max Age**
-- Optional fields to restrict who can purchase this membership.
-- Must have birthday collection enabled in portal settings to work.
-
----
 
 #### **Billing Interval**
 - How often this membership bills:
@@ -114,24 +97,38 @@ Membership levels define the structure of your offerings, including pricing, bil
 - ❗ Once created, this cannot be changed.
 - Only shown if the membership is not marked as free.
 
+#### **Is Recurring**
+- Indicates whether this membership auto-renews (i.e., subscription).
+- If disabled, you can set:
+  - **Expiration Days** – How long the membership lasts before expiring. Required for non-recurring levels unless credits never expire.
+
+#### **Associated Agreements**
+- Specify which agreements must be signed for this membership level. You will see a warning if there are no agreements.
+
+#### **Publicly Visible**
+- Controls whether this membership level appears on the public registration page.
+- Turning this **off** also removes the level as a bundle option everywhere it is used. If another plan offers it under **Allow Bundles**, you'll get a warning naming those plans so you can update them — see [Allow Bundles](#allow-bundles) below.
+
+#### **Description**
+- Rich text description of the membership level. Shown to prospective members during registration.
+
+#### **Public Link**
+- If editing an existing membership, this will show the **registration link** users can use to sign up for it.
+
 ---
+
+### 💲 Pricing options
+
+#### **Trial Membership**
+- Enables a trial period where the member is not billed immediately.
+- If checked, the following field appears:
+  - **Number of periods for free** – The number of days/weeks/months the member can use the membership for free before billing begins.
 
 #### **Max Billing Cycles**
 - Optional field that limits how many times the member is billed.
 - Example: if set to `6` on a $30/month plan, the member will be billed **$30 monthly for 6 months**, then the subscription will **automatically cancel**.
 - Useful for limited-term memberships without requiring manual cancellation.
-
----
-
-#### **Advance Booking Limit**
-- Optional field that limits how many classes a member on this level can book more than 7 days in advance per month.
-- Same-week bookings (within 7 days) are always unlimited.
-- Resets at the start of each calendar month.
-- Leave blank for no limit.
-
----
-
-### 💲 Additional Pricing Options
+- Only shown for recurring, paid levels.
 
 #### **Additional Price Options**
 - Use this section to offer **alternate billing intervals** with their own pricing (e.g., quarterly or yearly discounts).
@@ -143,84 +140,9 @@ Membership levels define the structure of your offerings, including pricing, bil
 
 ---
 
-### 🔁 Renewal & Expiration Options
+### 👨‍👩‍👧 Family & bundles
 
-#### **Annual Renewal**
-- If enabled, members must **re-sign waivers or agreements each year**.
-- This is useful for legal compliance in environments like gyms or schools.
-- When checked, an optional field appears:
-  - **Months Penalty** – Number of months to penalize if a user cancels early.
-
-#### **Is Recurring**
-- Indicates whether this membership auto-renews (i.e., subscription).
-- If disabled, you can set:
-  - **Expiration Days** – How long the membership lasts before expiring.
-
-#### **After Expiration, Convert Members To**
-- Optional: automatically move members to another membership level when their subscription on this level expires.
-- Great for trial-style offers — e.g., a **"10 days for $10"** level that automatically upgrades to **Unlimited** when it expires, or downgrading lapsed members to a Drop-In level.
-- Billing follows the **target** level:
-  - **Recurring with a price** – A new subscription is created and the member's card on file is charged that night. Recurring billing starts from the day of conversion (prorated on calendar-billing portals). **No signup fee is charged.** Failed charges follow the normal failed-invoice retry flow.
-  - **Free** – The member is moved and keeps an active (unbilled) membership. No charge.
-  - **Non-recurring (drop-in / day pass)** – The member is just moved. **No charge is ever made** — they pay per visit as usual.
-- Conversions run nightly. Members who already signed up for another membership on their own are skipped, and only recently expired memberships are converted — turning this on does **not** retroactively convert members who expired long ago.
-- Pair it with the **"On Membership Auto-Conversion"** instant trigger (Communication → Triggers) to email or text the member (or staff) when a conversion happens. Template variables: `old_level`, `new_level`, and `price`.
-
-#### **Number of Check-ins / Class Credits**
-- Sets a fixed allowance of check-ins or class bookings for the membership.
-- This number is added to the member’s **check-in quota** and is deducted when registering for classes.
-- Each time the credits are granted they form their own **pack**, with its own size and expiration — see [Class Credits & Packs](./class-credits.md).
-- Works with **both recurring and non-recurring memberships**:
-  - **Recurring memberships**: A fresh allotment is granted each billing cycle when the invoice is paid. For example, a $29/month plan with 4 class credits gives the member 4 fresh credits every month.
-  - **Non-recurring memberships**: The credits are assigned once on purchase and are not renewed.
-- Useful for:
-  - Monthly plans with limited class access (e.g., "Basic: 4 classes/month")
-  - Punch cards and fixed-session programs
-  - Private training packages
-
-#### **Additive Credits (Class Pack)**
-- Visible when class credits are enabled on any membership type.
-- When enabled, purchasing this membership **adds** a new pack of credits alongside the member’s existing packs instead of replacing them.
-- Example: A member has 5 credits remaining and purchases a "10 Swim Credits" pack — they now have **15 credits**, held as two packs that expire independently.
-- When disabled, the member’s existing packs are cleared and replaced by the new allotment (e.g., 5 remaining becomes 10, not 15).
-- For recurring memberships with additive credits, each billing cycle adds a fresh pack on top of any remaining credits. Credits are always spent from the pack expiring soonest.
-
-#### **Credits Never Expire**
-- Visible when class credits are enabled on any membership type.
-- When enabled, credits granted by this level have no expiration date.
-- When disabled, each granted pack expires **Expiration Days** after the day it was granted. On a recurring plan that means each cycle’s credits carry their own deadline rather than sharing one — January’s credits can lapse while February’s are still good.
-
----
-
-### 🔒 Approval Options
-
-#### **Requires Approval**
-- When enabled, new members must be approved by an owner/manager before payment is collected. Members will see the price but won't enter payment info until approved.
-- **Note:** Approval-only memberships do not support multi-member or bundled signups. Those options are automatically disabled when Requires Approval is on.
-- Only available for paid (non-free) memberships.
-
----
-
-### 👀 Visibility Options
-
-#### **Publicly Visible**
-- Controls whether this membership level appears on the public registration page.
-- Turning this **off** also removes the level as a bundle option everywhere it is used. If another plan offers it under **Allow Bundles**, you'll get a warning naming those plans so you can update them — see [Allow Bundles](#allow-bundles) below.
-
-#### **Single Use**
-- When enabled, anyone who has ever held this membership level before — even if they later canceled, or their account was removed — cannot select it or be signed up for it again using the same email address.
-- Applies whether the member signs up themselves on the registration page or is added manually by staff.
-- Intended for one-time intro or promotional levels, so they can't be reused as a repeat discount.
-- ❗ This only recognizes someone by the email address they use. If they sign up again with a **different** email, there is no way to know it's the same person, so this will not catch that case.
-
-#### **Public Link**
-- If editing an existing membership, this will show the **registration link** users can use to sign up for it.
-
----
-
-### 👨‍👩‍👧 Multi-Member & Bundling Options
-
-> 🔐 These are only available to paid SaaS accounts.
+> 🔐 This section only appears on paid SaaS accounts.
 
 #### **Multi-Member**
 - Enables charging for **multiple people under one plan** (e.g., family plan).
@@ -245,7 +167,80 @@ Membership levels define the structure of your offerings, including pricing, bil
 
 ---
 
-### 🧾 Custom Fields
+### 🎟️ Check-ins & credits
+
+#### **Number of Check-ins / Class Credits**
+- Sets a fixed allowance of check-ins or class bookings for the membership.
+- This number is added to the member’s **check-in quota** and is deducted when registering for classes.
+- Each time the credits are granted they form their own **pack**, with its own size and expiration — see [Class Credits & Packs](./class-credits.md).
+- Works with **both recurring and non-recurring memberships**:
+  - **Recurring memberships**: A fresh allotment is granted each billing cycle when the invoice is paid. For example, a $29/month plan with 4 class credits gives the member 4 fresh credits every month.
+  - **Non-recurring memberships**: The credits are assigned once on purchase and are not renewed.
+- Useful for:
+  - Monthly plans with limited class access (e.g., "Basic: 4 classes/month")
+  - Punch cards and fixed-session programs
+  - Private training packages
+
+#### **Additive Credits (Class Pack)**
+- Visible when class credits are set on this level.
+- When enabled, purchasing this membership **adds** a new pack of credits alongside the member’s existing packs instead of replacing them.
+- Example: A member has 5 credits remaining and purchases a "10 Swim Credits" pack — they now have **15 credits**, held as two packs that expire independently.
+- When disabled, the member’s existing packs are cleared and replaced by the new allotment (e.g., 5 remaining becomes 10, not 15).
+- For recurring memberships with additive credits, each billing cycle adds a fresh pack on top of any remaining credits. Credits are always spent from the pack expiring soonest.
+
+#### **Credits Never Expire**
+- Visible when class credits are set on this level.
+- When enabled, credits granted by this level have no expiration date.
+- When disabled, each granted pack expires **Expiration Days** after the day it was granted. On a recurring plan that means each cycle’s credits carry their own deadline rather than sharing one — January’s credits can lapse while February’s are still good.
+
+#### **Advance Booking Limit**
+- Optional field that limits how many classes a member on this level can book more than 7 days in advance per month.
+- Same-week bookings (within 7 days) are always unlimited.
+- Resets at the start of each calendar month.
+- Leave blank for no limit.
+
+#### **Single Use**
+- When enabled, anyone who has ever held this membership level before — even if they later canceled, or their account was removed — cannot select it or be signed up for it again using the same email address.
+- Applies whether the member signs up themselves on the registration page or is added manually by staff.
+- Intended for one-time intro or promotional levels, so they can't be reused as a repeat discount.
+- ❗ This only recognizes someone by the email address they use. If they sign up again with a **different** email, there is no way to know it's the same person, so this will not catch that case.
+
+---
+
+### 🔒 Eligibility & approval
+
+#### **Min/Max Age**
+- Optional fields to restrict who can purchase this membership.
+- Must have birthday collection enabled in portal settings to work.
+
+#### **Requires Approval**
+- When enabled, new members must be approved by an owner/manager before payment is collected. Members will see the price but won't enter payment info until approved.
+- **Note:** Approval-only memberships do not support multi-member or bundled signups. Those options are automatically disabled when Requires Approval is on.
+- Only available for paid (non-free) memberships.
+
+---
+
+### 🔁 Expiration & renewal
+
+#### **After Expiration, Convert Members To**
+- Optional: automatically move members to another membership level when their subscription on this level expires.
+- Great for trial-style offers — e.g., a **"10 days for $10"** level that automatically upgrades to **Unlimited** when it expires, or downgrading lapsed members to a Drop-In level.
+- Billing follows the **target** level:
+  - **Recurring with a price** – A new subscription is created and the member's card on file is charged that night. Recurring billing starts from the day of conversion (prorated on calendar-billing portals). **No signup fee is charged.** Failed charges follow the normal failed-invoice retry flow.
+  - **Free** – The member is moved and keeps an active (unbilled) membership. No charge.
+  - **Non-recurring (drop-in / day pass)** – The member is just moved. **No charge is ever made** — they pay per visit as usual.
+- Conversions run nightly. Members who already signed up for another membership on their own are skipped, and only recently expired memberships are converted — turning this on does **not** retroactively convert members who expired long ago.
+- Pair it with the **"On Membership Auto-Conversion"** instant trigger (Communication → Triggers) to email or text the member (or staff) when a conversion happens. Template variables: `old_level`, `new_level`, and `price`.
+
+#### **Annual Renewal**
+- If enabled, members must **re-sign waivers or agreements each year**.
+- This is useful for legal compliance in environments like gyms or schools.
+- When checked, an optional field appears:
+  - **Months Penalty** – Number of months to penalize if a user cancels early.
+
+---
+
+### 🧾 Custom fields
 
 #### **Custom Fields**
 - Use this section to collect extra information at signup.
