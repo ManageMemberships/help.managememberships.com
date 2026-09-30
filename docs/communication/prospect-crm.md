@@ -31,6 +31,39 @@ Each prospect record includes:
 
 ---
 
+## Importing from a spreadsheet
+
+Click **Import CSV** at the top of the CRM board or list.
+
+1. Save your spreadsheet as a CSV (in Excel: **File → Save As → CSV**). Need a starting point? Click **Download a template**.
+2. Upload it, choose a **Source** for rows that don't have one, and optionally **assign everyone** to a staff member.
+3. Click **Preview import**. Nothing is saved yet — you'll see who's ready to import and who was skipped, and why.
+4. Click **Import** to add them.
+
+**Columns** are matched for you: *Name* (or *First Name* + *Last Name*), *Email*, *Phone*, *Company*, *Source*, *Notes*, *Address*, *City*, *State*, *Zip*. Each row needs an email or a phone number.
+
+**Skipped rows:** anyone already in your CRM (same email or phone), anyone listed twice in the file, and rows with no email and no phone. Up to 2,000 rows per file.
+
+---
+
+## Sources
+
+Every prospect has a **source** — where they came from — shown as a badge on their card on the board. Pick from Website, Referral, Walk-in, **Class Participant**, Event, Social Media, Paid Ad, Partner or Other. Leads that arrive on their own (texts, Facebook, Google, Zapier, squeeze pages, imports) get their source set automatically.
+
+---
+
+## Who gets new leads
+
+By default, leads that arrive on their own are rotated between your staff. You can send them all to one person, or leave them unassigned — and you can limit staff to seeing only their own prospects. See [Portal Settings → CRM & Automation](../settings/portal-settings.md#crm--automation).
+
+---
+
+## Tasks
+
+Click **+ New Task** to add a follow-up. In **Related To**, start typing a name, email or phone number — members and prospects both appear, labeled so you can tell them apart.
+
+---
+
 ## Stages
 
 Customize your pipeline stages to match your sales process. Prospects move through stages as they progress from initial inquiry to membership signup.

@@ -35,6 +35,12 @@ export default function Home() {
 
 <h3>Added</h3>
 <ul>
+  <li><strong>Import prospects from a spreadsheet</strong> &mdash; new Import CSV button on the CRM. Preview who'll be added before anything is saved; anyone already in your CRM is skipped automatically.</li>
+  <li><strong>Class Participant source</strong> &mdash; tag prospects who came in through a class, and see every prospect's source right on their card on the CRM board.</li>
+  <li><strong>Choose who gets new leads</strong> &mdash; in Portal Settings &rarr; CRM &amp; Automation, rotate new leads between staff, send them all to one person, or leave them unassigned. You can also limit staff to seeing only their own prospects.</li>
+  <li><strong>Easier task search</strong> &mdash; when adding a task, just start typing a member's or prospect's name, email or phone.</li>
+  <li><strong>New message alerts</strong> &mdash; you now get an email when anyone texts, messages you on Facebook or Instagram, or writes in through your website chat, not just members.</li>
+  <li><strong>Member emails from your own address</strong> &mdash; the Send Email box on a member's page now has the same From picker, editor and open/click tracking as the CRM.</li>
   <li><strong>Sending Addresses</strong> &mdash; new page under Settings &rarr; Sending Addresses. Verify your gym's domain once by adding a few DNS records, then let each staff member send CRM email as themselves (for example harmon@yourgym.com), with replies going straight back to them. Gmail and other personal addresses can be added too, confirmed by email. Mark team inboxes like info@ as Shared so anyone can use them.</li>
   <li><strong>Better CRM email</strong> &mdash; Send Email on a prospect now has a From picker (defaulting to your own address), a full formatting editor, and <code>{"{{first_name}}"}</code> / <code>{"{{name}}"}</code> personalization. The activity timeline shows each email in full and who it came from.</li>
   <li><strong>Open and click tracking everywhere</strong> &mdash; every CRM and drip email shows whether it was opened (and how many times), when it was last opened, and which links were clicked, on both the prospect's timeline and the member's email history. Email Campaigns now show exactly how many recipients opened and clicked, and a new Recipients panel lists who did.</li>
@@ -47,6 +53,12 @@ export default function Home() {
 
 <h3>Fixed</h3>
 <ul>
+  <li><strong>Website chat messages</strong> now appear in your Inbox, not just in the prospect's notes.</li>
+  <li><strong>Unanswered conversations</strong> now sort to the top of the Inbox, and you can load more than 50.</li>
+  <li><strong>"Stop" in a normal message</strong> (like "can I stop by?") no longer unsubscribes someone from texts.</li>
+  <li><strong>Some incoming texts weren't reaching the Inbox</strong> &mdash; texts with extra spaces and picture-only texts are now received.</li>
+  <li><strong>Bundle members' waivers</strong> signed before they were moved onto a parent's account now show as signed.</li>
+  <li><strong>No cancellation fee on free placeholder memberships</strong> &mdash; ending the temporary membership a kiosk signup creates no longer charges a cancellation fee.</li>
   <li><strong>Check-In Report timezone</strong> &mdash; check-ins are now filtered and grouped by your business's timezone; a late-night check-in no longer shows up under the next day.</li>
 </ul>
 
