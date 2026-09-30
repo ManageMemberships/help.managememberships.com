@@ -16,10 +16,15 @@ The campaign table shows all your email campaigns with:
 - **Schedule Send Time** - When the email is set to go out
 - **Completed Send Time** - When the email was actually sent
 - **Sent** - Number of emails delivered
-- **Opens** - Number of times the email was opened
-- **Clicks** - Number of link clicks
+- **Opened** - How many recipients opened it, for example *42 of 120*
+- **Clicked** - How many recipients clicked a link, for example *9 of 120*
+
+Campaigns sent before per-recipient tracking was added show an estimate marked **(est.)**.
+
+> **About opens:** Apple Mail loads emails automatically for many iPhone users, which can count as an open even if the person never read it. Treat opens as an upper bound; clicks are the stronger signal.
 
 ### Actions
+- **Recipients** - See exactly who opened and who clicked. Filter the list by **Opened**, **Clicked** or **No open**, and click a member's name to open their profile. Hover over a badge for open times and the links they clicked.
 - **View** - Preview the rendered email in a slide-over panel
 - **Edit Draft** - Edit campaigns that haven't been sent yet
 - **Delete** - Remove a campaign
@@ -41,7 +46,12 @@ Pick the date and time for delivery. Defaults to the current time.
 > **Tip:** To save as a draft, set the scheduled time far into the future.
 
 #### **Body**
-Rich text email content with full formatting support. You can use the variable `{{name}}` to personalize the email with each member's name.
+Rich text email content with full formatting support. Personalize it with:
+
+- `{{first_name}}` - the recipient's first name (`Hi {{first_name}}` becomes *Hi Chad*)
+- `{{name}}` - their full name
+
+Both also work in the **Subject**.
 
 #### **Membership Level**
 Filter the member list by one or more membership levels.

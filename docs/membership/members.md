@@ -391,10 +391,10 @@ Ideal for tracking multiple members under one billing account:
 ## 💬 Communication Center
 
 ### 📧 Email Management
-- **Send Individual Emails** - Direct member communication
+- **Send Individual Emails** - Choose who it's from (your own address, a shared one, or the gym default), format it with the editor, and personalize it with `{{first_name}}`. See [Sending Addresses](../settings/sending-addresses.md)
 - **Email History** - Complete conversation timeline
 - **Template System** - Pre-built message templates
-- **Delivery Tracking** - Confirmation of email receipt
+- **Open & Click Tracking** - Each email shows whether it was opened (and how many times), when it was last opened, and whether any links were clicked. Hover a badge for details.
 
 ### 📱 SMS Messaging
 

@@ -144,6 +144,8 @@ This name will appear in the **"From" field** of all system-generated emails.
 
 The email address used as the From: address on all system-generated emails sent to your members (welcome emails, payment failures, dunning notices, etc.).
 
+This is also the **gym default** sender for CRM emails. To let staff send CRM email as themselves (for example *harmon@yourgym.com*), set up [Sending Addresses](./sending-addresses.md).
+
 > **Cannot** be a `@managememberships.com` address.
 
 ##### Verifying your sender address
@@ -380,6 +382,20 @@ Automatically create CRM prospects and sync leads via Trello and Zapier.
 #### Auto-Add Free/Trial to CRM
 
 Automatically add free and trial members to the prospect CRM system.
+
+#### Assign new leads to
+
+Who gets leads that arrive on their own — website forms, squeeze pages, Facebook, Google and Zapier:
+
+| Option | What happens |
+|---|---|
+| **Rotate between staff** (default) | Each new lead goes to whichever owner, manager or staff member has the fewest open leads |
+| **Always the same person** | Every new lead goes to the person you pick. If they're deactivated, leads rotate again |
+| **Nobody** | New leads stay unassigned until someone picks them up |
+
+#### Staff only see their own prospects
+
+When on, staff see only the prospects assigned to them, plus unassigned ones, on the CRM board, the list and prospect pages. Owners and managers always see everything. Off by default.
 
 #### Trello Integration
 

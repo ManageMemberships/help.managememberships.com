@@ -35,6 +35,16 @@ export default function Home() {
 
 <h3>Added</h3>
 <ul>
+  <li><strong>Import prospects from a spreadsheet</strong> &mdash; new Import CSV button on the CRM. Preview who'll be added before anything is saved; anyone already in your CRM is skipped automatically.</li>
+  <li><strong>Class Participant source</strong> &mdash; tag prospects who came in through a class, and see every prospect's source right on their card on the CRM board.</li>
+  <li><strong>Choose who gets new leads</strong> &mdash; in Portal Settings &rarr; CRM &amp; Automation, rotate new leads between staff, send them all to one person, or leave them unassigned. You can also limit staff to seeing only their own prospects.</li>
+  <li><strong>Easier task search</strong> &mdash; when adding a task, just start typing a member's or prospect's name, email or phone.</li>
+  <li><strong>New message alerts</strong> &mdash; you now get an email when anyone texts, messages you on Facebook or Instagram, or writes in through your website chat, not just members.</li>
+  <li><strong>Member emails from your own address</strong> &mdash; the Send Email box on a member's page now has the same From picker, editor and open/click tracking as the CRM.</li>
+  <li><strong>Sending Addresses</strong> &mdash; new page under Settings &rarr; Sending Addresses. Verify your gym's domain once by adding a few DNS records, then let each staff member send CRM email as themselves (for example harmon@yourgym.com), with replies going straight back to them. Gmail and other personal addresses can be added too, confirmed by email. Mark team inboxes like info@ as Shared so anyone can use them.</li>
+  <li><strong>Better CRM email</strong> &mdash; Send Email on a prospect now has a From picker (defaulting to your own address), a full formatting editor, and <code>{"{{first_name}}"}</code> / <code>{"{{name}}"}</code> personalization. The activity timeline shows each email in full and who it came from.</li>
+  <li><strong>Open and click tracking everywhere</strong> &mdash; every CRM and drip email shows whether it was opened (and how many times), when it was last opened, and which links were clicked, on both the prospect's timeline and the member's email history. Email Campaigns now show exactly how many recipients opened and clicked, and a new Recipients panel lists who did.</li>
+  <li><strong><code>{"{{first_name}}"}</code> in email campaigns</strong> &mdash; personalize campaign subjects and bodies with the recipient's first name.</li>
   <li><strong>Bulk Check-In</strong> &mdash; new page under Reports &rarr; Bookings for checking a whole class in at once. Pick the class, date, and time slot, then type names: booked members get one-click check-in buttons and are marked attended, everyone else is recorded as a walk-in. Supports past dates for retroactive attendance, quota enforcement, duplicate protection, and one-click undo.</li>
   <li><strong>Walk-ins on the Class Calendar</strong> &mdash; the Class Calendar now shows kiosk and bulk check-ins the same way the Daily Roster does: events display a walk-in count, sessions attended only by walk-ins show green instead of empty, and the session detail popup gains a Walk-Ins tile plus a walk-in list with check-in times. Booked members who checked in at the kiosk now show as Checked In.</li>
   <li><strong>Daily Roster in the Reports menu</strong> &mdash; the read-only front-desk roster is now linked from Reports &rarr; Bookings &rarr; Daily Roster, so you no longer need to type the /kiosk/roster URL.</li>
@@ -43,6 +53,12 @@ export default function Home() {
 
 <h3>Fixed</h3>
 <ul>
+  <li><strong>Website chat messages</strong> now appear in your Inbox, not just in the prospect's notes.</li>
+  <li><strong>Unanswered conversations</strong> now sort to the top of the Inbox, and you can load more than 50.</li>
+  <li><strong>"Stop" in a normal message</strong> (like "can I stop by?") no longer unsubscribes someone from texts.</li>
+  <li><strong>Some incoming texts weren't reaching the Inbox</strong> &mdash; texts with extra spaces and picture-only texts are now received.</li>
+  <li><strong>Bundle members' waivers</strong> signed before they were moved onto a parent's account now show as signed.</li>
+  <li><strong>No cancellation fee on free placeholder memberships</strong> &mdash; ending the temporary membership a kiosk signup creates no longer charges a cancellation fee.</li>
   <li><strong>Check-In Report timezone</strong> &mdash; check-ins are now filtered and grouped by your business's timezone; a late-night check-in no longer shows up under the next day.</li>
 </ul>
 
