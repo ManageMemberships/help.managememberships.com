@@ -375,7 +375,7 @@ Ideal for tracking multiple members under one billing account:
 - **Send Individual Emails** - Direct member communication
 - **Email History** - Complete conversation timeline
 - **Template System** - Pre-built message templates
-- **Delivery Tracking** - Confirmation of email receipt
+- **Open & Click Tracking** - Each email shows whether it was opened (and how many times), when it was last opened, and whether any links were clicked. Hover a badge for details.
 
 ### 📱 SMS Messaging
 

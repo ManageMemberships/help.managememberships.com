@@ -144,6 +144,8 @@ This name will appear in the **"From" field** of all system-generated emails.
 
 The email address used as the From: address on all system-generated emails sent to your members (welcome emails, payment failures, dunning notices, etc.).
 
+This is also the **gym default** sender for CRM emails. To let staff send CRM email as themselves (for example *harmon@yourgym.com*), set up [Sending Addresses](./sending-addresses.md).
+
 > **Cannot** be a `@managememberships.com` address.
 
 ##### Verifying your sender address
