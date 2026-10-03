@@ -81,6 +81,7 @@ Turning this off hides the user from shift assignment.
 * You cannot change your own **Role** field while editing your own account
 * Owners and Managers do not use the **Permissions** checklist
 * Deleting a staff member is available from the row actions in the table
+* **Briefing kiosk code**: a 4–8 digit code, unique within your gym, that unlocks the [safety briefing kiosk](../safety-briefing.md) as this employee. It can only be set when editing a staff member, not when adding one
 
 ---
 

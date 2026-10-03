@@ -62,6 +62,12 @@ This setting works on its own. You don't need to turn on **Privacy Controls** to
 
 ---
 
+## Require Safety Briefing
+
+Also under **Privacy & Access**. Flags new members as needing the range safety briefing. See [Safety Briefing](../safety-briefing.md).
+
+---
+
 ## Notes
 
 - Resource visibility defaults to **Public** for existing resources

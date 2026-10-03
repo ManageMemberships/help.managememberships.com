@@ -91,3 +91,9 @@ When a class is shown:
 | `Member does not have valid subscription` | Your membership may be inactive or expired. Staff can tap **Check In Anyway** to override. |
 | `You have agreements to sign`   | You need to sign documents before check-in. Staff can tap **Check In Anyway** to override. |
 | `You are now checked in`        | Success! You’re marked present for your class.                      |
+
+---
+
+## Safety Briefing Kiosk
+
+The safety briefing has its own kiosk at `/kiosk/briefing`, unlocked with an employee's own code. See [Safety Briefing](./safety-briefing.md).
