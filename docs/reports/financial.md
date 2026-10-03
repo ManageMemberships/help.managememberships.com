@@ -35,6 +35,8 @@ The report displays transactions in a table format:
 - **Fee** - Processing or platform fees deducted
 - **Net Amount** - Your gym's final amount
 
+Payments taken on a [Stripe Terminal](/docs/stripe-terminal) reader appear here with the description you entered at the reader, and a dash (—) in the User column since they aren't tied to a member.
+
 Alternating row colors (gray/white) improve readability for large transaction lists.
 
 ### Cancel with Penalty / Cancel without Penalty

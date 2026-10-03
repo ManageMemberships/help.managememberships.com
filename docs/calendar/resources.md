@@ -105,6 +105,7 @@ If your resource has multiple pricing tiers (e.g., "Single Rider - $100" and "Do
 
 #### **Unavailable Dates**
 - Define exceptions when the resource is not available, with a reason and time range.
+- To show the reason only to owners and managers, turn on [Hide Unavailable Reasons From Staff](../settings/privacy-controls.md#hide-unavailable-reasons-from-staff).
 
 ---
 
