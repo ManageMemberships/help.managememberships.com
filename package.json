@@ -45,6 +45,7 @@
   },
   "overrides": {
     "@ungap/structured-clone": "1.4.0",
-    "tinypool": "2.2.0"
+    "tinypool": "2.2.0",
+    "sitemap": "9.0.0"
   }
 }
