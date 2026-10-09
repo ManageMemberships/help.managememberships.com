@@ -15,6 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Nothing later in this job pushes to Git; don't leave the token in .git/config
+          # where the build's dependencies (which run with the AWS keys) could read it.
+          persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:
