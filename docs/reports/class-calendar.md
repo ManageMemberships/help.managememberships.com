@@ -73,11 +73,15 @@ Creating or removing a blocked-off period requires the **Manage Resources** perm
      - **Agreement Status** (Unsigned agreements are shown in red with an "Unsigned" label; signed agreements include a "View Agreement" link.)
    - Summary tiles at the top show **Total Bookings**, **Total Tickets**, **Total Revenue**, and **Walk-Ins** for the session.
 
-3. **Check-In Status**
+3. **Unpaid Bookings and Collecting Cash**
+   - A booking that hasn't been paid shows a red **UNPAID** tag and a **Collect Payment** button. This is how bookings made with **Pay cash at the session** (a per-class setting, see [Classes](/docs/calendar/classes)) and bookings you add as unpaid show up.
+   - Click **Collect Payment**, then choose **Document Cash Collected** (or **Charge Card on File**). A cash booking is marked **CASH** and counted as revenue for the amount owed.
+
+4. **Check-In Status**
    - Booked members show one of: **Booked** (signed up, hasn't arrived), **Attended** / **Checked In** (green — they arrived, whether marked manually or via a kiosk check-in), or **Cancelled**.
    - Below the bookings table, a **Walk-In Check-Ins** section lists everyone who checked in for the class without a prior signup — the same people the [Daily Roster](/docs/daily-roster) shows with an amber "Walk-in" badge — with their check-in time and a link to their member profile.
 
-4. **From Roster to Registration Report**
+5. **From Roster to Registration Report**
    - In the roster view, click the link to **View Registration Report** to open the detailed Class Registrations page.
    - From there, you can see payment details and manually add attendees.
 

@@ -212,6 +212,26 @@ If your class runs at the same time every day, you don't need schedule groups â€
 
 ---
 
+### Pay Cash
+
+#### **Allow "pay cash at the session"**
+- **Off by default.** Turn it on for a class when members like to pay cash (a recovery session, for example) but you still want them to book online.
+- When it's on, the booking page shows a **Pay cash at the session** checkbox. A member who ticks it needs no card, nothing is charged, and they are booked right away. Everyone who can book the class sees the option.
+- The booking is saved as **UNPAID**, with the amount owed set at what they would have paid online: the class price after any membership discount or promo code, times the tickets, plus tax if you charge tax. The card processing fee is not added to cash.
+- Their confirmation email says how much to bring in cash. You get your usual new-registration email, marked **PAY CASH AT THE SESSION, not paid yet**.
+- Booking with class credits, or a class that costs $0, doesn't use this option.
+- **Web booking page only.** The mobile app and ManageRegister don't offer pay-cash bookings.
+
+**Collecting the cash**
+1. Open the [Class Calendar](/docs/reports/class-calendar), click the class, and find the member on the roster. Unpaid bookings are marked **UNPAID**.
+2. Click **Collect Payment**, leave **Document Cash Collected** selected, and click **Collect Payment**.
+3. The booking becomes **CASH** and counts as revenue in your class and trainer reports for the amount owed. (You can also pick **Charge Card on File** there if the member decides to pay by card.)
+
+**Cancellations and no-shows**
+- A cash booking holds a spot but is never charged or refunded, because nothing was paid. A member who cancels (within your cancellation window) or doesn't show owes nothing, and an unpaid booking stays on the roster until someone removes it. Remove no-shows from the roster so they don't take a spot or show as unpaid.
+
+---
+
 ### ManageRegister POS
 
 #### **Sync Completion to ManageRegister**
