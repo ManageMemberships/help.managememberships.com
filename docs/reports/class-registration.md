@@ -150,7 +150,8 @@ When a single session can't run — weather, a sick coach, a court double-booked
 1. Select the class, then select the timeslot for the date you're cancelling.
 2. Click **Cancel this session**. The button shows how many bookings will be affected.
 3. Choose a **reason**, and add a note if you pick "Other".
-4. Confirm.
+4. Leave **Email the booked members that this session is cancelled** ticked if you want them told (it's ticked by default), or untick it to let them know yourself.
+5. Confirm.
 
 What happens:
 
@@ -158,6 +159,13 @@ What happens:
 - **Class credits go back** to the packages they came from, so a member who paid with a punch-card isn't charged for a class that didn't run.
 - The reason you chose is recorded against each member's activity log, so the cause is visible later.
 - The session stops appearing on the calendar and can no longer be booked.
+- **If the email box is ticked, each member gets one email** saying which class and when was cancelled, and that any class credit they used went back to their package. A parent with two children booked into the same session gets one email, not two. The page tells you how many members were emailed.
+
+### What the email says
+
+The email names the class and the date and time, and says the session has been cancelled. The reason is only included when it's **Inclement weather** or **Gym / venue closed**. Your private note and the internal reasons (staff error, duplicate check-in) are never put in the email.
+
+Only members whose booking was cancelled by this action are emailed. If an email can't be sent, the booking is still cancelled and the page says how many emails failed.
 
 Only this one date is affected. The class continues to run on every other date as scheduled.
 
@@ -200,7 +208,7 @@ The Class Reports page is designed to give you full control over your class sche
 - Deduct bookings from a member’s **check-in quota** when applicable.
 - Export rosters to CSV.
 - Leave a staff note on a single session that travels with it if the session moves.
-- Cancel a single session and automatically return members' class credits.
+- Cancel a single session, automatically return members' class credits, and email the booked members in one step.
 - Swap the trainer for a single session without affecting the rest of the series.
 
 This ensures that all class data is consistent and up to date, whether members register online, through your staff, or using their prepaid check-ins.

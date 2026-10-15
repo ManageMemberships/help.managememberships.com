@@ -64,6 +64,23 @@ Alternatively, send the email to waitlist contacts by topic instead of members.
 
 ---
 
+## Emailing a Class's Participants
+
+You can start a campaign already addressed to everyone booked into one session:
+
+1. Open the **Calendar** and click the class session.
+2. In the box that opens, click **Email Class Participants**.
+3. The campaign form opens with the booked members already selected and the class and date shown at the top. Cancelled bookings are left out.
+4. Write the subject and message, then send or schedule it as usual.
+
+The link only works for about 10 minutes after you click the button. If you come back to it later and nothing is selected, go back to the calendar and click **Email Class Participants** again. Refreshing the page within those 10 minutes is fine.
+
+:::tip
+If you're cancelling the session, you don't need a campaign: the **Cancel this session** box on [Class Registrations](../reports/class-registration) can email the booked members for you.
+:::
+
+---
+
 ## Draft Editing
 
 For campaigns that haven't been sent yet, click **Edit Draft** to open a dedicated editor where you can refine the email content, adjust the recipient list, and update the scheduled send time.
