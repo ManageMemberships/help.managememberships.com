@@ -277,6 +277,16 @@ A flat dollar amount automatically added to a member's invoice when their paymen
 
 How many days after the invoice due date before the late fee is assessed. For example, set to `3` and a member whose payment fails on the 1st won't be charged the late fee until the 4th. Leave empty (or set to `0`) to charge the fee immediately on the first failure.
 
+### Charge a Pause Fee
+
+When enabled, a member whose subscription is **paused** is charged the **Pause Fee ($)** set on their membership level (see [Membership Levels](/docs/membership/membership-levels)), once each billing period while they stay paused. Default is **off**.
+
+It only applies to pauses you start **after** turning it on. For how the fee is charged, see [Pausing a Subscription](/docs/membership/members#pausing-a-subscription).
+
+### Maximum Pause Length (months)
+
+The longest a pause can last, as a whole number of months from **1** to **60**. Leave it **empty** for no limit. When it's set, pausing a member needs a **resume date** no more than that many months away.
+
 ### Suppress Owner Welcome Emails
 
 When enabled, the portal owner will not receive welcome email notifications for new member signups.

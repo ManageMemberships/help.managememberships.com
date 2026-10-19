@@ -37,6 +37,8 @@ The report displays transactions in a table format:
 
 Payments taken on a [Stripe Terminal](/docs/stripe-terminal) reader appear here with the description you entered at the reader, and a dash (—) in the User column since they aren't tied to a member.
 
+[Pause fees](/docs/membership/members#pause-fee) charged to paused members appear here too, with a description that starts with **Pause fee** (for example, "Pause fee - Gold - October 2026").
+
 Alternating row colors (gray/white) improve readability for large transaction lists.
 
 ### Cancel with Penalty / Cancel without Penalty

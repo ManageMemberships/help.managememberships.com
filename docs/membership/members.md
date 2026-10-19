@@ -51,7 +51,7 @@ Use combination filters to create targeted member lists. For example: "Payment F
 
 ### 🚨 Status Filters
 - **💳 Payment Failed** – Members with failed payment attempts
-- **⏸️ Paused Subscriptions** – Currently paused subscriptions  
+- **⏸️ Paused Subscriptions** – Currently paused subscriptions (for a fuller list with resume dates and pause fees, see the [Paused Members](/docs/reports/paused-members) report)  
 - **💵 Cash User** – Manually managed members
 - **❌ Inactive** – Deactivated accounts
 - **📝 Missing Agreements** – Unsigned required documents
@@ -176,7 +176,7 @@ The row count and per-row quantity are both capped at 10. If a membership level 
 ### 🔧 Subscription Modifications
 - **Add Items** - Attach recurring services with prorated billing
 - **Remove Items** - Cancel add-ons with immediate adjustment
-- **Pause/Resume** - Temporary subscription holds
+- **Pause/Resume** - Temporary subscription holds, with an optional pause fee (see [Pausing a Subscription](#pausing-a-subscription))
 - **Cancel** - End at the end of the paid period, or immediately, with or without a penalty fee
 
 ### ❌ Cancelling a Subscription
@@ -233,12 +233,35 @@ Updating the billing date is ideal when a member needs a short break but you wan
 If a member needs to temporarily stop their subscription entirely:
 1. Navigate to the member's **Subscriptions** tab
 2. Click the **Pause** button on the subscription
-3. Optionally enter a **resume date** to automatically restart billing
-4. Click **Confirm Pause** to apply
+3. Optionally pick a **Resume on** date to automatically restart billing. Leave it blank to pause until you resume the subscription yourself.
+4. If a pause fee applies, the dialog says so, for example *"The member will be charged $5.00 per month while paused, starting on Nov 02, 2026"*. A free pause shows no fee line.
+5. Click **Confirm Pause** to apply
 
 :::info Pause vs. Update Billing Date
 **Pausing** makes the subscription inactive — the member loses access while paused. **Updating the billing date** keeps the subscription active and the member's access intact, it just delays when they're next charged.
 :::
+
+:::note Maximum pause length
+If your **Portal Settings** set a **Maximum Pause Length (months)**, the dialog says **Resume on (required)**, only allows dates within that many months, and adds *"A pause can last at most N months."* See [Portal Settings](/docs/settings/portal-settings#maximum-pause-length-months).
+:::
+
+#### Resuming a Paused Subscription
+A paused subscription's card shows a red **Paused** badge, or **Paused until [date]** when a resume date is set. From the card you can:
+
+- **Resume Now** – ends the pause right away.
+- **Set Resume Date** (shown as **Edit Resume Date** once a date is set) – pick an **Auto-resume on** date and click **Save**. Click **Clear** to remove the date and keep the member paused until you resume them yourself. (A pause that was started under a Maximum Pause Length always keeps a resume date, so **Clear** isn't offered for it.)
+
+When a member resumes, either way, billing continues on their **original billing day**, not on the day they resumed. The cycles they were paused for are skipped. For example, a member who is billed on the 2nd and resumes on the 19th is next billed on the 2nd of the following month.
+
+#### Pause Fee
+If you charge a pause fee (set on each membership level and turned on in Portal Settings; see [Membership Levels](/docs/membership/membership-levels) and [Portal Settings](/docs/settings/portal-settings#charge-a-pause-fee)), a paused member is charged it while they're paused, and their normal price is not charged.
+
+- **When:** on the member's normal billing day, once each billing period. A monthly plan is charged every month, a quarterly plan every 3 months.
+- **How:** through your gym's payment processor.
+- **How much:** the **Pause Fee ($)** of the level the subscription is on, locked in on the day the pause starts. Changing the level's fee or the Portal Settings later does not change a pause that has already started.
+- **One fee per subscription**, not per person. A paused subscription is charged one fee however many people or units it covers.
+- **Where you see it:** the paused subscription's card shows, for example, *Pause fee $5.00 per month, next Nov 02, 2026*. The charge appears in [Financial Transactions](/docs/reports/financial) with a description that starts with **Pause fee**, and as an invoice on the member's account.
+- **If it fails:** a failed pause fee is retried like any other failed payment.
 
 ---
 
@@ -471,7 +494,7 @@ Understanding renewal timing is crucial for retention:
 
 #### **Renewal Status Categories:**
 - 🟢 **Good** - Active and current with successful payments
-- 🟡 **Paused** - Temporarily suspended, not currently billing
+- 🟡 **Paused** - Temporarily suspended, not billing for the membership (a pause fee may apply)
 - 🔴 **Failed** - Payment issues requiring immediate attention
 
 ### 📊 Check-In Analytics
