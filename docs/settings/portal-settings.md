@@ -407,6 +407,10 @@ Who gets leads that arrive on their own — website forms, squeeze pages, Facebo
 
 When on, staff see only the prospects assigned to them, plus unassigned ones, on the CRM board, the list and prospect pages. Owners and managers always see everything. Off by default.
 
+#### Daily task email for staff
+
+When on, each morning between 7:00 and 11:00 AM gym time, each person with CRM access who has tasks due today or overdue gets one email listing them. Unassigned tasks, and tasks assigned to someone who can't get the email, go to the owner. Nothing is sent when there is nothing due or overdue. On by default, on the Starter plan and above. There is no per-person opt-out. See [Daily task email](../communication/prospect-crm.md#daily-task-email) for what the email contains.
+
 #### Trello Integration
 
 Connect your Trello workspace to create cards automatically when new prospects enter the CRM.
