@@ -72,6 +72,8 @@ The debugger runs through every access check in order and shows you exactly what
 | **Agreements signed** | Whether the member has signed all required agreements for their membership level |
 | **User active** | Whether the member's account is marked as active |
 
+If the member's subscription is paused, the **Valid subscription** check starts with *Membership is paused until [date]* (or just *Membership is paused* when no resume date is set), followed by the details of each subscription, and the result is **Denied**.
+
 The result shows **Granted** or **Denied** with the specific reason, so you can quickly resolve access issues.
 
 ### Renewal Status & Door Access
@@ -101,6 +103,7 @@ When a known member scans a door and is denied, they are automatically notified 
 |--------|----------------------|
 | Membership not active | "Your scan at [Door] was blocked — your membership is not currently active. Visit [portal] to resolve this." |
 | Payment issue | "Your scan at [Door] was blocked — your membership may have a payment issue. Visit [portal] to resolve this." |
+| Membership paused | "Your scan at [Door] was blocked — your membership is paused. Visit [portal] or contact us for help." |
 | Facility closed | "Your scan at [Door] was blocked — the facility is currently closed. Visit [portal] or contact us for help." |
 | Unsigned agreements | "Your scan at [Door] was blocked — you have unsigned agreements on file. Visit [portal] to resolve this." |
 

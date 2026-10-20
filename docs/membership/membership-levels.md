@@ -61,7 +61,7 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 | **Family & bundles** | Multi-Member, Flat Rate Pricing, Allow Bundles (paid SaaS plans only) |
 | **Check-ins & credits** | Class credits, Additive Credits, Credits Never Expire, Advance Booking Limit, Single Use |
 | **Eligibility & approval** | Min/Max Age, Requires Approval |
-| **Expiration & renewal** | After Expiration Convert To, Annual Renewal, Months Penalty |
+| **Expiration & renewal** | After Expiration Convert To, Annual Renewal, Months Penalty, Pause Fee |
 | **Custom fields** | Extra signup questions for this level |
 
 - When you **create** a level, every section except Basics starts collapsed.
@@ -237,6 +237,13 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 - This is useful for legal compliance in environments like gyms or schools.
 - When checked, an optional field appears:
   - **Months Penalty** – Number of months to penalize if a user cancels early.
+
+#### **Pause Fee ($)**
+- The fee charged each billing period while a member on this level is **paused**. Leave it **blank or 0** for a free pause.
+- It only takes effect when **Charge a Pause Fee** is turned on in **Settings → Portal Settings → Membership & Billing** (see [Portal Settings](/docs/settings/portal-settings#charge-a-pause-fee)), and only for pauses started after that.
+- The fee comes from the level the paused subscription is on. A member on a quarterly plan is charged once every 3 months, not every month.
+- The amount is locked in on the day the pause starts. Changing the fee later does not change a pause that is already running.
+- To see how the fee is charged, see [Pausing a Subscription](/docs/membership/members#pausing-a-subscription).
 
 ---
 

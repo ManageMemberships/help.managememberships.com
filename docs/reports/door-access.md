@@ -33,6 +33,14 @@ Use this report to identify unusual access patterns, verify member attendance, o
 
 ---
 
+## Paused Members
+
+A member whose subscription is paused is turned away at the door, the same as before. Their scan shows **Denied: membership paused** in the log, so you can tell a paused member from one with a payment problem. The member is also told by text (or by email if they have no phone number or have opted out of texts) that their scan was blocked because their membership is paused.
+
+To see why a specific member is being denied, use the [Door Access Debugger](/docs/settings/doors).
+
+---
+
 ## Unknown Scans
 
 Scans that don't match any member also appear in the log, shown as **Unknown** along with what was scanned:
