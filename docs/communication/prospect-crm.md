@@ -62,6 +62,28 @@ By default, leads that arrive on their own are rotated between your staff. You c
 
 Click **+ New Task** to add a follow-up. In **Related To**, start typing a name, email or phone number — members and prospects both appear, labeled so you can tell them apart.
 
+### Follow-up task from an activity
+
+Under **Communication → Prospects CRM**, open a prospect. Under the activity type and description in the **Add Activity** form there is a **Create follow-up task** checkbox. Tick it and a **Due in** picker appears: **1**, **3** or **7 days** (3 by default).
+
+When you add the activity with the box ticked, a follow-up task is created too:
+
+- Titled **Follow up:** followed by the prospect's name (for example, **Follow up: Chad Smith**) and linked to that prospect.
+- Assigned to you, the person who logged the activity, at **medium** priority.
+- Due at **9:00 AM** gym time, that many days from today.
+
+The task shows in the prospect's **Tasks** list right away, and in **My Tasks** on the Pipeline Board. The activity description is still optional. This is for prospects only; members don't have an Add Activity form.
+
+### Daily task email
+
+Each morning between **7:00 and 11:00 AM** gym time, each person with CRM access who has tasks due today or overdue gets one email, **Your tasks for today**. It lists their tasks in two sections, **Due today** and **Overdue** (with how many days overdue). Each section shows up to 15 tasks, then *and N more*, and a button opens the Pipeline Board.
+
+- Unassigned tasks, and tasks assigned to someone who can't get the email (for example, no CRM access or a deactivated account), go to the gym owner, with *assigned to* and that person's name on the row (for example, *assigned to Marcus*).
+- Nothing is sent when there is nothing due or overdue.
+- Available on the **Starter** plan and above.
+
+It's on by default. An owner can turn it off under **Settings → Portal Settings → Features & Integrations → CRM & Automation → Daily task email for staff** (those sections start collapsed, so click to expand them). There is no per-person opt-out.
+
 ---
 
 ## Stages
