@@ -8,6 +8,7 @@ This documentation outlines what navigation items are available to users based o
 
 **Roles**:
 - `owner`
+- `manager`
 - `staff`
 - `accountant`
 
@@ -43,6 +44,7 @@ This documentation outlines what navigation items are available to users based o
 | Class Registrations          | Not `accountant`          | `growth` or `premium`             |
 | Resources Report             | Not `accountant`          | `premium`                         |
 | Door Access                  | Not `accountant`          | `premium`                         |
+| Paused Members (Reports)     | Needs the *View Subscription Reports* permission: always for owners and managers, by default for `accountant`, for `staff` only if granted | Not `free` |
 | Events                       | Not `accountant`          | `growth` or `premium`             |
 | Classes                      | Not `staff`               | Not `free` or `basic`             |
 | Packages                     | Not `staff`               | `premium`                         |
