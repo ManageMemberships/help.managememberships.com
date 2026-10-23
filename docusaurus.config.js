@@ -8,6 +8,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+// Shown in the footer so a deploy can be confirmed at a glance: the date this build ran
+// and the commit it was built from (GITHUB_SHA is set by the deploy workflow).
+const buildDate = new Date().toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/Chicago',
+});
+const buildCommit = (process.env.GITHUB_SHA || 'local').slice(0, 7);
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ManageMemberships Knowledge Base',
@@ -107,7 +114,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ManageMemberships. Last updated April 27, 2026.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ManageMemberships. Last updated ${buildDate} (build ${buildCommit}).`,
       },
       prism: {
         theme: prismThemes.github,
