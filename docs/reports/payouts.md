@@ -10,8 +10,9 @@ The **Payouts** report shows your Stripe Connect balance and payout history, so 
 
 ## Balance Summary
 
-Four figures at the top of the report:
+Five figures at the top of the report:
 
+- **USD Payouts** — the next payout Stripe has already scheduled for you, and when it's expected ("Expected today", "Expected tomorrow", or the date). If more than one payout is due on that day they're added together. It shows **No payout scheduled** when nothing is waiting
 - **Total Balance** — funds currently held by Stripe for your account, not yet paid out
 - **Future Payouts** — the portion of your balance not yet available, which will be included in a future payout once it settles
 - **In Transit to Bank** — payouts Stripe has already sent but that haven't yet been confirmed as landed in your bank account

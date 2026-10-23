@@ -48,7 +48,7 @@ Trainers are sorted by revenue (highest first).
 
 ## Trainer Swaps
 
-If a trainer was [swapped in for a single class date](./class-registration) from Class Registrations, that session counts toward the substitute's sessions, bookings, and revenue here instead of the regular trainer's — the regular trainer's numbers reflect every date except the swapped one.
+If a trainer was [swapped in for a single class date](./class-registration.md) from Class Registrations, that session counts toward the substitute's sessions, bookings, and revenue here instead of the regular trainer's — the regular trainer's numbers reflect every date except the swapped one.
 
 ---
 

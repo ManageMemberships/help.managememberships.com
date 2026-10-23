@@ -76,7 +76,7 @@ You can start a campaign already addressed to everyone booked into one session:
 The link only works for about 10 minutes after you click the button. If you come back to it later and nothing is selected, go back to the calendar and click **Email Class Participants** again. Refreshing the page within those 10 minutes is fine.
 
 :::tip
-If you're cancelling the session, you don't need a campaign: the **Cancel this session** box on [Class Registrations](../reports/class-registration) can email the booked members for you.
+If you're cancelling the session, you don't need a campaign: the **Cancel this session** box on [Class Registrations](../reports/class-registration.md) can email the booked members for you.
 :::
 
 ---

@@ -10,6 +10,23 @@ Find them under **Communication → Squeeze Pages**.
 
 ---
 
+## Collecting Leads (Events, Raffles, Ads)
+
+A Squeeze Page is the right tool any time you want to collect names and contact info from people who are **not members yet**: a table at a community event, a raffle or giveaway, a free-trial offer, or an ad.
+
+- People who fill it out become **prospects** in the [Prospect CRM](./prospect-crm.md), not members.
+- Prospects **don't count toward your member numbers** and **don't need a waiver**.
+- You can follow up from the CRM, or enroll them in a [Drip Campaign](./drip-campaigns.md) automatically.
+- When a prospect joins, they convert to a member.
+
+**Example: a raffle at a community event.** Create a Squeeze Page with name, email and phone fields and a line like "Enter to win a free month." Open the page link on a tablet at your table, or print it as a QR code with any free QR generator. Everyone who enters lands in your Prospect CRM, ready for follow-up.
+
+:::tip
+Don't use a hidden event or a registration form to collect leads. Those create **member** records, which inflate your member count and leave you with unsigned waivers.
+:::
+
+---
+
 ## Creating a Page
 
 Click **"New Squeeze Page"**. A new active page is created and you're taken straight to the drag-and-drop page builder.

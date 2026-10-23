@@ -278,4 +278,4 @@ To reorder how resources appear (e.g., in dropdowns or booking interfaces), clic
 
 - Keep membership names clear and recognizable (e.g., "Adult Monthly", "Family Annual").
 - Use the **active toggle** to hide legacy plans without deleting them.
-- Always associate an agreement template with each membership (see [Agreement Templates](./agreements/)).
+- Always associate an agreement template with each membership (see [Agreement Templates](./agreements.md)).

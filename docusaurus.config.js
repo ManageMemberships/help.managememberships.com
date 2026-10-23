@@ -20,7 +20,9 @@ const config = {
   title: 'ManageMemberships Knowledge Base',
   tagline: '',
   favicon: 'img/favicon.ico',
-  trailingSlash: false,
+  // Builds each page as /path/index.html: the S3 website origin serves that for /path/ (and redirects /path there).
+  // With false it built /path.html, which S3 never serves for /path, so every direct link to a doc 404'd.
+  trailingSlash: true,
   // Set the production url of your site here
   url: 'https://help.managememberships.com',
   // Set the /<baseUrl>/ pathname under which your site is served

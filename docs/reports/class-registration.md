@@ -107,7 +107,7 @@ You can mark each booking as **Attended** or **No-Show** directly from the class
 3. Click to toggle the status — the button highlights to confirm
 4. Attendance data is saved immediately
 
-Attendance data feeds into the [Trainer Reports](./trainer-reports) and is used to calculate attendance rates per trainer and per class. Consistently marking attendance helps you:
+Attendance data feeds into the [Trainer Reports](./trainer-reports.md) and is used to calculate attendance rates per trainer and per class. Consistently marking attendance helps you:
 - Identify no-show patterns (members who book but don’t show)
 - Track which classes have the best turnout
 - Evaluate trainer performance
@@ -187,7 +187,7 @@ If your regular trainer can't make one date of a recurring class, you can substi
 What happens:
 
 - Only that one date changes. Every other occurrence of the class keeps its regular trainer.
-- The substitute is credited for that one session in [Trainer Reports](./trainer-reports), and the regular trainer's credit for that session is removed.
+- The substitute is credited for that one session in [Trainer Reports](./trainer-reports.md), and the regular trainer's credit for that session is removed.
 - **No one is notified.** The swap doesn't email or otherwise alert either trainer — let them know yourself if they need to hear it from you.
 
 The **Swap trainer** button shows who's currently assigned to that date, so you can tell at a glance whether a session has already been covered.
