@@ -80,12 +80,16 @@ Use combination filters to create targeted member lists. For example: "Payment F
 |--------|-------------|----------|
 | 🏷️ **Mark as Athlete** | Set `is_athlete` flag to `true` | Team member tagging |
 | ❌ **Unmark as Athlete** | Clear athlete designation | Remove team status |
-| ✅ **Mark as Active** | Reactivate suspended accounts | Bulk account restoration |
-| 🚫 **Mark as Inactive** | Suspend accounts (non-destructive) | Temporary deactivation |
+| ✅ **Mark as Active** | Switch the selected accounts back on | Bulk account restoration |
+| 🚫 **Mark as Inactive** | Switch the selected accounts off (billing is not stopped) | Members who should no longer have access |
 | 📥 **Export Contact Info (CSV)** | Download contact details for the selected members | Mailing lists, class rosters, offline outreach |
 
 :::tip Voiding pending invoices when marking members inactive
 If any of the selected members have pending invoices, **Mark as Inactive** will also ask whether you want to void them. If you don't, the system keeps trying to collect on those invoices even though the members are now inactive. A partially paid invoice is never voided by this option, and it only appears for staff with the *Manage Memberships* permission.
+:::
+
+:::info Marking members inactive does not stop billing
+The confirmation reads *"Members with an active subscription will keep being charged: marking them inactive doesn't stop it. To stop charges, pause or cancel the subscription on each member's Subscriptions tab."* The void option is the checkbox **Also void pending invoices for these members**. **Mark as Active** also asks you to confirm. Neither action sends an email to the member.
 :::
 
 ![Bulk Actions Menu](/img/bulk1.png)
@@ -106,13 +110,34 @@ If any of the selected members have pending invoices, **Mark as Inactive** will 
 Access the full member management interface with organized sections:
 
 #### ⚡ Active / Inactive Toggle
-At the top of the member details page, the **Active** toggle marks the member active or inactive.
+At the top of the member details page, the **Active** toggle switches the member's account on or off. You need the *Manage Memberships* permission (owners and managers always have it).
 
-- **Turning a member Active** — takes effect immediately
-- **Turning a member Inactive, with pending invoices** — you'll be asked whether to also void them. If you don't, the system keeps trying to collect on those invoices even though the member is now inactive
-- **Turning a member Inactive, with no pending invoices** — takes effect immediately, no prompt
-- A partially paid invoice is never voided by this option
-- The option to void invoices only appears for staff with the *Manage Memberships* permission
+- **Turning a member Active** — takes effect immediately. There is no confirmation and no email is sent to the member.
+- **Turning a member Inactive** — a dialog titled *Mark [member name] inactive?* opens:
+  - If the member has pending invoices, it says how many and warns that the system keeps trying to collect payment even though the member is inactive. Choose **Mark Inactive & Void Invoices** or **Mark Inactive, Keep Invoices**.
+  - If there are no pending invoices, the only choice is **Mark Inactive**.
+  - If the member has a subscription that bills them, the dialog adds *"Billing continues: marking them inactive doesn't stop their subscription. To stop charges, pause or cancel it on the Subscriptions tab."*
+  - **Cancel** closes the dialog without changing anything.
+- A partially paid invoice is never voided by this option.
+- No email is sent to the member when you turn them inactive.
+
+#### 🧭 Inactive vs Paused vs Canceled
+Inactive and paused are easy to mix up. They are separate things:
+
+| | **Inactive** | **Paused** |
+|---|---|---|
+| **Applies to** | The member's whole account | One subscription |
+| **What it means** | The account is switched off | Billing is on hold, and the account stays **Active** |
+| **Door, kiosk and class, event or resource bookings** | Blocked | Blocked |
+| **Billing** | Carries on. Marking a member inactive does not stop their subscription | The regular charge stops. A pause fee may apply |
+| **How it starts** | You switch **Active** off or use **Mark as Inactive**, or the system does it when payments keep failing (**Failed Payments Before Inactive**) | You click **Pause** on the Subscriptions tab |
+| **How it ends** | You switch **Active** back on, or a successful payment can do it (see below) | **Resume Now**, or automatically on the **Resume on** date |
+
+Canceled is different again: it ends one subscription for good. Inactive and paused members still have their subscriptions.
+
+Inactive and paused members can still log in, see their account, update their card and pay invoices.
+
+**Reactivating an inactive member:** switch **Active** back on (no confirmation and no email). After a successful payment, the system can switch the account back on by itself. It does not do this if staff switched the account off by hand. In that case only staff can switch it back on.
 
 #### 💵 Cash / Card Billing Toggle
 Next to the Active/Inactive status at the top of the member details page, a badge shows the member's billing type: **Cash Member** or **Card Billing**.
@@ -230,19 +255,25 @@ Updating the billing date is ideal when a member needs a short break but you wan
 :::
 
 #### Pausing a Subscription
-If a member needs to temporarily stop their subscription entirely:
+If a member needs to temporarily stop their subscription entirely, staff with the *Manage Memberships* permission can pause it (owners and managers always have it). Members can't pause their own subscriptions. Cash subscriptions can't be paused.
 1. Navigate to the member's **Subscriptions** tab
-2. Click the **Pause** button on the subscription
-3. Optionally pick a **Resume on** date to automatically restart billing. Leave it blank to pause until you resume the subscription yourself.
-4. If a pause fee applies, the dialog says so, for example *"The member will be charged $5.00 per month while paused, starting on Nov 02, 2026"*. A free pause shows no fee line.
-5. Click **Confirm Pause** to apply
+2. Click the **Pause** button on the subscription. A dialog titled *Pause "[subscription name]"* opens and says *"Billing will be paused. Optionally pick a date to automatically resume."*
+3. Under **Resume on (optional)**, optionally pick a date to automatically restart billing. The hint says *"Leave blank to pause indefinitely."* If you leave it blank, the pause lasts until you resume the subscription yourself.
+4. If a pause fee applies, an orange line shows it, for example *"The member will be charged $15.00 per month while paused, starting on Nov 02, 2026."* (It says *per billing period* on plans that aren't monthly, and *starting on their next billing date* when the date isn't known yet.) A free pause shows no fee line.
+5. Click **Confirm Pause** to apply, or **Cancel** to close the dialog without pausing.
+
+After you confirm, you'll see a message like *"Subscription paused — will auto-resume on Nov 30, 2026. A pause fee of $15.00 per month will be charged starting Nov 02, 2026. May take a few seconds; hit Refresh on the left."* The auto-resume and pause-fee parts only appear when they apply.
 
 :::info Pause vs. Update Billing Date
-**Pausing** makes the subscription inactive — the member loses access while paused. **Updating the billing date** keeps the subscription active and the member's access intact, it just delays when they're next charged.
+**Pausing** stops the regular charge and blocks door, kiosk and booking access, but the member's account stays **Active**. **Updating the billing date** keeps the subscription active and the member's access intact, it just delays when they're next charged.
 :::
 
 :::note Maximum pause length
 If your **Portal Settings** set a **Maximum Pause Length (months)**, the dialog says **Resume on (required)**, only allows dates within that many months, and adds *"A pause can last at most N months."* See [Portal Settings](/docs/settings/portal-settings#maximum-pause-length-months).
+:::
+
+:::info What a paused member can and can't do
+A paused member's account stays **Active**. They can still log in, see their account, update their card and pay invoices. But door access, kiosk check-in and bookings for classes, events and resources in the portal or app are refused until the pause ends. No email or text is sent to the member when a pause starts, ends or resumes automatically, so let them know yourself.
 :::
 
 #### Resuming a Paused Subscription
@@ -251,17 +282,19 @@ A paused subscription's card shows a red **Paused** badge, or **Paused until [da
 - **Resume Now** – ends the pause right away.
 - **Set Resume Date** (shown as **Edit Resume Date** once a date is set) – pick an **Auto-resume on** date and click **Save**. Click **Clear** to remove the date and keep the member paused until you resume them yourself. (A pause that was started under a Maximum Pause Length always keeps a resume date, so **Clear** isn't offered for it.)
 
+If a resume date is set, the subscription also resumes by itself overnight on that date.
+
 When a member resumes, either way, billing continues on their **original billing day**, not on the day they resumed. The cycles they were paused for are skipped. For example, a member who is billed on the 2nd and resumes on the 19th is next billed on the 2nd of the following month.
 
 #### Pause Fee
-If you charge a pause fee (set on each membership level and turned on in Portal Settings; see [Membership Levels](/docs/membership/membership-levels) and [Portal Settings](/docs/settings/portal-settings#charge-a-pause-fee)), a paused member is charged it while they're paused, and their normal price is not charged.
+If you charge a pause fee (set on each membership level and turned on in Portal Settings; see [Membership Levels](/docs/membership/membership-levels) and [Portal Settings](/docs/settings/portal-settings#charge-a-pause-fee)), a paused member is charged it while they're paused. Their regular membership charge stops for the whole pause, and nothing is billed later to make up for it.
 
-- **When:** on the member's normal billing day, once each billing period. A monthly plan is charged every month, a quarterly plan every 3 months.
-- **How:** through your gym's payment processor.
+- **When:** on the member's normal billing day, once each billing period (not every day). A monthly plan is charged every month, a quarterly plan every 3 months.
+- **How:** as its own invoice, charged to the member's saved card through your gym's payment processor.
 - **How much:** the **Pause Fee ($)** of the level the subscription is on, locked in on the day the pause starts. Changing the level's fee or the Portal Settings later does not change a pause that has already started.
 - **One fee per subscription**, not per person. A paused subscription is charged one fee however many people or units it covers.
 - **Where you see it:** the paused subscription's card shows, for example, *Pause fee $5.00 per month, next Nov 02, 2026*. The charge appears in [Financial Transactions](/docs/reports/financial) with a description that starts with **Pause fee**, and as an invoice on the member's account.
-- **If it fails:** a failed pause fee is retried like any other failed payment.
+- **If it fails:** a failed pause fee is retried like any other failed payment. It also counts toward **Failed Payments Before Inactive**, so the member can end up marked inactive.
 
 ---
 

@@ -19,9 +19,13 @@ When a payment fails, the system automatically retries it on a schedule. Each re
 | 0 | Same day | Friendly notice |
 | 3 | Day 3 | Gentle reminder |
 | 7 | Day 7 | Access at risk |
-| 14 | Day 14 | Access paused |
+| 14 | Day 14 | Access paused (account marked inactive) |
 | 19 | Day 19 | We're here to help |
 | 25 | Day 25 | Final notice |
+
+:::note "Access paused" means the account is marked inactive
+In these messages "paused" is not the subscription pause described in [Members](/docs/membership/members#pausing-a-subscription). When payments keep failing, the system marks the member's account **inactive**. That happens when the number of failed attempts set in **Failed Payments Before Inactive** (Portal Settings) is reached, which can be before day 14, or when the last retry fails. Inactive members are turned away at doors and the kiosk and can't book. Retries continue until the last stage. After a successful payment the system can switch the account back on by itself, unless staff switched it off by hand.
+:::
 
 Every email and SMS includes a secure link members can use to update their card — clicking it takes them directly to a payment update page where they can enter new card details and trigger an immediate retry.
 
@@ -72,4 +76,4 @@ The card update page automatically retries the outstanding invoice immediately a
 Not individually — but you can edit the body to be minimal if you'd prefer a lighter touch at certain stages.
 
 **What happens at the end of the sequence?**
-After the final stage (day 25), no further automatic retries occur. Depending on your settings, the member's access may be suspended and you'll need to resolve the balance manually.
+After the final stage (day 25), no further automatic retries occur. The member's account is marked inactive if it isn't already, and you'll need to resolve the balance manually.

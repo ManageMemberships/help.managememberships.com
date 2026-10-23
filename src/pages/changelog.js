@@ -35,6 +35,7 @@ export default function Home() {
 
 <h3>Added</h3>
 <ul>
+  <li><strong>Pause fees</strong> &mdash; charge a fee while a member's subscription is paused. Turn on Charge a Pause Fee in Portal Settings &rarr; Membership &amp; Billing, then set a Pause Fee ($) on each membership level. You can also cap pauses with Maximum Pause Length (months), and the new Paused Members report under Reports lists everyone who is paused, with resume dates and unpaid pause fees.</li>
   <li><strong>Follow-up task from an activity</strong> &mdash; when you add an activity to a prospect, tick Create follow-up task to also create a task for yourself, due in 1, 3 or 7 days at 9:00 AM gym time.</li>
   <li><strong>Daily task email</strong> &mdash; each morning between 7:00 and 11:00 AM gym time, everyone with CRM access who has tasks due today or overdue gets one email listing them. Starter plans and above. On by default; an owner can turn it off in Portal Settings &rarr; CRM &amp; Automation.</li>
   <li><strong>Import prospects from a spreadsheet</strong> &mdash; new Import CSV button on the CRM. Preview who'll be added before anything is saved; anyone already in your CRM is skipped automatically.</li>
