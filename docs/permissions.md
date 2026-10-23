@@ -8,6 +8,7 @@ This documentation outlines what navigation items are available to users based o
 
 **Roles**:
 - `owner`
+- `manager`
 - `staff`
 - `accountant`
 

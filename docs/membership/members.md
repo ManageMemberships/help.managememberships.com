@@ -89,7 +89,7 @@ If any of the selected members have pending invoices, **Mark as Inactive** will 
 :::
 
 :::info Marking members inactive does not stop billing
-The confirmation reads *"Members with an active subscription will keep being charged: marking them inactive doesn't stop it. To stop charges, pause or cancel the subscription on each member's Subscriptions tab."* The void option is the checkbox **Also void pending invoices for these members**. **Mark as Active** also asks you to confirm. Neither action sends an email to the member.
+The confirmation reads *"Members with an active subscription will keep being charged: marking them inactive doesn't stop it. To stop charges, pause or cancel the subscription on each member's Subscriptions tab."* The void option is the checkbox **Also void pending invoices for these members**. In the members list, with several members selected, **Mark as Active** asks you to confirm; the **Active** toggle on a single member's page does not. Neither action sends an email to the member.
 :::
 
 ![Bulk Actions Menu](/img/bulk1.png)
@@ -112,7 +112,7 @@ Access the full member management interface with organized sections:
 #### ⚡ Active / Inactive Toggle
 At the top of the member details page, the **Active** toggle switches the member's account on or off. You need the *Manage Memberships* permission (owners and managers always have it).
 
-- **Turning a member Active** — takes effect immediately. There is no confirmation and no email is sent to the member.
+- **Turning a member Active** — takes effect immediately and sends no email to the member. In the members list, with several members selected, **Mark as Active** asks you to confirm; the **Active** toggle on a single member's page does not.
 - **Turning a member Inactive** — a dialog titled *Mark [member name] inactive?* opens:
   - If the member has pending invoices, it says how many and warns that the system keeps trying to collect payment even though the member is inactive. Choose **Mark Inactive & Void Invoices** or **Mark Inactive, Keep Invoices**.
   - If there are no pending invoices, the only choice is **Mark Inactive**.

@@ -70,7 +70,7 @@ Templates are saved per portal, so each location manages its own messaging indep
 Default templates are pre-loaded when dunning is enabled. You can customize them at any time — your edits take effect on the next message that goes out.
 
 **What happens if a member updates their card?**
-The card update page automatically retries the outstanding invoice immediately after the new card is saved. If it succeeds, the dunning sequence stops and their access is restored.
+The card update page automatically retries the outstanding invoice immediately after the new card is saved. If it succeeds, the dunning sequence stops and the system can switch the account back on by itself, unless staff switched it off by hand.
 
 **Can I disable messages for a specific stage?**
 Not individually — but you can edit the body to be minimal if you'd prefer a lighter touch at certain stages.
