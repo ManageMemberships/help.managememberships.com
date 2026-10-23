@@ -78,6 +78,12 @@ On the list page, click **Settings** on any page to configure:
 ### Design & Styling
 Background, text, and button colors. Button colors apply to the form's submit button.
 
+### Link Preview
+- **Share Image** - The picture shown when the page's link is shared on Facebook, in a text message, or anywhere else that shows link previews. Best at 1200 × 630.
+- Leave it empty and the preview uses the first picture on the page instead (usually your hero image), or your portal hero banner or logo if the page has no pictures.
+- The preview also shows the page title and its subheadline (or the first line of text on the page).
+- Facebook remembers previews. If you change the image after the link was already shared there, paste the link into Facebook's [Sharing Debugger](https://developers.facebook.com/tools/debug/) and click **Scrape Again**.
+
 ### After Submission
 - **Thank you message** - Shown after submission (when no redirect is set)
 - **Thank you redirect** - Optional URL to redirect to after submission
