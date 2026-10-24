@@ -88,20 +88,31 @@ A trigger set to "At most once a week" that also texts an owner will still text 
 
 ## Conditions
 
-Define which members the trigger applies to using the **Members where** rule builder. You can combine conditions with **AND/OR** logic.
+*Scheduled triggers only.* Event triggers fire for the one member involved and don't use conditions.
 
-### Available Condition Fields
-- **Engagement Tier (Now)** - Current engagement level
-- **Engagement Tier (30 Days Ago)** - Engagement level from 30 days prior
-- **Last Check-in** - Date of most recent check-in
-- **At Risk Since** - Date member was flagged as at-risk
-- **Invalid Door Scan At** - Date of last denied door access
+A scheduled trigger checks your **active** members once a day, in the early morning, and messages whoever matches. Combine conditions with **ALL of these are true** or **ANY of these is true**. With no conditions, every active member matches.
 
-### Engagement Tier Values
-- Highly Engaged
-- Neutral
-- Poorly Engaged
-- At Risk
+| Condition | Matches members who… |
+|---|---|
+| **Activity date → Has not checked in for at least…** | haven't checked in for that many days (including members who have never checked in) |
+| **Activity date → Had a failed door scan within the last…** | were denied at a door in that many days |
+| **Custom field date** | have a date in that custom field that is that many days away |
+| **Birthday is today** | have their birthday today, in your gym's time zone. Someone born on February 29 matches on February 28 in other years |
+| **Membership level is** | are on any of the levels you pick |
+
+Members with no phone number, or who have opted out of texts, are skipped for text messages.
+
+### Birthday texts
+
+To text members on their actual birthday, click the **Birthday text** template button. It fills in a scheduled trigger with **Birthday is today**, a **Sending limit** of once a year, and a text you can edit.
+
+To send it only to some members, add a second condition, **Membership level is**, and pick the levels. For example, choose your Drop-In level to send drop-ins a birthday offer:
+
+```
+Happy birthday {{ first_name }}! 🎉 Come in anytime in the next week and your Day Pass is on us.
+```
+
+The member's birth date comes from their profile, so members with no birth date on file won't get it.
 
 ---
 
@@ -112,6 +123,8 @@ Each trigger can perform one or more actions when conditions are met:
 ### Text Message
 - **Send To** - The matched member or a custom phone number
 - **Text Body** - The message content
+
+Messages can include variables, which are filled in for each member: `{{ first_name }}`, `{{ name }}` (full name) and `{{ email }}`, plus the event-specific ones listed under each trigger type. Click a variable under the message box to insert it.
 
 ### Email
 - **Send To** - The matched member or a custom email address
