@@ -56,7 +56,7 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 
 | Section | What's in it |
 |---|---|
-| **Basics** (always open) | Name, Free Membership, Price, Signup Fee, Billing Interval, Is Recurring, Expiration Days, Associated Agreements, Publicly Visible, Description, Public Link |
+| **Basics** (always open) | Name, Free Membership, Price, Signup Fee, Billing Interval, Is Recurring, Expiration Days, Associated Agreements, Publicly Visible, Bundle Only, Description, Public Link |
 | **Pricing options** | Trial Membership, Max Billing Cycles, Additional Price Options |
 | **Family & bundles** | Multi-Member, Flat Rate Pricing, Allow Bundles (paid SaaS plans only) |
 | **Check-ins & credits** | Class credits, Additive Credits, Credits Never Expire, Advance Booking Limit, Single Use |
@@ -107,7 +107,13 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 
 #### **Publicly Visible**
 - Controls whether this membership level appears on the public registration page.
-- Turning this **off** also removes the level as a bundle option everywhere it is used. If another plan offers it under **Allow Bundles**, you'll get a warning naming those plans so you can update them — see [Allow Bundles](#allow-bundles) below.
+- Turning this **off** also removes the level as a bundle option everywhere it is used, unless you turn on **Bundle Only** (below). If another plan offers it under **Allow Bundles**, you'll get a warning naming those plans so you can either turn on Bundle Only or update them — see [Allow Bundles](#allow-bundles) below.
+
+#### **Bundle Only**
+- Appears under **Publicly Visible** when that is turned off.
+- Keeps the level off the public registration page, but still offers it as an add-on inside the plans that list it under **Allow Bundles**.
+- Use it for add-ons that should never be bought on their own, such as a training upgrade on a family plan.
+- Bundle Only does nothing for a level that is Publicly Visible, which is already offered everywhere.
 
 #### **Description**
 - Rich text description of the membership level. Shown to prospective members during registration.
@@ -160,10 +166,12 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 - Useful when members want to purchase **add-ons** (e.g., `Monthly Membership + Coaching`).
 - If enabled:
   - A multi-select appears to choose which other memberships can be bundled.
-  - At least one of the levels you pick must be **Publicly Visible**. Members are only ever offered publicly visible levels, so a bundle made up entirely of hidden ones would show them an empty dropdown.
-  - Levels that are not publicly visible still appear in the picker, marked `(not publicly visible — members cannot see this)`. They're kept so an existing selection isn't silently dropped, but they don't count toward the requirement above.
+  - At least one of the levels you pick must be **Publicly Visible** or marked **Bundle Only**. Members are only ever offered those, so a bundle made up entirely of other hidden levels would show them an empty dropdown.
+  - Levels that are marked Bundle Only appear in the picker as `(bundle only)`. Levels that are hidden and not Bundle Only appear as `(not publicly visible — members cannot see this)`. They're kept so an existing selection isn't silently dropped, but they don't count toward the requirement above and members are not offered them.
 
-> ⚠️ **If you later hide every level a bundle points at**, that plan's bundle section simply stops appearing on the registration page. Members can still sign up for the plan itself — they just won't be offered the add-ons. Re-enable **Publicly Visible** on one of the bundled levels, or edit the plan to pick a visible one, to bring it back.
+> ⚠️ **If you later hide every level a bundle points at**, that plan's bundle section simply stops appearing on the registration page. Members can still sign up for the plan itself — they just won't be offered the add-ons. Turn on **Bundle Only** for one of the bundled levels, re-enable **Publicly Visible** on it, or edit the plan to pick another, to bring it back.
+
+**Example: a training add-on.** Create the add-on level (for example `Training Add-On`), turn **Publicly Visible** off and **Bundle Only** on. On the family plan, turn on **Allow Bundles** and pick the add-on. New members see the add-on while signing up for the family plan, and nobody can sign up for it on its own.
 
 ---
 
