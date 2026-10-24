@@ -58,7 +58,7 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 |---|---|
 | **Basics** (always open) | Name, Free Membership, Price, Signup Fee, Billing Interval, Is Recurring, Expiration Days, Associated Agreements, Publicly Visible, Bundle Only, Description, Public Link |
 | **Pricing options** | Trial Membership, Max Billing Cycles, Additional Price Options |
-| **Family & bundles** | Multi-Member, Flat Rate Pricing, Allow Bundles (paid SaaS plans only) |
+| **Family & bundles** | Multi-Member, Flat Rate Pricing, Allow Bundles, Bundled Membership Levels, Bundle Description (paid SaaS plans only) |
 | **Check-ins & credits** | Class credits, Additive Credits, Credits Never Expire, Advance Booking Limit, Single Use |
 | **Eligibility & approval** | Min/Max Age, Requires Approval |
 | **Expiration & renewal** | After Expiration Convert To, Annual Renewal, Months Penalty, Pause Fee |
@@ -171,7 +171,9 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 
 > ⚠️ **If you later hide every level a bundle points at**, that plan's bundle section simply stops appearing on the registration page. Members can still sign up for the plan itself — they just won't be offered the add-ons. Turn on **Bundle Only** for one of the bundled levels, re-enable **Publicly Visible** on it, or edit the plan to pick another, to bring it back.
 
-**Example: a training add-on.** Create the add-on level (for example `Training Add-On`), turn **Publicly Visible** off and **Bundle Only** on. On the family plan, turn on **Allow Bundles** and pick the add-on. New members see the add-on while signing up for the family plan, and nobody can sign up for it on its own.
+  - **Bundle Description** (optional) is the text members see above the add-on picker. Leave it blank and they see the default: "This is a bundleable plan. You can add additional plans at 50% off..." That default is only wording, **no discount is applied**: each add-on is billed at its own level's price. If your add-ons are not half price, write your own, for example `Add training for any family member for $61.50/mo each. Members you add this way don't get separate accounts.`
+
+**Example: a training add-on.** Create the add-on level (for example `Training Add-On`), turn **Publicly Visible** off and **Bundle Only** on. On the family plan, turn on **Allow Bundles** and pick the add-on. New members see the add-on while signing up for the family plan, and nobody can sign up for it on its own. Each add-on is its own subscription at the add-on's price (one per person who takes it), while the family plan keeps its flat price. Use **Bundle Description** to tell members what the add-on costs.
 
 ---
 
