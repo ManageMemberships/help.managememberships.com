@@ -404,7 +404,7 @@ Link existing members to create family account relationships while preserving th
 #### Breaking Out a Sub-Account
 When a sub-account needs to become a standalone member (for example, a child who has aged out of a family plan), staff with the *Manage Memberships* permission can click **Break Out** in the Sub Accounts table under **Account & Access** on the member's page.
 
-The person gets their own login, keeps their history, and has to sign their agreements again. They also start without a subscription of their own, so plan to set one up. See [Breaking Out a Sub-Account](./sub-accounts.md#breaking-out-a-sub-account) for the full steps and what to do afterwards.
+The person gets their own login, keeps their history, and has to sign their agreements again. They start without a subscription of their own unless a linked subscription was kept. If they need one, plan to set one up. See [Breaking Out a Sub-Account](./sub-accounts.md#breaking-out-a-sub-account) for the full steps and what to do afterwards.
 
 ### 📦 Bundle Accounts (Name-Only Access)
 Ideal for tracking multiple members under one billing account:

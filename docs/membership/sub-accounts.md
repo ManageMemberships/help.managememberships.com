@@ -46,7 +46,7 @@ If that subscription has pending invoices, the cancel prompt also offers to void
 
 Sub-accounts are child accounts **with their own login**. They have their own email, password, and can sign in independently, but are linked to a parent account.
 
-- Added from the member detail page > Account tab > Sub-Accounts
+- Added from the member detail page &gt; Account & Access &gt; Sub Accounts
 - Can link an existing user or create a new one
 - Each sub-account has its own class bookings, check-ins, and history
 
@@ -58,7 +58,7 @@ A sub-account can always check in at the kiosk. It does **not** appear in the pa
 
 This catches out gyms that have moved over from another system. Mindbody, for example, stores every child as its own separate client, so an import brings them in as sub-accounts — they work at the kiosk, and then a parent asks why their child isn't in the app.
 
-To fix it, go to the parent's member detail page > **Account** tab > **Sub-Accounts**, and click **Enable App Check-In** next to the child. The child then appears in the parent's app straight away, and the button is replaced by a green **App check-in on** label.
+To fix it, go to the parent's member detail page &gt; **Account & Access** &gt; **Sub Accounts**, and click **Enable App Check-In** next to the child. The child then appears in the parent's app straight away, and the button is replaced by a green **App check-in on** label.
 
 **Nothing else about the child changes.** They keep their own login, their class bookings, their check-in history, their certificates and their achievements. The child is simply added to the parent's bundle as well, so the app can see them. Turning this on does not create a second membership or a second charge.
 
@@ -83,7 +83,7 @@ You can dismiss the prompt without adding a subscription. It won't come back on 
 
 ## Breaking Out a Sub-Account
 
-The **Break Out** feature turns a sub-account into a standalone member who no longer belongs to the parent's account. This is useful when a child ages out of a family plan and needs their own login, waivers and payment.
+The **Break Out** feature turns a sub-account into a standalone member who no longer belongs to the parent's account. This is useful when a child ages out of a family plan and needs their own login and waivers. Payment is needed only when they need their own subscription.
 
 Only sub-accounts can be broken out. Bundle accounts have no login, so there is nothing to separate. If a minor will need their own login when they turn 18, add them as a sub-account from the start rather than as a bundle account.
 
@@ -132,6 +132,6 @@ The sub-account keeps its own account afterward, so only cancel if you actually 
 
 ## Deleting a Sub-Account
 
-Deleting a sub-account permanently removes the account and cannot be undone. To delete one, go to the parent's member detail page > Account tab > Sub-Accounts, and click the **Delete** button next to the child account.
+Deleting a sub-account permanently removes the account and cannot be undone. To delete one, go to the parent's member detail page &gt; Account & Access &gt; Sub Accounts, and click the **Delete** button next to the child account.
 
 If the sub-account has a linked subscription, you'll be prompted to cancel it here too — confirming cancels both the parent's charging subscription and the sub-account's own linked subscription together.
