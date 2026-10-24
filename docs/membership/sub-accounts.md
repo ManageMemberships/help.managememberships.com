@@ -75,7 +75,7 @@ When you link an existing user or create a new sub-account, you'll be prompted t
 - A real, credit-card-charging subscription **on the parent account** — the parent's card is billed, since that's typically whose payment method is on file.
 - A linked, non-charging subscription **on the sub-account's own record**, so the sub-account shows an active membership of its own.
 
-The two stay linked, so cancelling one cancels both automatically — see Breaking Out and Deleting below.
+The two stay linked to each other.
 
 You can dismiss the prompt without adding a subscription. It won't come back on its own; add one later from the sub-account's own Subscriptions tab if needed.
 
@@ -83,19 +83,50 @@ You can dismiss the prompt without adding a subscription. It won't come back on 
 
 ## Breaking Out a Sub-Account
 
-The **Break Out** feature promotes a sub-account into a fully independent member. This is useful when a child ages out of a family plan or needs their own standalone membership.
+The **Break Out** feature turns a sub-account into a standalone member who no longer belongs to the parent's account. This is useful when a child ages out of a family plan and needs their own login, waivers and payment.
 
-When you break out a sub-account:
+Only sub-accounts can be broken out. Bundle accounts have no login, so there is nothing to separate. If a minor will need their own login when they turn 18, add them as a sub-account from the start rather than as a bundle account.
 
-1. The child is detached from the parent account
-2. All existing history is preserved (class bookings, check-ins, certificates, etc.)
-3. Their agreement count is reset so they can sign new waivers
-4. A **password reset email** is sent to their email address
-5. An audit log entry is created documenting the breakout
+Only staff with the *Manage Memberships* permission can do this (owners and managers always have it). Members can't break themselves out.
 
-If the sub-account has a linked subscription from the flow above, you'll also be prompted to cancel it. Confirming cancels both the parent's charging subscription and the sub-account's own linked subscription together. The sub-account keeps its own account afterward, so only confirm this if you actually want their paid access to end.
+### How to break out a sub-account
 
-To break out a sub-account, go to the parent's member detail page > Account tab > Sub-Accounts, and click the **Break Out** button next to the child account.
+1. Go to the parent's member detail page &gt; **Account & Access** &gt; **Sub Accounts**.
+2. Click **Break Out** next to the person. Each row also has **Enable App Check-In** and **Delete**.
+3. A confirmation appears: *Break out "[name]"?* It explains that they will get their own login, and will need to sign waivers and set up payment, and that their history will be preserved. Click **Break Out** to continue, or **Cancel** to stop.
+4. A green message confirms that the person has been broken out into a standalone account and that a password reset email has been sent to their address.
+
+Nothing is sent to the parent.
+
+### What changes
+
+- They leave the parent's account and become a standalone account. They stay **Active**, with the same membership level.
+- Their old password is replaced, and they are signed out of the app.
+- Their check-in history and other past activity are kept.
+- Their signed agreements for their membership level are cleared, so they must sign them again.
+
+The confirmation dialog says their history will be preserved. Check-ins and other past activity are kept, but signed agreements are the exception.
+
+### What to do afterwards
+
+**Tell the person to check their email.** They receive a standard password reset email at their own address, and the link is valid for 24 hours. The email doesn't mention the break-out, so let them know they should use it to set a password.
+
+**Agreements.** When they log in, they are asked to sign any agreements they owe. You can also handle this from their own member page, in the **Agreements & Waivers** section: click **Sign**, or **Upload signed copy** if you have a paper copy.
+
+**Subscription.** The member starts with no subscription of their own, unless one was linked to the sub-account. Add one from their **Subscriptions** tab, using **Add New Credit Card Subscription** or **Manual/Cash Subscription**. For a card subscription, first add the card under **Financial** with **Add New Card**.
+
+**App check-in.** If **Enable App Check-In** was on for this person, their name stays listed under **Bundle Accounts** on the parent's account after the break-out. If they should no longer be checked in under the parent, click **Remove** next to their name there. This only takes the name off the parent's bundle; it doesn't change the broken-out member's own account.
+
+### If the sub-account had a linked subscription
+
+If the sub-account has a linked subscription from the flow above, a second dialog appears after the break-out: *Also cancel "[name]"'s subscription?* It explains that removing or breaking out a sub-account does not cancel the subscription automatically. Choose on purpose:
+
+- **Cancel Subscription** ends that subscription and the parent's matching one.
+- **Keep Subscription** leaves both running. The broken-out member keeps an active subscription, and the parent keeps being billed for it.
+
+:::warning Choose on purpose
+The sub-account keeps its own account afterward, so only cancel if you actually want their paid access to end. If you keep the subscription, remember the parent is still the one being charged.
+:::
 
 ---
 
