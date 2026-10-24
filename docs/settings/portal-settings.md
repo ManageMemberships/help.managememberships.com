@@ -313,7 +313,7 @@ When enabled, members must upload a photo at registration.
 
 ### Kiosk Waiver Free Membership Level
 
-Select a membership level that allows kiosk check-in without requiring a signed waiver.
+Select the membership level given to new accounts created from the kiosk waiver sign-up (`/kiosk/waiver`). These people still sign the level's agreements.
 
 ### Require Email Verification
 

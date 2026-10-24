@@ -120,6 +120,7 @@ At the top of the member details page, the **Active** toggle switches the member
   - **Cancel** closes the dialog without changing anything.
 - A partially paid invoice is never voided by this option.
 - No email is sent to the member when you turn them inactive.
+- If the member has notes, ManageRegister also shows them in its inactive pop-up. See [Member Notes](#-member-notes).
 
 #### 🧭 Inactive vs Paused vs Canceled
 Inactive and paused are easy to mix up. They are separate things:
@@ -158,6 +159,17 @@ Also on the Overview tab, a **Staff Access** toggle next to Active lets you prom
 - **Confirmation required** — a modal confirms the change before it's applied
 - **Not available for your own account** — you can't change your own staff status from here
 - Requires the *Manage Staff* permission
+
+#### 📝 Member Notes
+The **Member Notes** card on the Overview tab keeps internal notes about a member, such as conversations, special arrangements or anything your staff needs to know.
+
+- **A history, not a single field** — each note is saved with the staff member who wrote it and the date and time
+- **Add a note** — type in **Add New Note** and click **Save Note**
+- **Edit or delete** — staff with permission see **Edit** and **Delete** next to each note. Deleting asks you to confirm and can't be undone. An edited note is marked *edited*
+- **Permission** — you need the *Manage Memberships* permission and an active account to add, edit or delete notes
+- **Staff only** — notes are internal. The card says members never see them
+- **Audit logged** — editing or deleting a note is recorded in the member's audit log. Adding a note is not, but every note keeps its author and date
+- **Shown in ManageRegister** — ManageRegister gets the member's newest 3 notes (long text is cut at 500 characters) and shows them at the POS as a pop-up the cashier must acknowledge, and as a banner on the sale. The register can take about a minute to show a change. A note typed in ManageRegister for a ManageMemberships member is saved here as a new note
 
 #### 🏆 Award Points
 The **Award Points** section on the Overview tab lets staff manually award points and review the member's point history.
