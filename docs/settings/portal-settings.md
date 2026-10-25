@@ -497,6 +497,18 @@ Enable support for managing classes and events at multiple business locations. W
 
 Enable visibility settings on resources (public, members-only, staff-only) and allow marking trainers as sensitive staff to hide them from member-facing pages.
 
+### Require Citizenship Verification
+
+*Shows each member's citizenship verification status at the top of their member page, where staff can mark it verified.*
+
+Off by default. When it is on, the status also shows next to names on Class Registrations, on the printed roster and on the Bulk Check-In screen. See [Citizenship Verification](../citizenship-verification.md).
+
+### Require Safety Briefing
+
+*Members who sign up from now on are flagged as needing the range safety briefing, and the register warns staff until it is cleared. Existing members are not flagged. Status shows at the top of the member page.*
+
+Off by default. When it is on, the status also shows next to names on Class Registrations, on the printed roster and on the Bulk Check-In screen. See [Safety Briefing](../safety-briefing.md).
+
 ---
 
 ## Points

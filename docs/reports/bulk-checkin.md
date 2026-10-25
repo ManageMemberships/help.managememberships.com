@@ -40,6 +40,19 @@ Checking in a **booked** member links the check-in to their booking and marks th
 
 ---
 
+## Citizenship and Safety Briefing Labels
+
+If your gym has turned on **Require Citizenship Verification** or **Require Safety Briefing** (in **Settings → Portal Settings → Privacy & Access**), small labels show next to names:
+
+- **Citizenship: Verified** (green) or **Citizenship: Not Verified** (red)
+- **Briefing Needed** (red) or **Briefed** (green). Nothing shows for a member who was never flagged and never briefed.
+
+They appear in the search results and in the **Booked** and **Walk-Ins** lists.
+
+The labels are information only. They do not stop a check-in. To change one, open the member's profile. See [Citizenship Verification](../citizenship-verification.md) and [Safety Briefing](../safety-briefing.md).
+
+---
+
 ## Undo
 
 Every check-in made from this page has an **Undo** link. Undoing removes the check-in, restores any check-in quota it consumed, and clears the booking's attended status if it was set.

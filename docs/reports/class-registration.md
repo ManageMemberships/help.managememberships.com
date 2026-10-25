@@ -4,7 +4,13 @@ sidebar_position: 5
 
 # Class Registrations
 
-The **Class Reports** page allows owners and administrators to view class bookings, see which members are registered for each timeslot, manually add bookings for users who did not register themselves, and keep a staff note against any individual session.
+The **Class Registrations** page allows owners and administrators to view class bookings, see which members are registered for each timeslot, manually add bookings for users who did not register themselves, print a sign-in roster, and keep a staff note against any individual session.
+
+Find it under **Reports → Bookings → Class Registrations**. You can also reach it from the **View Full Report** button in the [Class Calendar](./class-calendar.md) window.
+
+:::info Permission required
+You need the **View Class Reports** permission. Owners and managers always have it. The default **Staff** role does not, so an owner has to tick it for each staff member under **Settings → Staff → Edit → Permissions**. See [Staff](../settings/staff.md).
+:::
 
 ---
 
@@ -20,14 +26,34 @@ The **Class Reports** page allows owners and administrators to view class bookin
 
 3. **View Registered Members**
    - The report will show:
-     - **Date** of booking
-     - **Member Name**
-     - **Tickets Purchased**
-     - **Amount Paid**
-   - You can also see if any member has **pending agreements**. For unsigned agreements, you will see a red "Unsigned" label. Signed agreements include a **"View Agreement"** link.
+     - **Date**: the date of the booking. For a booking you add yourself with **Manual Registration**, this shows the date of the class instead.
+     - **Member**: the member's name, which links to their profile. Labels may appear next to the name (see [Labels Next to a Member's Name](#labels-next-to-a-members-name)).
+     - **Tickets**
+     - **Quota Used?**: **Yes** if the booking used one of the member's check-ins, otherwise **No**. It says nothing about whether they attended.
+     - **Amount Paid**: with an **UNPAID**, **CASH** or **COMPED** tag where it applies
+     - **Attendance**: the **Attended** and **No-Show** buttons (see [Attendance Tracking](#attendance-tracking))
+   - Any custom fields set to show on the roster appear as extra columns after **Member**.
+   - A yellow **⚠** next to a name is the waiver warning. See [Labels Next to a Member's Name](#labels-next-to-a-members-name).
+   - If the class has agreements, they are also listed under the name on bookings the member made online. Each one shows a red "Unsigned" label, or a **"View Agreement"** link once it is signed.
 
 4. **Totals**
    - At the bottom of the table, you will see the total revenue (sum of all amounts paid) for the selected timeslot.
+
+---
+
+## **Labels Next to a Member's Name**
+
+Next to a member's name you may see up to three labels:
+
+| Label | What it means |
+|---|---|
+| **⚠** (yellow) | The waiver warning. Hover over it to see **Waiver(s) pending**. It is about waivers, not citizenship, and it shows whether or not the settings below are on. |
+| **Citizenship ✓** (green) or **Citizenship ✗** (red) | Verified or not verified. Hover over it to see *Citizenship: Verified* or *Citizenship: Not Verified*. **✗** also shows for a member nobody has checked yet. |
+| **Briefing Needed** (red) or **Briefed** (green) | The range safety briefing. A member who was never flagged and never briefed shows no label. |
+
+The **Citizenship** label shows only while **Require Citizenship Verification** is on. The **Briefing** label shows only while **Require Safety Briefing** is on. Both are in **Settings → Portal Settings → Privacy & Access**. If you turn a setting off, its label disappears from this page.
+
+The labels are for information. They do not stop a booking or a check-in. Staff change them on the member's profile. See [Citizenship Verification](../citizenship-verification.md) and [Safety Briefing](../safety-briefing.md).
 
 ---
 
@@ -35,42 +61,51 @@ The **Class Reports** page allows owners and administrators to view class bookin
 
 Sometimes members may call or request a spot without registering online. You can manually add a booking:
 
-1. **Select the Class and Timeslot**
-   - As described above, choose the class and timeslot first.
+1. **Select the Class**
+   - Choose the class from the dropdown at the top of the page, the one that starts with **"Select a class"**. Type in **Filter classes...** above it to shorten the list.
+   - The **Manual Registration** box appears as soon as a class is selected. You do not need to choose a timeslot first.
 
 2. **Use the Manual Registration Section**
    - On the right-hand side, you will see the **"Manual Registration"** box.
 
 3. **Select a Member**
+   - Type in **Filter users...** to shorten the list.
    - Use the **"Select Member"** dropdown to choose the member you are booking for.
 
 4. **Select Attendee (Family/Bundle Members)**
-   - If the selected member has **child accounts** or **bundle members**, an **"Attendee"** dropdown will appear.
+   - If the selected member has **child accounts** or **bundle members**, an **"Attendee"** dropdown will appear. It starts on **Same as member**, and the hint under it reads *Select if booking for a child/family member on this account*.
    - Use this to select which family member is actually attending the class.
    - For example, if a parent (TJ Young) has a child (Jamaal Young) on their account, select TJ Young as the member, then pick Jamaal Young as the attendee.
    - The attendee name will appear on the roster next to the parent's name.
    - You can also **search by a bundle member's name** in the member filter — it will find the parent account that contains that bundle member.
 
-5. **Select Date**
+5. **Check Quota Usage (Optional)**
+   - If the class accepts check-ins, then once you pick a member you will see either **Check-ins available: N** with a **Consume one check-in** checkbox, or **No check-ins available**.
+   - When you tick **Consume one check-in**:
+     - The booking will deduct one check-in from their available quota.
+     - This is especially useful for **private training packages** or **limited check-in memberships**.
+
+6. **Select Date**
    - Choose the date of the class from the **"Select Date"** dropdown.
    - Only available dates will be shown.
 
-5. **Select Time Slot**
-   - Once a date is chosen, the **"Select Time Slot"** dropdown will appear.
-   - You will see available times and how many spots are open for each slot.
+7. **Select Time Slot**
+   - Once a date is chosen, the **"Select Time Slot"** dropdown will appear. It is required.
+   - Each option shows the time and how many spots are open, for example **6:00 PM - 7:00 PM (8 spots)**.
 
-6. **Check Quota Usage (Optional)**
-   - If the member has a **check-in quota** from a membership package, you can tick the **"Use Member's Quota"** checkbox.
-   - When checked:
-     - The booking will deduct from their available quota.
-     - This is especially useful for **private training packages** or **limited check-in memberships**.
+8. **Choose a Payment Option**
+   - Under **Payment**, pick one. **Mark Unpaid** is selected to start with.
+     - **Mark Unpaid**: the booking is added as unpaid and shows an **UNPAID** tag. You can collect the payment later from the [Class Calendar](./class-calendar.md) window.
+     - **Charge Card on File**: charges the class price to the member's card on file. You need the **Manage Classes** permission.
+     - **Mark Paid (Cash)**: records the class price as paid in cash and shows a **CASH** tag.
+     - **Mark Comped**: adds the booking for free and shows a **COMPED** tag.
 
-7. **Add the Booking**
+9. **Add the Booking**
    - Click the **"Add"** button.
    - The booking will always be for **1 ticket**, and this cannot be changed.
 
-8. **Confirmation**
-   - Once added, the booking will appear in the table of registrations for that timeslot.
+10. **Confirmation**
+    - Once added, the table of registrations shows that date and time, including the new booking, and the form is cleared.
 
 ---
 
@@ -78,7 +113,7 @@ Sometimes members may call or request a spot without registering online. You can
 
 - **Errors and Validation**
   - You must select all required fields (Member, Date, Time Slot).
-  - If a field is missing or invalid, you will see a red error message under the manual registration form.
+  - If a field is missing or invalid, you will see a red error message under the manual registration form. For example, if you leave **Select Time Slot** empty, it reads **The manual slot field is required.**
 
 - **Updating the View**
   - After adding a booking, the page will automatically refresh the selected timeslot to show the new registration.
@@ -114,9 +149,77 @@ Attendance data feeds into the [Trainer Reports](./trainer-reports.md) and is us
 
 ---
 
+## **Sorting the Roster**
+
+Use the **Sort by** menu above the table to change the order:
+
+- **Last Name (A–Z)** (the default)
+- **First Name (A–Z)**
+
+"Last name" means the last word in the member's name. The order carries through to **Print roster** and **Export CSV**.
+
+---
+
+## **Printing the Roster**
+
+Choose a class and timeslot, then click **Print roster**. Your browser's print window opens with a clean sign-in sheet. It is not a copy of the screen.
+
+**The header shows:**
+
+- Your gym's name followed by **— Class roster**
+- The class name
+- The date and time
+- **Instructor**, if the session has a trainer (a [swapped trainer](#swapping-the-trainer-for-a-session) is used)
+- **Note**, if the session has a staff note
+- **Booked: N**, and how many were cancelled
+
+**The table has these columns:**
+
+| Column | What it shows |
+|---|---|
+| **Member** | The name, plus *Attendee: name* when the booking is for someone else |
+| **Membership** | The member's membership level |
+| **Check-in** | An empty box to tick with a pen. It stays empty even if the member is already marked Attended. |
+| **Compliance** | Only when **Require Citizenship Verification** or **Require Safety Briefing** is on. Plain words: *Citizenship: Verified*, *Citizenship: Not Verified*, *Safety briefing: Needed* or *Safety briefing: Briefed*. **Not Verified** and **Needed** are printed bold and boxed so they stand out on a black-and-white printout. |
+
+Cancelled bookings are listed with **CANCELLED** instead of a box, and the name is struck through. Rows follow the **Sort by** order.
+
+**Left off the printout:** amounts paid, tickets, quota, the **Attended** and **No-Show** buttons, the waiver **⚠**, phone numbers, emails and the waitlist.
+
+:::tip
+Your browser may add its own date, page title and web address at the top and bottom of the page. Turn off **Headers and footers** in the print window to remove them.
+:::
+
+---
+
 ## **CSV Export**
 
-Click the **Export CSV** button to download the current roster as a spreadsheet. The export includes member name, tickets, amount paid, attendance status, and any custom fields configured for the class.
+Click **Export CSV** to download the roster for the selected timeslot as a spreadsheet. Rows follow the **Sort by** order. If there are no bookings, nothing downloads.
+
+The columns, in order:
+
+| Column | What it holds |
+|---|---|
+| **Date** | The same date as the **Date** column on screen |
+| **Member** | The member's name, with *(Attendee: name)* added when the booking is for someone else |
+| **Email** | The member's email |
+| **Phone** | The member's mobile number |
+| Custom fields | One column for each custom field set to show on the roster |
+| **Tickets** | Number of tickets |
+| **Quota Used** | **Yes** or **No** |
+| **Amount Paid** | The amount, without a dollar sign |
+| **Status** | **Active** or **Cancelled** |
+| **Attendance** | **Attended**, **No_show** or **Scheduled** (no attendance marked yet) |
+
+:::note
+The file does **not** include citizenship, safety briefing or waiver status. Those show only on screen and on the printed roster.
+:::
+
+Cancelled bookings are included, marked **Cancelled** in **Status**. Their amount is still in **Amount Paid**, so a total taken from the file includes them. The **Totals** row on screen leaves them out.
+
+A cell that starts with **=**, **+**, **-** or **@** gets an apostrophe added in front. A phone number such as +1 (682) 540-1908 appears in the file as `'+1 (682) 540-1908`.
+
+The file name is the class name in lowercase with dashes, then `-roster-` and the date and time of the timeslot, for example `concealed-carry-roster-2026-10-26_1800.csv`.
 
 ---
 
@@ -200,13 +303,15 @@ A swap only updates bookings that already exist for that date. If a member regis
 
 ## **Summary**
 
-The Class Reports page is designed to give you full control over your class schedules and attendance records. You can:
+The Class Registrations page is designed to give you full control over your class schedules and attendance records. You can:
 - Quickly find which members are registered for each class.
 - View payments and agreements.
 - Mark attendance (attended or no-show) for each booking.
 - Add last-minute or offline bookings with the Manual Registration tool.
 - Deduct bookings from a member’s **check-in quota** when applicable.
 - Export rosters to CSV.
+- Print a sign-in roster with a check-in box and the compliance labels.
+- See at a glance who is citizenship-verified and who still needs a safety briefing.
 - Leave a staff note on a single session that travels with it if the session moves.
 - Cancel a single session, automatically return members' class credits, and email the booked members in one step.
 - Swap the trainer for a single session without affecting the rest of the series.
