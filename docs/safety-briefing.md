@@ -50,11 +50,37 @@ Scanning the same ticket again shows "already checked out". A ticket from anothe
 
 For a regular who has already been briefed, or someone who needs it again:
 
-1. Open the member under **Members**
-2. Find the **Safety Briefing** row
-3. Click it to switch between **Needs Briefing** and **Complete**
+1. Go to **Membership → Members** and open the member
+2. On the **Overview** tab, under the member's name and email, find the **Safety Briefing** pill. It reads **Safety Briefing: Needed** (red) or **Safety Briefing: Complete** (green)
+3. Click the pill to switch between the two
 
-This needs the **Manage memberships** permission.
+There is no confirmation box. Hover over the pill to see what a click will do. On **Needed** it says *Click to mark complete*. On **Complete** it says *Click to mark as needing the briefing*.
+
+This needs the **Manage Membership Levels** permission. Owners and managers always have it. Each change is recorded under **Activity & History → Change History** on the member's page.
+
+:::note
+Marking a member **Complete** by hand clears the flag, but it does not give them a **Briefed** label on the roster. **Briefed** appears only after their ticket is scanned out at the briefing kiosk.
+:::
+
+---
+
+## Where the Flag Shows
+
+The status shows in these places while **Require Safety Briefing** is on:
+
+| Screen | What it says |
+|---|---|
+| Member profile, **Overview** tab | **Safety Briefing: Needed** or **Safety Briefing: Complete** |
+| [Class Registrations](./reports/class-registration.md), next to the member's name | **Briefing Needed** (red) or **Briefed** (green) |
+| Printed roster, **Compliance** column | *Safety briefing: Needed* or *Safety briefing: Briefed* |
+| [Bulk Check-In](./reports/bulk-checkin.md), and the Check In screen | **Briefing Needed** or **Briefed** |
+| ManageRegister | **⚠ NEEDS SAFETY BRIEFING** |
+
+A member who was never flagged and never briefed shows **no label** on Class Registrations, the printed roster or the check-in screens. Their profile pill shows **Complete**.
+
+The flag does not show on the [Check-in Report](./reports/check-in-report.md), in the Class Calendar window, or in the **Export CSV** file. It never stops a booking or a check-in.
+
+The citizenship flag works the same way. See [Citizenship Verification](./citizenship-verification.md).
 
 ---
 

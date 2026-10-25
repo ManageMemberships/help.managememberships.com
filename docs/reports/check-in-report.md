@@ -37,3 +37,4 @@ This gives you a quick visual overview of which classes are most active during t
 - If a class row shows "No Class", that means the check-in wasn't tied to a specific class (e.g., open mat or drop-ins).
 - Check-ins are matched to a time slot automatically: if the member had a booking, the booking's time is used; otherwise the check-in is assigned to the session whose start time is closest.
 - You can use this report to track attendance trends over time or identify underperforming sessions.
+- This report does not show the **Citizenship** or **Briefing** labels. They appear on [Class Registrations](./class-registration.md) and [Bulk Check-In](./bulk-checkin.md).

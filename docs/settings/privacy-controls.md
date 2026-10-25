@@ -62,9 +62,19 @@ This setting works on its own. You don't need to turn on **Privacy Controls** to
 
 ---
 
+## Require Citizenship Verification
+
+Also under **Privacy & Access**. The helper text reads: *Shows each member's citizenship verification status at the top of their member page, where staff can mark it verified.*
+
+Off by default. Staff mark each member Verified or Not Verified by hand. See [Citizenship Verification](../citizenship-verification.md).
+
+---
+
 ## Require Safety Briefing
 
-Also under **Privacy & Access**. Flags new members as needing the range safety briefing. See [Safety Briefing](../safety-briefing.md).
+Also under **Privacy & Access**. The helper text reads: *Members who sign up from now on are flagged as needing the range safety briefing, and the register warns staff until it is cleared. Existing members are not flagged. Status shows at the top of the member page.*
+
+Off by default. See [Safety Briefing](../safety-briefing.md).
 
 ---
 

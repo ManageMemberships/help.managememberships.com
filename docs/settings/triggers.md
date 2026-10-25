@@ -10,7 +10,7 @@ The **Triggers** section allows you to set up automated actions that respond to 
 
 ## Creating a Trigger
 
-Click **New Trigger** to create an automation. The following fields are available:
+Click **New automation trigger** to create an automation. The following fields are available:
 
 ### Name
 A descriptive name for the trigger (e.g., "Re-engage At-Risk Members").
@@ -39,9 +39,49 @@ A pre-built template is available via the **Invalid kiosk check-in** button.
 
 Message variables for this trigger: `{{ name }}`, `{{ email }}`, `{{ status }}`, `{{ reason }}` (why the check-in was rejected), and `{{ attempted_input }}` (unknown-person attempts only).
 
-#### First Class Booking Template
+#### First Class Booking Example
 
-A pre-built template is available for the "First Class Booking" trigger. Click the **First class booking** template button to auto-fill a trigger with citizenship documentation email, "forever" deduplication (so each member only receives it once), and a pre-written email body.
+An example is available for the **On First Class Booking** trigger. It sets up an email that tells new students to bring their citizenship or eligibility documents to the front desk.
+
+To use it:
+
+1. Click **New automation trigger**.
+2. Click the **First class booking** button under the **Active** switch and confirm. (The example buttons appear on new triggers only, not when you edit one.)
+3. Check the fields below, and change the email if you like.
+4. Turn **Active** on and save.
+
+The example fills in:
+
+| Field | Set to |
+|---|---|
+| **Name** | First class booking — citizenship docs |
+| **When It Runs** | The moment something happens |
+| **When** | On First Class Booking |
+| **Sending limit** | Only ever once per member |
+| **Cooldown** | 7 days |
+| **What It Sends** | One email to the member who booked |
+| **Email Subject** | Documentation Requirements for Your Upcoming Class |
+| **Active** | Off |
+
+The **Email Content** starts as:
+
+> Hi `{{ name }}`,
+>
+> Thank you for registering for your first class! Before attending, please review our documentation requirements.
+>
+> Please bring valid citizenship or eligibility documentation to the front desk before your class date.
+>
+> If you have any questions, please contact us.
+
+Things to know:
+
+- **It is off until you turn it on.** The example leaves **Active** off. An inactive trigger never sends anything.
+- **Nothing creates it for you.** If you never create this trigger, no one gets the email.
+- **Each member gets it once.** It goes out the first time a member books any class at your gym, however the booking is made. If that first booking is later cancelled, it still counts as their first, so a later booking does not send the email again.
+- **To change the email,** edit **Email Subject** and **Email Content** before you save, or click **Edit** on the trigger in the list later. Your copy belongs to that trigger, so it does not change if the example is updated.
+- **Variables you can use:** `{{ first_name }}`, `{{ name }}` and `{{ email }}`.
+- **It does not check the Citizenship flag.** A member who is already marked Verified still receives it. See [Citizenship Verification](../citizenship-verification.md).
+- **The sender.** Emails sent by a trigger do not use the **Sender Email** from [Portal Settings](./portal-settings.md).
 
 ### Schedule
 When using a **Scheduled** trigger type, choose how often it runs:
