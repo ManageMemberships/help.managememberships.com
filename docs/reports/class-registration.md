@@ -311,7 +311,7 @@ The Class Registrations page is designed to give you full control over your clas
 - Deduct bookings from a member’s **check-in quota** when applicable.
 - Export rosters to CSV.
 - Print a sign-in roster with a check-in box and the compliance labels.
-- See at a glance who is citizenship-verified and who still needs a safety briefing.
+- See at a glance who is citizenship-verified and who has been flagged as needing a safety briefing.
 - Leave a staff note on a single session that travels with it if the session moves.
 - Cancel a single session, automatically return members' class credits, and email the booked members in one step.
 - Swap the trainer for a single session without affecting the rest of the series.

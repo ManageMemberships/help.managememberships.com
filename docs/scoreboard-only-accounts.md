@@ -48,7 +48,7 @@ The same 50-member cap applies to imports — if a file would push you over the 
 
 A simple, search-based check-in screen — search by name or email, then check the member in. There's no class to select, since this account type has no calendar; every check-in is a general check-in and counts toward the member's points based on your [Points settings](/docs/membership/points-leaderboard).
 
-If you have turned on **Require Citizenship Verification** or **Require Safety Briefing**, the same labels as [Bulk Check-In](./reports/bulk-checkin.md) show next to names in the search results and in the **Checked In Today** list. They are information only and do not stop a check-in. See [Citizenship Verification](./citizenship-verification.md).
+If you have turned on **Require Citizenship Verification** or **Require Safety Briefing**, the same labels as [Bulk Check-In](./reports/bulk-checkin.md) show next to names in the search results and in the **Checked In Today** list. They are information only and do not stop a check-in. See [Citizenship Verification](./citizenship-verification.md) and [Safety Briefing](./safety-briefing.md).
 
 ### Check-In Report
 

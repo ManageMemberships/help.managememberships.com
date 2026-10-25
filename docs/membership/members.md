@@ -169,7 +169,7 @@ When your gym turns on **Require Citizenship Verification** or **Require Safety 
 - **One click, no confirmation** — click a pill to switch it. Hover over it to see what the click will do
 - **Permission** — you need the **Manage Membership Levels** permission. Without it the pills are still shown, but you can't click them
 - **Audit logged** — each change is recorded under **Activity & History → Change History**
-- **Shown on rosters** — the same flags show next to names on Class Registrations and the check-in screens
+- **Shown on rosters** — the applicable labels show next to names on Class Registrations and the check-in screens. Members who were never flagged and never briefed have no Safety Briefing label
 
 See [Citizenship Verification](../citizenship-verification.md) and [Safety Briefing](../safety-briefing.md).
 
