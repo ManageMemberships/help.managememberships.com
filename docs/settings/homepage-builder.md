@@ -11,7 +11,7 @@ The **Homepage Builder** lets you design a fully custom public homepage for your
 ## Opening the Builder
 
 1. Go to **Settings → Portal Settings**
-2. Expand the **Membership Levels Display** section
+2. Expand the **Homepage Builder** section
 3. Click **Open Homepage Builder**
 
 :::note
@@ -65,6 +65,26 @@ The **Membership Levels** widget displays your active membership plans with live
 - Column gap spacing
 
 You can also choose which membership levels appear in the widget and edit the section heading text.
+
+### Coupon Code
+
+Want your **Join Now** buttons to carry a discount code? Choose a code on the widget and every button links to the registration page with the code already filled in, so the visitor sees it applied. You don't need **Edit HTML** for this.
+
+1. Go to **Settings → Portal Settings → Homepage Builder** and click **Open Homepage Builder**
+2. Click a **Membership Levels** widget, then press the **⚙ Design** button
+3. Find the **Coupon code** dropdown and choose a code
+4. Click **Done**, then **Save**
+
+The dropdown lists **None** plus your discount codes that can currently be used. Codes are created under **Membership → Discount Codes** — see [Discount Codes](../membership/discount-codes.md).
+
+- **One code per widget** — the code applies to the whole widget, not to individual cards. If you have two Membership Levels widgets on the page, each can use a different code.
+- **Codes limited to certain levels** — if a code is limited under **Membership Restrictions → Allowed Membership Levels**, only the **Join Now** buttons for those levels carry it.
+- **Codes that stop working** — if a code expires, is turned off, or reaches its usage limit, the **Join Now** buttons go back to normal links on their own. The dropdown shows the saved code with "(inactive)" after it, for example **SUMMER25 (inactive)**, so you can see why.
+- **Only these buttons** — this affects the **Join Now** buttons inside the Membership Levels widget only. Other buttons on the page, such as a separate button block lower down, are not part of it. Their links are set in that button's own link settings.
+
+:::note
+Picking or changing a code needs the **Manage Membership Levels** permission. Staff who can open the Homepage Builder without it see the dropdown disabled with the saved code shown, and a saved code stays in place when they save the page.
+:::
 
 ---
 
