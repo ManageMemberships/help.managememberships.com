@@ -68,14 +68,14 @@ You can also choose which membership levels appear in the widget and edit the se
 
 ### Coupon Code
 
-Want your **Join Now** buttons to carry a discount code? Choose a code on the widget and every button links to the registration page with the code already filled in, so the visitor sees it applied. You don't need **Edit HTML** for this.
+Want your **Join Now** buttons to carry a discount code? Choose a code on the widget and the **Join Now** buttons it applies to link to the registration page with the code already filled in, so the visitor sees it applied. You don't need **Edit HTML** for this.
 
 1. Go to **Settings → Portal Settings → Homepage Builder** and click **Open Homepage Builder**
 2. Click a **Membership Levels** widget, then press the **⚙ Design** button
 3. Find the **Coupon code** dropdown and choose a code
 4. Click **Done**, then **Save**
 
-The dropdown lists **None** plus your discount codes that can currently be used. Codes are created under **Membership → Discount Codes** — see [Discount Codes](../membership/discount-codes.md).
+The dropdown lists **None** plus your discount codes that can currently be used. If the widget's saved code is no longer usable, it still appears, selected and marked "(inactive)". Codes are created under **Membership → Discount Codes** — see [Discount Codes](../membership/discount-codes.md).
 
 - **One code per widget** — the code applies to the whole widget, not to individual cards. If you have two Membership Levels widgets on the page, each can use a different code.
 - **Codes limited to certain levels** — if a code is limited under **Membership Restrictions → Allowed Membership Levels**, only the **Join Now** buttons for those levels carry it.
