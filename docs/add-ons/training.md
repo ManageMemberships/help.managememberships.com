@@ -26,12 +26,12 @@ Coaches are:
 
 - **Owners**
 - **Managers**
-- **Staff** who have the **Trainer/Available for Classes** checkbox ticked on the [Staff](../settings/staff.md) page
+- **Staff** who have the **Trainer or Available for Classes** checkbox ticked on the [Staff](../settings/staff.md) page
 
 Only coaches see **Training** in the **Add-ons** menu. Other staff and accountants don't see it and can't open its pages.
 
 :::note
-The **Trainer/Available for Classes** checkbox isn't shown on Free and Basic (Starter) plans. On those plans, only owners and managers can coach.
+The **Trainer or Available for Classes** checkbox isn't shown on Free and Basic (Starter) plans. On those plans, only owners and managers can coach.
 :::
 
 ---
@@ -143,4 +143,4 @@ The page is designed for phones.
 ## Related
 
 - [Marketplace](../settings/marketplace.md) for turning Training on or off.
-- [Staff](../settings/staff.md) for the **Trainer/Available for Classes** checkbox.
+- [Staff](../settings/staff.md) for the **Trainer or Available for Classes** checkbox.
