@@ -39,6 +39,15 @@ Click **"New Available Class"** to open the class editor. This will open a side 
 #### **Max Participants**
 - For fixed-time classes, this limits how many can attend. For appointments, it limits per session.
 
+#### **Show seats left**
+- Off by default. When on, members see how many seats are left on each date instead of a general "Limited spots available!" note:
+  - the class page says **3 spots left** (or **1 spot left**) under the price;
+  - the [Schedule Widget](./schedule-widget.md) pop-up shows the count next to the class name;
+  - the **Next dates for one class** widget shows the count on each date.
+- Leave it off if you'd rather not show that a class is nearly empty.
+- Classes with flexible time slots have seats per slot, so they keep the general note either way.
+- A date that is full always says **This date is full.**, whether this is on or off.
+
 ---
 
 ### Pricing
@@ -270,7 +279,7 @@ If you only want to temporarily stop registrations, uncheck **Is Active** instea
 
 ## Waitlist
 
-When a class reaches its **Max Participants** limit, members will see a **"Join Waitlist"** button instead of the normal registration form.
+When a class reaches its **Max Participants** limit, the class page says **This date is full.** and members see a **"Join Waitlist"** button instead of the normal registration form.
 
 - Members are added to the waitlist in the order they join (first come, first served).
 - When a booked member cancels, the first person on the waitlist is **automatically booked** into the class and receives an email notification.

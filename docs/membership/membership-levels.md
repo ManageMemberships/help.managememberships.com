@@ -240,7 +240,7 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
   - **Free** – The member is moved and keeps an active (unbilled) membership. No charge.
   - **Non-recurring (drop-in / day pass)** – The member is just moved. **No charge is ever made** — they pay per visit as usual.
 - Conversions run nightly. Members who already signed up for another membership on their own are skipped, and only recently expired memberships are converted — turning this on does **not** retroactively convert members who expired long ago.
-- Pair it with the **"On Membership Auto-Conversion"** instant trigger (Communication → Triggers) to email or text the member (or staff) when a conversion happens. Template variables: `old_level`, `new_level`, and `price`.
+- Pair it with the **"On Membership Auto-Conversion"** instant trigger (Settings → Triggers) to email or text the member (or staff) when a conversion happens. Template variables: `old_level`, `new_level`, and `price`.
 
 #### **Annual Renewal**
 - If enabled, members must **re-sign waivers or agreements each year**.

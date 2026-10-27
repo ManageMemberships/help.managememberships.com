@@ -33,7 +33,7 @@ Every email and SMS includes a secure link members can use to update their card 
 
 ## Editing Templates
 
-Go to **Communication → Dunning Templates** to open the template editor.
+Go to **Marketing → Dunning Templates** to open the template editor.
 
 Each stage has two templates:
 

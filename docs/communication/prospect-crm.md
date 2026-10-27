@@ -6,7 +6,7 @@ sidebar_position: 6
 
 The **Prospect CRM** is a customer relationship management tool for tracking potential members (leads/prospects) through your sales pipeline. It provides both a list view and a kanban board view for managing prospect stages.
 
-Find it under **Communication → Prospects CRM**. Prospects can be added manually, or captured automatically from [Squeeze Pages](./squeeze-pages.md) and the [Chat Widget](../settings/portal-settings.md#chat-widget) on your public pages.
+Find it under **Marketing → Prospects CRM**. Prospects can be added manually, or captured automatically from [Squeeze Pages](./squeeze-pages.md) and the [Chat Widget](../settings/portal-settings.md#chat-widget) on your public pages.
 
 ---
 
@@ -64,7 +64,7 @@ Click **+ New Task** to add a follow-up. In **Related To**, start typing a name,
 
 ### Follow-up task from an activity
 
-Under **Communication → Prospects CRM**, open a prospect. Under the activity type and description in the **Add Activity** form there is a **Create follow-up task** checkbox. Tick it and a **Due in** picker appears: **1**, **3** or **7 days** (3 by default).
+Under **Marketing → Prospects CRM**, open a prospect. Under the activity type and description in the **Add Activity** form there is a **Create follow-up task** checkbox. Tick it and a **Due in** picker appears: **1**, **3** or **7 days** (3 by default).
 
 When you add the activity with the box ticked, a follow-up task is created too:
 

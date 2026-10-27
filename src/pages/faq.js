@@ -36,7 +36,7 @@ export default function Home() {
             <li>If they are going to be a minor or someone who will not require their own login, such as a spouse or child, a bundle account is the best fit</li>
           </ul>
           <ol>
-            <li>Navigate to Membership &rarr; Members</li>
+            <li>Navigate to Members &rarr; Members</li>
             <li>Find the member and click 'manage'</li>
             <li>Scroll down to 'Manage Accounts'</li>
             <li>Add the bundle account or the sub account depending on the situation</li>

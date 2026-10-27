@@ -72,7 +72,7 @@ The amount on an award is never directly editable — if the amount itself was w
 
 ## Points Ledger
 
-**Membership → Points** lists every point transaction across your whole gym — check-ins, class attendance, manual awards, everything — in one place.
+**Members → Points** lists every point transaction across your whole gym — check-ins, class attendance, manual awards, everything — in one place.
 
 Filter by member, source, category, date range, manual-only, or reversed-only, sorted newest first. A summary strip at the top shows total points awarded this month, this year, and the top 5 earners this year.
 

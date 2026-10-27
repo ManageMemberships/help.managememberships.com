@@ -6,7 +6,7 @@ sidebar_position: 8
 
 **Squeeze Pages** are public landing pages with a lead-capture form. When a visitor submits the form, they're automatically added to your [Prospect CRM](./prospect-crm.md) — and can optionally trigger email alerts and [Drip Campaign](./drip-campaigns.md) enrollment.
 
-Find them under **Communication → Squeeze Pages**.
+Find them under **Marketing → Squeeze Pages**.
 
 ---
 

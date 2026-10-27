@@ -27,6 +27,7 @@ Choose when the trigger fires:
 - **On First Class Booking** - Fires when a member books their very first class ever
 - **On Class Check-in** - Fires when a member checks in to a class
 - **On Merchandise Purchase** - Fires when a member buys a product
+- **When a Class Is Booked Without Its Follow-up** - Fires a set number of hours after a member books one class (e.g. CCL Part 1) if they still haven't booked its follow-up (Part 2)
 
 #### Invalid Kiosk Check-in
 
@@ -38,6 +39,35 @@ Fires in two situations:
 A pre-built template is available via the **Invalid kiosk check-in** button.
 
 Message variables for this trigger: `{{ name }}`, `{{ email }}`, `{{ status }}`, `{{ reason }}` (why the check-in was rejected), and `{{ attempted_input }}` (unknown-person attempts only).
+
+#### Class Booked Without Its Follow-up
+
+For classes that come in parts, such as a 16-hour CCL split into **Part 1** (Saturday) and **Part 2** (Sunday). It reminds people who booked Part 1 to book Part 2, with a link straight to it.
+
+Set it up with three fields:
+
+- **When someone books** — the first class (Part 1). You can pick more than one.
+- **But hasn't booked** — the follow-up class (Part 2). If you run Part 2 on more than one schedule, pick them all; booking any of them counts.
+- **Check after** — how many hours after the Part 1 booking to check, from 1 to 168. Default 2.
+
+When someone books Part 1, the check waits that many hours. The message goes out only if, by then:
+
+- their Part 1 booking hasn't been cancelled;
+- they have no Part 2 booking on or after their Part 1 date (a Part 2 booked for an earlier date doesn't count);
+- Part 1 is still picked on the trigger.
+
+Message variables for this trigger:
+- `{{ class_name }}` and `{{ class_date }}` — the Part 1 class and its date.
+- `{{ followup_class_name }}` — the Part 2 class.
+- `{{ followup_link }}` — the booking page for the next open Part 2 date on or after Part 1, e.g. the Sunday right after a Saturday Part 1. With several Part 2 classes picked, it uses whichever has the earliest open date. If none has an open date posted, it links to the Part 2 dates page.
+
+Example text:
+
+```
+Hi {{ first_name }}! You're booked for {{ class_name }} on {{ class_date }}. Don't forget {{ followup_class_name }} to finish your 16 hours: {{ followup_link }}
+```
+
+Use **Sending limit: Every time** if members may take the class more than once.
 
 #### First Class Booking Template
 

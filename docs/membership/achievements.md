@@ -7,7 +7,7 @@ sidebar_position: 5
 The achievement system lets you create visual badges that track member progress toward goals. Staff manually mark segments complete as members hit milestones — no automation, just a simple way to recognize effort and keep members engaged.
 
 :::tip Quick Start
-Go to **Membership → Achievements** to create your first achievement. Choose a badge shape, set the number of segments, and optionally label each segment. Then assign it to members and track their progress.
+Go to **Members → Achievements** to create your first achievement. Choose a badge shape, set the number of segments, and optionally label each segment. Then assign it to members and track their progress.
 :::
 
 ---
