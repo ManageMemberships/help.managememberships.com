@@ -11,7 +11,7 @@ The **Class Calendar** report allows owners and administrators to see upcoming c
 ## **Viewing the Class Calendar**
 
 1. **Open the Report**
-   - Go to **Reports → Class Calendar** in the main menu.
+   - Go to **Reports → Bookings → Class Calendar** in the main menu.
 
 2. **Select a Class**
    - Use the **"Select Class"** dropdown above the calendar to filter the view to a single class.
@@ -66,12 +66,21 @@ Creating or removing a blocked-off period requires the **Manage Resources** perm
    - Selecting any class event on the calendar will open a roster view for that timeslot.
 
 2. **Roster Information**
-   - The roster displays:
-     - **Member Name**
-     - **Tickets Purchased**
-     - **Amount Paid**
-     - **Agreement Status** (Unsigned agreements are shown in red with an "Unsigned" label; signed agreements include a "View Agreement" link.)
-   - Summary tiles at the top show **Total Bookings**, **Total Tickets**, **Total Revenue**, and **Walk-Ins** for the session.
+   - The window title shows the class name and date, for example **Introduction to Handguns - 10/23/2026**. The date follows your browser's format.
+   - Summary tiles at the top show **Total Bookings**, **Total Tickets**, **Total Revenue**, and **Walk-Ins**.
+   - The booking table has these columns:
+     - **Member**: the member's name, with **View Member** and **Check In** buttons. A yellow **⚠** next to the name is the waiver warning. Hover over it to see **Waiver(s) pending**.
+     - **Time**
+     - **Tickets**
+     - **Amount Paid**: with an **UNPAID**, **CASH** or **COMPED** tag where it applies
+     - **Status**: see step 4
+     - **Actions**: **Collect Payment** (unpaid bookings only, see step 3) and **Remove**
+   - What the buttons do:
+     - **View Member** opens the **Members** list in a new tab, searched for that member's email.
+     - **Check In** asks you to confirm, then checks the member in for this class.
+     - **Remove** asks *Are you sure you want to remove (the member's name) from this class? This action cannot be undone.* Click **Yes, remove** to remove the booking.
+   - Under the table, three more tiles track the class survey: **Remaining to Send**, **Sent** and **Completed**. A **Total participants** line shows how many people are booked.
+   - This window does **not** show the **Citizenship** or **Briefing** labels. Click **View Full Report** to see them on [Class Registrations](./class-registration.md).
 
 3. **Unpaid Bookings and Collecting Cash**
    - A booking that hasn't been paid shows a red **UNPAID** tag and a **Collect Payment** button. This is how bookings made with **Pay cash at the session** (a per-class setting, see [Classes](/docs/calendar/classes)) and bookings you add as unpaid show up.
@@ -81,9 +90,13 @@ Creating or removing a blocked-off period requires the **Manage Resources** perm
    - Booked members show one of: **Booked** (signed up, hasn't arrived), **Attended** / **Checked In** (green — they arrived, whether marked manually or via a kiosk check-in), or **Cancelled**.
    - Below the bookings table, a **Walk-In Check-Ins** section lists everyone who checked in for the class without a prior signup — the same people the [Daily Roster](/docs/daily-roster) shows with an amber "Walk-in" badge — with their check-in time and a link to their member profile.
 
-5. **From Roster to Registration Report**
-   - In the roster view, click the link to **View Registration Report** to open the detailed Class Registrations page.
-   - From there, you can see payment details and manually add attendees.
+5. **Buttons at the Bottom of the Window**
+   - **Close** closes the window.
+   - **Email Survey** queues the class survey email for everyone booked on that date, then shows **Surveys queued**. There is no confirmation box. Each click queues the email again for everyone booked on that date, including people who were already sent it or already answered.
+   - **Email Class Participants** opens an email campaign with the booked members already selected. See [Emailing a Class's Participants](../communication/email-campaigns.md).
+   - **Text Class Participants** does the same for a [text campaign](../communication/text-campaigns.md).
+   - **View Full Report** opens the detailed [Class Registrations](./class-registration.md) page for that session in a new tab. From there you can see payment details, print the roster and manually add attendees.
+   - **View Feedback** appears only once someone has completed the survey.
 
 ---
 
@@ -94,7 +107,7 @@ While the Class Calendar itself is for viewing and navigation, you can add atten
 1. **Clicking an Event**
    - Opens the roster popup.
 
-2. **Clicking "View Registration Report"**
+2. **Clicking "View Full Report"**
    - This takes you to the **Class Registrations** page for that event.
 
 3. **Using Manual Registration**

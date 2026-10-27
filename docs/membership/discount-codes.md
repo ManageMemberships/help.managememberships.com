@@ -90,3 +90,9 @@ Quickly toggle a discount code on or off without deleting it.
 
 ### Delete
 Discount codes with active subscriptions using them **cannot be deleted**. You must deactivate them instead.
+
+---
+
+## Using a Code on Your Homepage
+
+If your homepage has a Membership Levels widget, you can have its **Join Now** buttons carry one of your codes, so visitors arrive at registration with the code already filled in. See [Coupon Code](../settings/homepage-builder.md#coupon-code) in the Homepage Builder guide.

@@ -160,6 +160,19 @@ Also on the Overview tab, a **Staff Access** toggle next to Active lets you prom
 - **Not available for your own account** — you can't change your own staff status from here
 - Requires the *Manage Staff* permission
 
+#### 🛂 Citizenship and Safety Briefing Flags
+When your gym turns on **Require Citizenship Verification** or **Require Safety Briefing** in **Settings → Portal Settings → Privacy & Access**, the Overview tab shows a pill for each, under the member's name and email:
+
+- **Citizenship: Verified** (green) or **Citizenship: Not Verified** (red)
+- **Safety Briefing: Needed** (red) or **Safety Briefing: Complete** (green)
+
+- **One click, no confirmation** — click a pill to switch it. Hover over it to see what the click will do
+- **Permission** — you need the **Manage Membership Levels** permission. Without it the pills are still shown, but you can't click them
+- **Audit logged** — each change is recorded under **Activity & History → Change History**
+- **Shown on rosters** — the applicable labels show next to names on Class Registrations and the check-in screens. Members who were never flagged and never briefed have no Safety Briefing label
+
+See [Citizenship Verification](../citizenship-verification.md) and [Safety Briefing](../safety-briefing.md).
+
 #### 📝 Member Notes
 The **Member Notes** card on the Overview tab keeps internal notes about a member, such as conversations, special arrangements or anything your staff needs to know.
 
