@@ -1,0 +1,8 @@
+{
+  "label": "Add-ons",
+  "position": 6.5,
+  "link": {
+    "type": "generated-index",
+    "description": "Optional features you can turn on for your gym from Settings → Marketplace"
+  }
+}
