@@ -32,6 +32,7 @@ This documentation outlines what navigation items are available to users based o
 | Staff                        | Not `staff`               | Not `free`                        |
 | Digital Cards                | Not `staff`               | `growth` or `premium`             |
 | Doors                        | Not `staff`               | `growth` or `premium`             |
+| Marketplace                  | Not `staff`, Not `accountant` | Any                           |
 | Trainer Availability         | Any                       | Not `free` or `basic`             |
 | Text Campaigns               | Not `staff`               | `premium`                         |
 | Email Campaigns              | Not `staff`               | `premium`                         |
@@ -49,6 +50,7 @@ This documentation outlines what navigation items are available to users based o
 | Classes                      | Not `staff`               | Not `free` or `basic`             |
 | Packages                     | Not `staff`               | `premium`                         |
 | Resources                    | Not `staff`               | `premium`                         |
+| Add-ons menu                 | Only the links you are allowed to use (Training: owners, managers and staff marked as trainers) | Any |
 
 ---
 

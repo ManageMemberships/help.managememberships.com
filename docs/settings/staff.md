@@ -66,6 +66,10 @@ Trainers who are unavailable will not appear for scheduling during conflicting t
 
 Your member portal includes an **Instructors** page at `/instructors` that displays all active trainers with their headshot, bio, and the classes they teach. Members can click any trainer to see their full profile and browse their class schedule. Each class view page also links to the assigned trainer's profile and shows a "See all instructors" link.
 
+### Coaching clients with Training
+
+If your gym has turned on the [Training](../add-ons/training.md) add-on, staff with this checkbox ticked can also coach clients with it: build programs, flag clients and assign programs. Staff without it don't see Training.
+
 ---
 
 ## 🕒 Has Shifts
