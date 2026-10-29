@@ -246,6 +246,11 @@ If your class runs at the same time every day, you don't need schedule groups â€
 #### **Sync Completion to ManageRegister**
 - If enabled, completed bookings for this class appear in ManageRegister via the register API.
 
+#### **Checking in from ManageRegister**
+- Staff can check people in for today's classes from **Account Check** in ManageRegister. If the person booked or bought the class, it's picked for them, and checking in marks that booking **attended**, the same as checking in from the member app.
+- **The class has to be paid for first.** Someone with no paid booking is refused when the class costs them something. ManageRegister's **Collect payment** books their seat (refused when the class is full) and puts it in the cart at their member price. Members whose discount makes the class free, or whose level gives them check-in credits, aren't asked to pay.
+- Where **Require Citizenship Verification** is on, someone not yet verified is refused. Staff check their documents and click **I have verified their citizenship â€” check in**, which records the verification on their account and checks them in.
+
 ---
 
 ## Editing a Class

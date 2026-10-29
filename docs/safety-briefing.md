@@ -38,11 +38,13 @@ The code can't be set on the **Add staff** form. Add the employee first, then ed
 
 ## The Process
 
-1. **At the counter.** When a flagged member is selected in ManageRegister, staff see **⚠ NEEDS SAFETY BRIEFING**. Clicking **Print briefing ticket** adds them to the safety briefing queue and prints a QR ticket.
+1. **At the counter.** When a flagged member is selected in ManageRegister, in the cart or in **Account Check**, staff see **⚠ NEEDS SAFETY BRIEFING**. Clicking **Print briefing ticket** adds them to the safety briefing queue and prints a QR ticket. The register's **Checked In** list has the same button on anyone who still owes the briefing.
 2. **Unlock the kiosk.** On the briefing kiosk, open `https://<your-subdomain>.managememberships.com/kiosk/briefing` and enter your employee code. The screen shows who is running the briefing. Use **Lock kiosk** when you're done.
 3. **Scan out.** After the briefing, each attendee scans their ticket on the way out, using a USB or Bluetooth QR scanner or the kiosk's camera. Their briefing is marked complete, the queue entry closes, and the time and employee are recorded.
 
 Scanning the same ticket again shows "already checked out". A ticket from another gym, or anything that isn't a ticket, is rejected.
+
+Scanning out also puts them in the **Shooting** queue for the RSO. A ticket printed for someone in a party on the register's **Checked In** list keeps them with that party. The register's **Checked In** list picks up the completed briefing the next time staff open it, so that person moves toward green without anyone marking it by hand.
 
 ---
 

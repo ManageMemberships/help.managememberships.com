@@ -11,7 +11,10 @@ The Walk-In Queue manages customers waiting for service at your facility. It sup
 
 ## How It Works
 
-1. **ManageRegister** adds customers to the queue when they check in at the POS
+1. **ManageRegister** adds customers to the queue:
+   - when someone on the register's **Checked In** list turns green (paid and briefed, or a member with nothing to pay), people in a party together;
+   - when range time is sold at the counter;
+   - and the briefing kiosk moves people from the Safety Briefing queue to the Shooting queue when they scan out, keeping their party if the ticket was printed for one.
 2. Staff manages queue status (calling, serving, completing) from either ManageRegister or the ManageMemberships dashboard
 3. **Members** see their queue position on their portal dashboard in real-time
 
