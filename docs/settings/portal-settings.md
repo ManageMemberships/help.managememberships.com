@@ -238,6 +238,10 @@ How many failed billing attempts will occur before a member is automatically mar
 
 If your jurisdiction requires tax collection, enter your tax ID here to enable automatic tax calculation on payments.
 
+### Charge Tax and Tax Rate
+
+Turn on **Charge Tax** to add sales tax to memberships, events, classes and resource bookings, then enter your **Tax Rate** as a percentage (for example, 7 for 7%). The tax collected on each payment shows in the [Sales Tax](/docs/reports/sales-tax) report.
+
 ### Email on Payment Failure
 
 Toggles whether or not to send an email to members when their payment fails asking them to update their payment method. Default is **on**.

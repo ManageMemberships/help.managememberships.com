@@ -66,3 +66,5 @@ When transactions are loaded, a **Download CSV** button appears:
 Downloads are automatically named: `financial-transactions-YYYY-MM-DD-to-YYYY-MM-DD.csv`
 
 > **Note:** Transactions made by the **owner account** are automatically excluded from reports.
+
+For the sales tax inside these payments, split into taxable and non-taxable sales, use the [Sales Tax](/docs/reports/sales-tax) report.
