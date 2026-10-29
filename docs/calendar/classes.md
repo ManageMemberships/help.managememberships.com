@@ -253,6 +253,15 @@ If your class runs at the same time every day, you don't need schedule groups â€
 
 ---
 
+## Booking Without an Account
+
+Visitors who aren't logged in can still see a class's date, time and price. To book, they need an account:
+
+- With **Level for New Accounts from Booking Pages** set in [Portal Settings](../settings/portal-settings.md#level-for-new-accounts-from-booking-pages), and that level allowed to book the class under **Membership Eligibility**, the class page shows **I have an account** / **I'm new here**. New visitors fill in their details, sign any waivers, and come straight back to the class to book.
+- Otherwise the page shows **Log In** and **Create Account**, and logging in brings them back to the class.
+
+---
+
 ## Editing a Class
 
 Click the **edit icon** to update any part of the class. Changes will reflect immediately for new registrations. Existing bookings are unaffected unless specifically changed elsewhere.

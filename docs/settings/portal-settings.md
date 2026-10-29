@@ -182,6 +182,10 @@ A comma-separated list of staff emails to alert when a member's payment fails.
 
 A comma-separated list of emails that receive new-lead notifications. The owner always receives them.
 
+#### Additional Signup Notification Recipients
+
+A comma-separated list of emails told whenever someone creates an account, as well as the owner. Use it so managers hear about new signups too; otherwise only the owner is emailed. Each address is checked when you save, so a typo is caught straight away.
+
 #### Email Template
 
 Reusable content (such as headers or footers) for pre-filling email campaigns.
@@ -293,7 +297,20 @@ The longest a pause can last, as a whole number of months from **1** to **60**. 
 
 ### Suppress Owner Welcome Emails
 
-When enabled, the portal owner will not receive welcome email notifications for new member signups.
+When enabled, the portal owner will not receive welcome email notifications for new member signups. Anyone in **Additional Signup Notification Recipients** still gets them.
+
+### Level for New Accounts from Booking Pages
+
+Lets visitors create an account and book in one go. When it's set:
+
+- A logged-out visitor on a **class** page gets **I have an account** and **I'm new here** right on the page, instead of "You must be logged in".
+- Someone sent to log in from an **appointment** or **resource** booking gets a **New here? Create your account and book** box under the login form.
+
+Their new account joins this level. If the level has waivers, they sign them first. Then they come straight back to the class or appointment they were booking, signed in, to finish booking.
+
+Only free or trial levels without an approval step or a minimum number of members can be picked. A class or resource only offers it when this level is allowed to book it; otherwise visitors see the usual **Log In** and **Create Account** buttons, and logging in still brings them back to what they were booking.
+
+Leave it empty to keep the usual buttons everywhere.
 
 ---
 
