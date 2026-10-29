@@ -64,6 +64,7 @@ Janus uses a third-party AI. Before anything is sent, names are replaced with an
 - Member ids and IP addresses are removed too.
 - You still see real names in Janus's answers.
 - The AI provider is outside the United States. The box you tick to turn on your gym's data says so.
+- Janus can't look up prospects or family members on someone's account. Their names are removed before anything is sent, and Janus will point you to the **Prospects CRM** page or the main member's account instead.
 
 :::tip Keep personal details out of your questions
 Janus may not recognize a misspelled name or a nickname, and it can't recognize a street address. Avoid typing personal details like addresses into the chat.
