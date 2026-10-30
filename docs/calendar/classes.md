@@ -271,6 +271,8 @@ If the membership level a new account joins has waivers attached (**Members → 
 - They can't book until every waiver is signed. Other pages of the member portal still send them to their dashboard to sign, as before.
 - Signatures are saved exactly as when someone signs from their dashboard, so you see them in the same places (see [Agreements](../membership/agreements.md#signing-from-a-class-page)).
 
+A class's own **Required Agreements** (under [Registration Requirements](#registration-requirements)) are separate from the level's **Associated Agreements** and aren't part of this step. They're added to the booking when the person books, don't hold up the booking, and are signed afterwards from the **Sign Required** link next to the class on their dashboard.
+
 ---
 
 ## Editing a Class
