@@ -306,7 +306,10 @@ Lets visitors create an account and book in one go. When it's set:
 - A logged-out visitor on a **class** page gets **I have an account** and **I'm new here** right on the page, instead of "You must be logged in".
 - Someone sent to log in from an **appointment** or **resource** booking gets a **New here? Create your account and book** box under the login form.
 
-Their new account joins this level. If the level has waivers, they sign them first. Then they come straight back to the class or appointment they were booking, signed in, to finish booking.
+Their new account joins this level. If the level has waivers (**Members → Membership Levels → Associated Agreements**), what happens next depends on where they signed up:
+
+- **On a class page**, they sign the waivers inside the **Book this class** box, under **One more step before booking**, and stay on the class page to book. See [Signing Waivers on the Class Page](../calendar/classes.md#signing-waivers-on-the-class-page).
+- **From an appointment or resource booking**, they sign on their dashboard first, then come straight back to what they were booking, signed in, to finish booking.
 
 Only free or trial levels without an approval step or a minimum number of members can be picked. A class or resource only offers it when this level is allowed to book it; otherwise visitors see the usual **Log In** and **Create Account** buttons, and logging in still brings them back to what they were booking.
 
