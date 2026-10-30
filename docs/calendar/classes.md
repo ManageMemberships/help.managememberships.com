@@ -25,6 +25,25 @@ The class table shows all classes currently available for your business.
 
 Click **"New Available Class"** to open the class editor. This will open a side panel with configuration fields organized into sections.
 
+Most classes only need a name, description, image, price and schedule, so **Basic Information**, **Pricing** and **Schedule & Timing** are always open. Everything else is grouped into sections you can expand when you need them:
+
+| Section | What's in it |
+|---|---|
+| **Basic Information** (always open) | Class Name, Max Participants, Show seats left, Court / Resource, Location, Description, Image |
+| **Pricing** (always open) | Base Price, One-Time Free Code, Promo Codes |
+| **Schedule & Timing** (always open) | Fixed Schedule Class, dates, times, registration deadline, minimum participants, available days, recurring groups, special dates |
+| **Add-ons** | Which [class add-ons](#class-add-ons) this class offers |
+| **Additional class** | Offer another class at a discount while booking this one |
+| **Staff & Resources** | Available Trainers |
+| **Registration Requirements** | Required Agreements, Registration Questions |
+| **Membership Eligibility & Discounts** | Eligible Membership Levels, Membership Level Discounts |
+| **Notifications & Advanced Settings** | Notification Emails, Class Active, Hide from Public Calendar, Public View Link, Reminder Settings |
+| **Trello Integration**, **Class Credits**, **Pay Cash**, **ManageRegister POS** | Optional integrations and payment options |
+
+- When you **create** a class, every section except the three above starts collapsed.
+- When you **edit** a class, a section opens on its own if the class uses anything in it.
+- A collapsed section still saves its settings. If one of its fields has a problem when you save, the section opens and scrolls to the error.
+
 ### Basic Information
 
 #### **Class Name**
@@ -74,31 +93,6 @@ Click **"New Available Class"** to open the class editor. This will open a side 
   - **Display Name** (optional) — a friendly label shown on the invoice (e.g., "Summer Special").
 - Promo codes and membership-level discounts **do not stack**. If a promo code is applied, membership discounts are skipped.
 - When a member enters a valid promo code during registration, the price updates in real time and a confirmation message is shown.
-
----
-
-### Add-ons
-
-#### **Add-ons offered with this class**
-- Tick the [class add-ons](#class-add-ons) this class offers. Only add-ons you have already created are listed. Leave them all unticked if this class doesn't offer any.
-- Add-ons are not shown for classes that cost $0, or when a member books with class credits.
-- A note in this section reminds you that firearms, ammo and firearm rentals cannot be offered as add-ons.
-
----
-
-### Additional class
-
-Lets a member add one more class at a discount while booking this one. See [Add Another Class at a Discount](#add-another-class-at-a-discount) for what members see.
-
-#### **Offer an additional class**
-- Turn this on to offer an additional class on this class's booking page. Off by default.
-
-#### **Classes a member can add**
-- A checklist of your other classes. Only classes that are active, run on a fixed schedule, cost more than $0 and have no booking questions (no **Registration Questions** set up) can be offered.
-- The member's membership level must also be allowed on the additional class, so tick the right levels under **Eligible Membership Levels** in that class's **Membership Eligibility & Discounts** section. This includes the level new members get when they sign up while booking (**Level for New Accounts from Booking Pages**, see [Booking Without an Account](#booking-without-an-account)).
-
-#### **Percent off the additional class**
-- A whole number from 1 to 100.
 
 ---
 
@@ -173,6 +167,31 @@ If your class runs at the same time every day, you don't need schedule groups �
 - Perfect for short-term workshops or series (e.g., a 4-class course running every Wednesday in July).
 - Click **Add Special Date** to add individual dates.
 - These dates are treated as valid class days even if they aren't included in the **Available Days** field.
+
+---
+
+### Add-ons
+
+#### **Add-ons offered with this class**
+- Tick the [class add-ons](#class-add-ons) this class offers. Only add-ons you have already created are listed. Leave them all unticked if this class doesn't offer any.
+- Add-ons are not shown for classes that cost $0, or when a member books with class credits.
+- A note in this section reminds you that firearms, ammo and firearm rentals cannot be offered as add-ons.
+
+---
+
+### Additional class
+
+Lets a member add one more class at a discount while booking this one. See [Add Another Class at a Discount](#add-another-class-at-a-discount) for what members see.
+
+#### **Offer an additional class**
+- Turn this on to offer an additional class on this class's booking page. Off by default.
+
+#### **Classes a member can add**
+- A checklist of your other classes. Only classes that are active, run on a fixed schedule, cost more than $0 and have no booking questions (no **Registration Questions** set up) can be offered.
+- The member's membership level must also be allowed on the additional class, so tick the right levels under **Eligible Membership Levels** in that class's **Membership Eligibility & Discounts** section. This includes the level new members get when they sign up while booking (**Level for New Accounts from Booking Pages**, see [Booking Without an Account](#booking-without-an-account)).
+
+#### **Percent off the additional class**
+- A whole number from 1 to 100.
 
 ---
 
@@ -299,7 +318,7 @@ These are **class add-ons**. They are not the **Add-ons** menu that appears in t
 
 ### Creating Add-ons
 
-1. Go to **Calendar → Classes**. Below the classes table is a card called **Add-ons**.
+1. Go to **Calendar → Classes** and click **Manage add-ons**, next to **New Available Class**. A window opens with your add-ons list.
 2. Click **New add-on**.
 3. Enter a **Name** and a **Price** (at least $0.01). **Active** is on by default.
 4. Save, then tick the add-on in the [Add-ons](#add-ons) section of each class that should offer it.
