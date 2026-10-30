@@ -257,8 +257,19 @@ If your class runs at the same time every day, you don't need schedule groups �
 
 Visitors who aren't logged in can still see a class's date, time and price. To book, they need an account:
 
-- With **Level for New Accounts from Booking Pages** set in [Portal Settings](../settings/portal-settings.md#level-for-new-accounts-from-booking-pages), and that level allowed to book the class under **Membership Eligibility**, the class page shows **I have an account** / **I'm new here**. New visitors fill in their details, sign any waivers, and come straight back to the class to book.
+- With **Level for New Accounts from Booking Pages** set in [Portal Settings](../settings/portal-settings.md#level-for-new-accounts-from-booking-pages), and that level allowed to book the class under **Membership Eligibility**, the class page shows a **Book this class** box with two tabs, **I have an account** and **I'm new here**. A new visitor fills in their details under **I'm new here** and clicks **Create account & continue**, and can book without leaving the page. An existing member logs in under **I have an account** and stays on the class page.
 - Otherwise the page shows **Log In** and **Create Account**, and logging in brings them back to the class.
+
+### Signing Waivers on the Class Page
+
+If the membership level a new account joins has waivers attached (**Members → Membership Levels → Associated Agreements**), the person signs them in the **Book this class** box, on the same class page, instead of being sent to their dashboard:
+
+- The box shows **One more step before booking** with the waiver to sign. Any fillable fields in the waiver work the same as everywhere else a waiver is signed.
+- With more than one waiver, they sign one at a time and the box says how many are left (for example **2 waivers left**). After the last one, the normal booking form appears.
+- The class date, time and price stay visible above the waiver, so they see what they're booking before they sign. On a paid class, the card form only appears once every waiver is signed.
+- An existing member who logs in from the class page with an unsigned waiver gets the same thing: they sign in the box and stay on the class page.
+- They can't book until every waiver is signed. Other pages of the member portal still send them to their dashboard to sign, as before.
+- Signatures are saved exactly as when someone signs from their dashboard, so you see them in the same places (see [Agreements](../membership/agreements.md#signing-from-a-class-page)).
 
 ---
 

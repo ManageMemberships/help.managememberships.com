@@ -106,6 +106,10 @@ When a member opens the agreement to sign:
 - Optional fields can be left blank.
 - Inputs appear styled inline within the agreement text with a highlighted background so they’re easy to spot.
 
+### Signing from a Class Page
+
+When someone creates an account or logs in from a class page's **Book this class** box and still has agreements to sign, they sign them right in that box, one at a time, before the booking form appears (see [Signing Waivers on the Class Page](../calendar/classes.md#signing-waivers-on-the-class-page)). The agreement and any fillable fields look the same as on the dashboard, and the signature is saved the same way, so you see it in the same places: the member's **Member Details** page and the [Waiver Compliance](/docs/reports/waiver-compliance) report. If you publish a new version while someone is signing, they are sent back to the class page to read the updated text first.
+
 ### How It Looks After Signing
 
 On completed/viewed agreements:
