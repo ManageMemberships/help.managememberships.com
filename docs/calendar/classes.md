@@ -77,6 +77,31 @@ Click **"New Available Class"** to open the class editor. This will open a side 
 
 ---
 
+### Add-ons
+
+#### **Add-ons offered with this class**
+- Tick the [class add-ons](#class-add-ons) this class offers. Only add-ons you have already created are listed. Leave them all unticked if this class doesn't offer any.
+- Add-ons are not shown for classes that cost $0, or when a member books with class credits.
+- A note in this section reminds you that firearms, ammo and firearm rentals cannot be offered as add-ons.
+
+---
+
+### Additional class
+
+Lets a member add one more class at a discount while booking this one. See [Add Another Class at a Discount](#add-another-class-at-a-discount) for what members see.
+
+#### **Offer an additional class**
+- Turn this on to offer an additional class on this class's booking page. Off by default.
+
+#### **Classes a member can add**
+- A checklist of your other classes. Only classes that are active, run on a fixed schedule, cost more than $0 and have no booking questions (no **Registration Questions** set up) can be offered.
+- The member's membership level must also be allowed on the additional class, so tick the right levels under **Eligible Membership Levels** in that class's **Membership Eligibility & Discounts** section. This includes the level new members get when they sign up while booking (**Level for New Accounts from Booking Pages**, see [Booking Without an Account](#booking-without-an-account)).
+
+#### **Percent off the additional class**
+- A whole number from 1 to 100.
+
+---
+
 ### Schedule & Timing
 
 #### **Fixed Schedule Class**
@@ -227,6 +252,8 @@ If your class runs at the same time every day, you don't need schedule groups â€
 - **Off by default.** Turn it on for a class when members like to pay cash (a recovery session, for example) but you still want them to book online.
 - When it's on, the booking page shows a **Pay cash at the session** checkbox. A member who ticks it needs no card, nothing is charged, and they are booked right away. Everyone who can book the class sees the option.
 - The booking is saved as **UNPAID**, with the amount owed set at what they would have paid online: the class price after any membership discount or promo code, times the tickets, plus tax if you charge tax. The card processing fee is not added to cash.
+- If the member also chose [class add-ons](#class-add-ons), they are included in the amount owed.
+- If the member also added an [additional class](#add-another-class-at-a-discount), its amount is included in the amount owed too, and both bookings are saved as **UNPAID**, except a booking that costs nothing (for example when the additional class is 100% off), which is saved as a free booking instead.
 - Their confirmation email says how much to bring in cash. You get your usual new-registration email, marked **PAY CASH AT THE SESSION, not paid yet**.
 - Booking with class credits, or a class that costs $0, doesn't use this option.
 - **Web booking page only.** The mobile app and ManageRegister don't offer pay-cash bookings.
@@ -262,6 +289,70 @@ Visitors who aren't logged in can still see a class's date, time and price. To b
 
 ---
 
+## Class Add-ons
+
+Class add-ons are optional extras a member can add while booking a class, such as eye and ear protection rental. You create the add-ons once, then choose which classes offer them.
+
+:::note
+These are **class add-ons**. They are not the **Add-ons** menu that appears in the owner menu when you turn on a feature in the [Marketplace](../settings/marketplace.md).
+:::
+
+### Creating Add-ons
+
+1. Go to **Calendar â†’ Classes**. Below the classes table is a card called **Add-ons**.
+2. Click **New add-on**.
+3. Enter a **Name** and a **Price** (at least $0.01). **Active** is on by default.
+4. Save, then tick the add-on in the [Add-ons](#add-ons) section of each class that should offer it.
+
+A note on these forms reminds you that firearms, ammo and firearm rentals cannot be offered as add-ons.
+
+### Changing Add-ons
+
+- Click **Edit** on a row to change its name, price or **Active** setting.
+- Use the **Active** toggle in the table to switch an add-on off or back on.
+- To change the order of the list, click **Reorder records**, drag the rows into the order you want, then click **Finish reordering records**.
+- There is no delete. To stop offering an add-on, switch it off.
+
+### What Members See
+
+- On the class booking page, before payment, the member sees an **Add-ons (optional)** box. For each add-on they choose a quantity from 0 up to the number of tickets they are buying.
+- The add-on price is added to the class total, so tax, gift card and the processing fee apply to the full amount.
+- Add-ons show on the invoice and in the confirmation emails.
+- With [**Allow "pay cash at the session"**](#pay-cash), the add-ons are included in the amount owed at the door.
+- Add-ons are not shown for classes that cost $0, or when the member books with class credits.
+- A free promo code on the class still charges for add-ons.
+
+**Web booking page only.** Add-ons are not offered in owner manual booking, ManageRegister or the mobile app.
+
+---
+
+## Add Another Class at a Discount
+
+A member booking a class can add a second class at a percent off, in the same booking. You turn this on for each class in its **Additional class** section (see [Additional class](#additional-class)).
+
+### On the Booking Page
+
+- A signed-in member sees **Add another class for X% off?** on the booking page, where X is the percent you set. They pick a class from one dropdown and a date from another.
+- They get the same number of tickets as the main class.
+- The discount applies only to the additional class, not to the main class or the add-ons.
+- Promo codes, member discounts and class credits do not apply to the additional class.
+- Members can add one additional class per booking.
+
+### One Payment, Two Bookings
+
+- One payment covers both classes.
+- It is saved as two separate bookings, so each can be cancelled on its own.
+- If only one of the two is cancelled, nothing is recalculated and the discount stays with the additional booking.
+- The invoice shows the additional class and a discount line.
+
+:::note
+The additional class can currently be on a date before the main class.
+:::
+
+**Web booking page only.** Adding another class is not offered in owner manual booking, ManageRegister or the mobile app.
+
+---
+
 ## Editing a Class
 
 Click the **edit icon** to update any part of the class. Changes will reflect immediately for new registrations. Existing bookings are unaffected unless specifically changed elsewhere.
@@ -272,6 +363,7 @@ Click the **edit icon** to update any part of the class. Changes will reflect im
 
 Click the **"Duplicate"** action from the class table to quickly create a copy of an existing class. The duplicated version:
 - Copies all fields including name, schedule, trainers, and membership settings
+- Copies which add-ons the class offers (the ticks in its **Add-ons** section)
 - Appends **"(copy)"** to the class name
 - Is set to **inactive** by default so you can safely make adjustments before making it live
 
