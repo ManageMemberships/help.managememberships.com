@@ -73,6 +73,13 @@ Click **"New Resource"** to open the resource editor panel.
 - Enter **0** to allow back-to-back bookings on this resource even when the portal default is higher.
 - See [Booking Buffer Between Sessions](#booking-buffer) below for how it behaves.
 
+#### **Max Booking Length on Weekends & Holidays (Minutes)**
+- The longest a single booking on **this** resource can be on a **Saturday, a Sunday or a holiday**.
+- **Leave blank for no limit.** Nothing changes for this resource.
+- Enter a whole number from **1** to **1440** to set a limit.
+- Set the resource's **Duration** at or below this limit, or members can't book it on weekends and holidays.
+- See [Weekend & Holiday Booking Length](#weekend-holiday-limit) below for how it behaves.
+
 :::tip Duration is the session length, the buffer is the gap
 **Duration** controls how long a booking lasts. **Booking Buffer** only controls how soon the *next* booking may start. If you want people booking in 15-minute sessions, set Duration to 15 — changing the buffer will never shorten a session.
 :::
@@ -210,6 +217,66 @@ A resource with a 10-minute buffer and an existing 10:00–11:00 booking:
 Members see these as greyed-out slots on the booking grid; staff booking at the register get a rejection message.
 
 A buffer can also reach across midnight — a booking ending at 11:59 PM with a 10-minute buffer closes a 12:00 AM slot the following day.
+
+---
+
+## 🗓️ Weekend & Holiday Booking Length {#weekend-holiday-limit}
+
+A resource can cap how long a single booking may be on **Saturdays, Sundays and holidays**. A booking on one of those days that is longer than the limit is refused.
+
+This is part of Resources, so it needs the same plan as the Resources page (Core).
+
+### Where it's set
+
+| Setting | Where | What it does |
+|---|---|---|
+| **Max Booking Length on Weekends & Holidays (Minutes)** | On the individual resource | The longest one booking can be on this resource on a weekend or holiday. Blank = no limit. |
+| **Holidays (Booking Length Limits)** | Portal Settings → Store & Scheduling → Calendar & Display Settings, right after Facility Closures | The holiday dates for your whole portal. |
+
+**The default is blank — no limit.** Nothing changes for a resource until you enter a number, from **1** to **1440** minutes.
+
+### How it works
+
+- **Weekends and holidays only.** The limit applies on a Saturday, a Sunday, or a date on your holiday list. On any other day the resource is booked as usual.
+- **Per booking.** The limit is the length of one booking, from its start to its end. It is not a total for the day.
+- **A booking exactly at the limit is allowed.**
+- **Holidays are single dates you add by hand.** There is no yearly repeat and no built-in holiday list.
+- **A holiday is not a closure.** On a holiday the facility stays open and bookable, and only the booking length is capped. To close a date, use [Facility Closures](../settings/portal-settings.md#facility-closures), which work as before.
+
+:::tip Keep Duration at or below the limit
+Members book slots as long as the resource's **Duration**. If the Duration is longer than the limit, members can't book that resource on weekends and holidays. Set the Duration to the limit or less.
+:::
+
+### What it applies to
+
+The limit applies every way a resource is booked:
+
+- **Members booking themselves** in the member portal
+- **ManageRegister**
+- **The owner's Book a Resource form**
+- **The RSO kiosk**
+
+It applies to staff too. There is no override.
+
+A booking that is too long is refused with this message, where **X** is the limit set on that resource:
+
+> This resource can be booked for a maximum of X minutes on weekends and holidays.
+
+### Existing bookings
+
+Setting a limit doesn't change bookings that already exist. A booking that is already over the limit can't be moved or stretched unless it ends up within the limit.
+
+#### Example
+
+A resource with a limit of 120 minutes:
+
+| Booking | Result |
+|---|---|
+| 2 hours on a Saturday | ✅ Allowed — exactly at the limit |
+| 3 hours on a Saturday | ❌ Refused |
+| 1 hour on a Sunday | ✅ Allowed — under the limit |
+| 3 hours on an ordinary weekday | ✅ Allowed — the limit only applies on weekends and holidays |
+| 3 hours on a date on your holiday list | ❌ Refused |
 
 ---
 
