@@ -121,3 +121,12 @@ Bot submissions are silently discarded via a honeypot field.
 ## Statistics
 
 The list page shows per-page **Views**, **Submissions**, and **Conversion Rate**, plus totals across all pages.
+
+### Seeing who submitted a page
+
+Click **View submissions** on a page's row to open the [Prospect CRM](./prospect-crm.md) list, filtered to the people who came in through that page. This list covers every pipeline, so nobody is hidden. You can also use the **Squeeze Page** filter on the prospects list, or the **Squeeze page** dropdown on the Pipeline Board.
+
+A few things to know:
+- The list hides archived prospects by default. Change the **Archive Status** filter to see them.
+- The page's **Submissions** count adds up every submission. The list shows one row per person, so someone who submitted twice counts twice in Submissions but appears once.
+- On the Pipeline Board, the dropdown narrows the pipeline you are viewing, so it won't show people in another pipeline.

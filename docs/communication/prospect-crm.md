@@ -15,8 +15,12 @@ Find it under **Marketing → Prospects CRM**. Prospects can be added manually, 
 ### List View
 A searchable, sortable table of all prospects with their current status and details.
 
+Use the filters to narrow it by pipeline, status, stage, source or **Squeeze Page** (the page the person signed up through).
+
 ### Kanban Board
 A drag-and-drop board view where prospects are organized by stage/status columns. Move prospects between stages by dragging their cards.
+
+If your gym has [Squeeze Pages](./squeeze-pages.md), a **Squeeze page** dropdown above the board shows only the people from one page. The board shows one pipeline at a time, so use the List View to see a page's people across every pipeline.
 
 ---
 
