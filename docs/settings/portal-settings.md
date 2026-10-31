@@ -403,6 +403,18 @@ Click **Add Closure Date** to add a new closure. Each closure can include:
 - **Recurring Day** (optional, for weekly closures)
 - **Closure Reason**
 
+#### Holidays (Booking Length Limits)
+
+The dates that count as holidays for each resource's **Max Booking Length on Weekends & Holidays**. It sits right after Facility Closures.
+
+Click **Add Holiday** to add a new holiday. Each holiday has:
+- **Date**
+- **Holiday Name** (optional)
+
+- Holidays are single dates you enter by hand. There is no yearly repeat and no built-in holiday list.
+- **A holiday is not a closure.** The facility stays open and bookable, and only the booking length is capped, and only on resources that have a limit set. [Facility Closures](#facility-closures) are unchanged.
+- See [Resources → Weekend & Holiday Booking Length](../calendar/resources.md#weekend-holiday-limit) for how the limit works.
+
 ---
 
 ## Features & Integrations
