@@ -36,7 +36,7 @@ Until you turn on your gym's data, Janus answers how-to questions from these hel
 
 ### With your gym's data
 
-With your gym's data on, Janus can look up members, billing, door access and classes **for your gym only**.
+With your gym's data on, Janus can look up members, billing, door access, classes and how your [Squeeze Pages](./communication/squeeze-pages.md) are doing **for your gym only**.
 
 1. Open Janus and click **Use my gym's data too**.
 2. Read the explanation.
@@ -77,3 +77,4 @@ Janus may not recognize a misspelled name or a nickname, and it can't recognize 
 - *How do I set up a class pack?* (works with help pages only)
 - *Why can Jane Smith not get through the front door?*
 - *How does Sam Lee's billing look?*
+- *How many people signed up through my Free Trial squeeze page this month?* (Janus gives you the numbers, not the names. To see the people, use **View submissions** on the Squeeze Pages screen.)
