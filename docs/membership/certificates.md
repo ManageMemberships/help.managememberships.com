@@ -5,7 +5,7 @@ sidebar_label: Certificates
 
 # Certificates
 
-Certificates are automatically generated when a member is marked as attended for a class. Each certificate is a branded PDF. Members are emailed their certificate for classes that have the setting turned on, and they can find all of their certificates at any time on the **My Certificates** page in the member portal.
+Certificates are automatically generated when a member is marked as attended for a class. Each certificate is a branded PDF. For classes that have **Sync completion to ManageRegister** ticked, members are emailed their certificate in the normal attendance workflows, except with **Mark Past as Attended**, which creates certificates without sending emails. Members can also find all of their certificates at any time on the **My Certificates** page in the member portal.
 
 ---
 
@@ -13,11 +13,12 @@ Certificates are automatically generated when a member is marked as attended for
 
 A certificate is created when a member's booking is marked as attended. No manual setup is required: every class works this way, whether or not it has **Sync completion to ManageRegister** ticked. Each booking gets one certificate, so marking the same booking attended again doesn't create a second one.
 
-A booking is marked as attended in these places:
+A booking is marked as attended in places such as:
 
 - The **Attended** button on **Reports → Bookings → Class Registrations**
 - Check-in screens such as the Class Calendar check-in and **Bulk Check-In**
 - **Mark Past as Attended** on a member's page (see below)
+- [Checking in from ManageRegister](../calendar/classes.md#checking-in-from-manageregister) (**Account Check**)
 
 The kiosks do not create certificates.
 
@@ -29,7 +30,7 @@ On a member's page, open **Activity & History → Completed Classes** and use th
 
 ## Emailing Certificates
 
-When a member's certificate is created, they are emailed it:
+When a certificate is created in the normal attendance workflows for a class with the setting turned on (see [Which Classes Send the Email](#which-classes-send-the-email)), the member is emailed it. Certificates created with **Mark Past as Attended** never send an email. When one is sent:
 
 - The email is titled `Your certificate: <class name>`
 - The certificate is attached as a PDF
