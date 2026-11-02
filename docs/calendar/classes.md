@@ -290,7 +290,10 @@ Lets a member add one more class at a discount while booking this one. See [Add 
 ### ManageRegister POS
 
 #### **Sync Completion to ManageRegister**
-- If enabled, completed bookings for this class appear in ManageRegister via the register API.
+- **Off by default.** If enabled, completed bookings for this class appear in ManageRegister, and members are emailed a certificate when it's issued.
+- The email is titled `Your certificate: <class name>` and has the certificate attached as a PDF. It is sent once per booking. A member with no email address gets nothing, and a child account uses its parent's email address. See [Certificates](../membership/certificates.md#emailing-certificates).
+- Certificates are still created for every class, whether or not this is ticked. Only the email depends on it.
+- **Already ticked on a class?** Its members will now also receive certificate emails.
 
 #### **Checking in from ManageRegister**
 - Staff can check people in for today's classes from **Account Check** in ManageRegister. If the person booked or bought the class, it's picked for them, and checking in marks that booking **attended**, the same as checking in from the member app.

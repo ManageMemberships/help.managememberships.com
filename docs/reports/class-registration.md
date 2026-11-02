@@ -142,6 +142,8 @@ You can mark each booking as **Attended** or **No-Show** directly from the class
 3. Click to toggle the status — the button highlights to confirm
 4. Attendance data is saved immediately
 
+Clicking **Attended** also creates the member's [certificate](../membership/certificates.md) for the class. If the class has **Sync completion to ManageRegister** ticked, the member is emailed it too. Marking the same booking attended again never sends a second email.
+
 Attendance data feeds into the [Trainer Reports](./trainer-reports.md) and is used to calculate attendance rates per trainer and per class. Consistently marking attendance helps you:
 - Identify no-show patterns (members who book but don’t show)
 - Track which classes have the best turnout
