@@ -90,7 +90,12 @@ Creating or removing a blocked-off period requires the **Manage Resources** perm
    - Booked members show one of: **Booked** (signed up, hasn't arrived), **Attended** / **Checked In** (green — they arrived, whether marked manually or via a kiosk check-in), or **Cancelled**.
    - Below the bookings table, a **Walk-In Check-Ins** section lists everyone who checked in for the class without a prior signup — the same people the [Daily Roster](/docs/daily-roster) shows with an amber "Walk-in" badge — with their check-in time and a link to their member profile.
 
-5. **Buttons at the Bottom of the Window**
+5. **Waitlist**
+   - When people are waiting for the class, a **Waitlist (N)** section appears below the bookings, with N the number of people in line. Each person has a **Promote** button.
+   - Click **Promote**, then **Yes, promote** to book that person into the class. They receive an email, and a **Promoted!** message confirms it.
+   - If the member is at their [Advance Booking Limit](../calendar/classes.md#advance-booking-limit) and the class is more than 7 days away, an **Error** pop-up shows *This member has reached their advance registration limit (N per month). A manager or owner can book it.* They stay on the waitlist. Staff and accountants see this message. Owners and managers can promote them.
+
+6. **Buttons at the Bottom of the Window**
    - **Close** closes the window.
    - **Email Survey** queues the class survey email for everyone booked on that date, then shows **Surveys queued**. There is no confirmation box. Each click queues the email again for everyone booked on that date, including people who were already sent it or already answered.
    - **Email Class Participants** opens an email campaign with the booked members already selected. See [Emailing a Class's Participants](../communication/email-campaigns.md).

@@ -372,6 +372,7 @@ A member booking a class can add a second class at a percent off, in the same bo
 - The discount applies only to the additional class, not to the main class or the add-ons.
 - Promo codes, member discounts and class credits do not apply to the additional class.
 - Members can add one additional class per booking.
+- The date list leaves out dates the member couldn't book, including dates past their [Advance Booking Limit](#advance-booking-limit) or past [Max days ahead members can book classes](../settings/portal-settings.md#max-days-ahead-members-can-book-classes).
 
 ### One Payment, Two Bookings
 
@@ -423,9 +424,10 @@ If you only want to temporarily stop registrations, uncheck **Is Active** instea
 When a class reaches its **Max Participants** limit, the class page says **This date is full.** and members see a **"Join Waitlist"** button instead of the normal registration form.
 
 - Members are added to the waitlist in the order they join (first come, first served).
-- When a booked member cancels, the first person on the waitlist is **automatically booked** into the class and receives an email notification.
+- When a booked member cancels, the first person on the waitlist is **automatically booked** into the class and receives an email notification. A member who is at their [Advance Booking Limit](#advance-booking-limit) is skipped, and the seat goes to the next person in line who is under their limit.
 - If the first person on the waitlist requested more tickets than are available (e.g., they want 3 but only 1 spot opened), they stay on the waitlist and are not promoted.
 - Members can see their waitlisted classes on their **dashboard**.
+- Anyone who can open [Class Registrations](../reports/class-registration.md) can also book a person off the waitlist by hand with the **Promote** button, and the [Class Calendar](../reports/class-calendar.md) has the same button. The same limit applies, see [Advance Booking Limit](#advance-booking-limit).
 
 ---
 
@@ -498,17 +500,37 @@ Members who have purchased a credit pack (see [Class Credits & Packs](../members
 
 ---
 
-## Advanced Registration Limits
+## Advance Booking Limit
 
-Owners can set a monthly cap on how many classes a member can book more than 7 days in advance, per membership level.
+Owners can limit how many classes a member books **in advance** each calendar month, per membership level. An advance booking is a class that is **more than 7 days away**. A class within 7 days can always be booked, even when the member has used their limit.
 
-- Go to **Membership Levels** and edit a level
-- Set the **Advance Booking Limit** field (e.g., 1 or 2)
-- Members on that level can only book that many classes per month when the class is more than 7 days away
-- Same-week bookings (within 7 days) are always unlimited
-- The limit resets at the start of each calendar month
+### Setting It
+
+- Go to **Members → Membership Levels** and edit the level.
+- Open **Check-ins & credits** and fill in **Advance Booking Limit (per month)** (e.g., 1 or 2). Leave it blank for no limit.
+- The limit counts the bookings the member made that month for a class more than 7 days after the day they booked it. Cancelled bookings don't count, and a spot on a waitlist doesn't count either. The count starts again at the start of each calendar month.
 
 This is useful for preventing members from reserving too many spots far in advance while still allowing flexible same-week bookings.
+
+### Where the Limit Applies
+
+- A member booking a class on the member portal.
+- A member joining a waitlist for a class more than 7 days away. A member who is at their limit can't join it, so a waitlist can't be used to get round the limit.
+- The **Add another class for X% off?** offer.
+- The staff screens: **Manual Registration** and **Promote** on [Class Registrations](../reports/class-registration.md), and **Promote** on the [Class Calendar](../reports/class-calendar.md).
+- Booking a class at the register.
+- The automatic promotion when a seat opens after a cancellation (see [Waitlist](#waitlist)). A member who is at their limit is skipped: they stay on the waitlist in the same place, no booking is made and no email is sent. The seat goes to the next person in line who is under their limit. If everyone in line is at their limit, the seat stays open, and a skipped member is considered again the next time a seat opens.
+
+### Who Can Book Past the Limit
+
+- **Owners and managers** can book or promote a member past their limit on the staff screens above (Class Registrations and the Class Calendar).
+- **Staff and accountants** can't. Where they try, they see *This member has reached their advance registration limit (N per month). A manager or owner can book it.* On **Manual Registration** it shows in red below the form. When promoting from Class Registrations it shows as a red notification titled **Advance registration limit**. On the Class Calendar it shows in an **Error** pop-up. N is the limit set on the member's level.
+- **Members** see *You have reached your advance registration limit (N per month). You can register for this class during the week it takes place.* in red on the class page.
+- The automatic promotion has nobody to make an exception, so it always applies the limit.
+
+:::note
+This limit is set per membership level. A separate gym-wide setting, **Max days ahead members can book classes**, caps how far ahead any member can book. See [Portal Settings](../settings/portal-settings.md#max-days-ahead-members-can-book-classes).
+:::
 
 ---
 

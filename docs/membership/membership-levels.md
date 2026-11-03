@@ -59,7 +59,7 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 | **Basics** (always open) | Name, Free Membership, Price, Signup Fee, Billing Interval, Is Recurring, Expiration Days, Associated Agreements, Publicly Visible, Bundle Only, Description, Public Link |
 | **Pricing options** | Trial Membership, Max Billing Cycles, Additional Price Options |
 | **Family & bundles** | Multi-Member, Flat Rate Pricing, Allow Bundles, Bundled Membership Levels, Bundle Description (paid SaaS plans only) |
-| **Check-ins & credits** | Class credits, Additive Credits, Credits Never Expire, Advance Booking Limit, Single Use |
+| **Check-ins & credits** | Class credits, Additive Credits, Credits Never Expire, Advance Booking Limit (per month), Single Use |
 | **Eligibility & approval** | Min/Max Age, Requires Approval |
 | **Expiration & renewal** | After Expiration Convert To, Annual Renewal, Months Penalty, Pause Fee |
 | **Custom fields** | Extra signup questions for this level |
@@ -203,11 +203,13 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 - When enabled, credits granted by this level have no expiration date.
 - When disabled, each granted pack expires **Expiration Days** after the day it was granted. On a recurring plan that means each cycle’s credits carry their own deadline rather than sharing one — January’s credits can lapse while February’s are still good.
 
-#### **Advance Booking Limit**
-- Optional field that limits how many classes a member on this level can book more than 7 days in advance per month.
-- Same-week bookings (within 7 days) are always unlimited.
-- Resets at the start of each calendar month.
+#### **Advance Booking Limit (per month)**
+- Optional field that limits how many classes a member on this level can book **in advance** each calendar month. An advance booking is a class that is **more than 7 days away**.
+- A class within 7 days can always be booked, even when the member has used their limit.
 - Leave blank for no limit.
+- The limit counts the bookings the member made **that month** for a class more than 7 days after the day they booked it. Cancelled bookings don't count, and a spot on a waitlist doesn't count either. The count starts again at the start of each calendar month.
+- **Example:** with the limit set to **1**, a member who books a class three weeks away on November 3 has used their November limit. They can still book any class within the next 7 days, and they can book another class far ahead from December 1.
+- Where the limit applies, who can book past it and what members and staff see are covered under [Advance Booking Limit](../calendar/classes.md#advance-booking-limit) in Classes.
 
 #### **Single Use**
 - When enabled, anyone who has ever held this membership level before — even if they later canceled, or their account was removed — cannot select it or be signed up for it again using the same email address.
