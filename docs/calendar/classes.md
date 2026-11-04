@@ -229,6 +229,16 @@ Lets a member add one more class at a discount while booking this one. See [Add 
 #### **Eligible Membership Levels**
 - Select which membership levels can register. Leaving this blank means **no one can register**.
 
+#### **Also require member field** and **Allowed values**
+- Optional. Restrict the class to members whose [custom field](../settings/custom-fields.md) holds one of the values you pick, for example a **Team** field set to Red or Black.
+- Choose a field under **Also require member field** (only Select and Multiselect fields are listed), then tick the **Allowed values**. Leave the field empty for no restriction.
+- This works together with **Eligible Membership Levels**: a member must be on an eligible level **and** hold one of the allowed values.
+- A member with **no value** for the field cannot register, so make sure every member has one set.
+- Members who don't qualify see "This class is not open to your team" on the class page, can't book it from the portal, and don't get it as a drop-in check-in or as the additional class offer.
+- Staff booking a member from the owner screens or the register are not held to this restriction.
+- To move a member between teams, edit their custom field on their profile. Their membership level and billing don't change.
+- Family bundle members who don't have their own account can't be checked against this restriction. Give each person who will take team classes their own account.
+
 #### **Membership Level Discounts**
 - Offer discounts to specific membership levels.
 - **Discount Type**: Choose between **% Off** (percentage) or **$ Off** (flat dollar amount).

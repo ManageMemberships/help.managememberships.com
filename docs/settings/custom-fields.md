@@ -31,6 +31,8 @@ The type of input displayed to the member:
 - **Date** - A date picker
 - **Select** - A dropdown with predefined options
 
+Select fields can also control who may register for a class. See **Also require member field** under [Membership Eligibility & Discounts](../calendar/classes.md) on the class form.
+
 ### Options
 Only shown when **Field Type** is set to **Select**. Define the dropdown options available to the member.
 
