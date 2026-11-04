@@ -393,6 +393,21 @@ Turnaround time required between two bookings on the same resource, in minutes. 
 - The buffer applies everywhere a resource is booked — members booking themselves, staff booking at the register, and rescheduling an existing booking. Packages that bundle several resources are the one exception.
 - On a resource using [Let Members Pick Any Start Time](../calendar/resources.md#any-start-time), the buffer is what decides when the next person may start — book 11:10 on a 60-minute resource with a 10-minute buffer and the next opening is 12:20.
 
+#### Max days ahead members can book classes
+
+How far ahead a member can book a class, counted in days from today. A member can book a class up to and including that many days from today, and not a day further. With **90**, for example, a member can book a class 90 days from today but not 91. Find it in **Settings → Portal Settings → Store & Scheduling → Calendar & Display Settings**, right after **Resource Booking Buffer**.
+
+- Enter a whole number from **1 to 365**. Leave it **blank** for no limit.
+- **Every gym starts at 90**, new and existing.
+- It only applies to **members booking for themselves** on the member portal: booking a class, joining a waitlist, and the **Add another class for X% off?** offer (dates past the limit are left out of its date list). It is checked when the member books or joins, not again when they are later promoted from a waitlist.
+- It applies to every member of the gym, whatever their membership level. It is separate from each level's [Advance Booking Limit (per month)](../membership/membership-levels.md#advance-booking-limit-per-month), and if both would refuse a booking, the member sees the days-ahead message.
+- It **never applies to staff, managers, owners or accountants**, even when they book for themselves on the member portal. Staff can still book members into classes months ahead from [Class Registrations](../reports/class-registration.md) and at the register, and promote them from a waitlist there or on the [Class Calendar](../reports/class-calendar.md). That keeps classes that are scheduled far ahead, such as courses scheduled months ahead, bookable by staff.
+- A member who tries a later date sees *You can only register for classes up to N days in advance.* in red on the class page. N is the number you set. The page for that date still opens, and the booking is refused.
+
+:::warning Important
+Because every gym starts at 90, members of a gym that sells classes more than 90 days ahead can't book them until the owner raises this number or clears the box. If you schedule classes or courses far in advance, check this setting first.
+:::
+
 #### Facility Closures
 
 Block specific dates or recurring days on the calendar system-wide (such as holidays or planned outages).

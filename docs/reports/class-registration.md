@@ -103,9 +103,23 @@ Sometimes members may call or request a spot without registering online. You can
 9. **Add the Booking**
    - Click the **"Add"** button.
    - The booking will always be for **1 ticket**, and this cannot be changed.
+   - If the member is at their [Advance Booking Limit](../calendar/classes.md#advance-booking-limit) and the class is more than 7 days away, the booking is not made and nothing is charged. Staff and accountants see *This member has reached their advance registration limit (N per month). A manager or owner can book it.* in red below the manual registration form. Owners and managers can add the booking.
 
 10. **Confirmation**
     - Once added, the table of registrations shows that date and time, including the new booking, and the form is cleared.
+
+---
+
+## **Promoting from the Waitlist**
+
+When a class is full, members can join its waitlist (see [Classes → Waitlist](../calendar/classes.md#waitlist)). To book someone off the waitlist yourself:
+
+1. Choose the class, then pick the date and time under **Select Timeslot**.
+2. If anyone is waiting, a yellow **Waitlist (N)** box appears, with N the number of people in line.
+3. Click **Promote** next to the person and confirm *Promote (the member's name) and book them into this class?*
+4. They are booked into the class and receive an email.
+
+If the member is at their [Advance Booking Limit](../calendar/classes.md#advance-booking-limit) and the class is more than 7 days away, they are not booked and stay on the waitlist. Staff and accountants see a red notification titled **Advance registration limit** with the message *This member has reached their advance registration limit (N per month). A manager or owner can book it.* Owners and managers can promote them.
 
 ---
 
@@ -113,7 +127,7 @@ Sometimes members may call or request a spot without registering online. You can
 
 - **Errors and Validation**
   - You must select all required fields (Member, Date, Time Slot).
-  - If a field is missing or invalid, you will see a red error message under the manual registration form. For example, if you leave **Select Time Slot** empty, it reads **The manual slot field is required.**
+  - If a field is missing or invalid, you will see a red error message under the manual registration form. For example, if you leave **Select Time Slot** empty, it reads **The manual slot field is required.** A booking refused by the member's Advance Booking Limit shows its message in the same place.
 
 - **Updating the View**
   - After adding a booking, the page will automatically refresh the selected timeslot to show the new registration.
@@ -141,6 +155,8 @@ You can mark each booking as **Attended** or **No-Show** directly from the class
 2. Each member row has **Attended** and **No-Show** buttons
 3. Click to toggle the status — the button highlights to confirm
 4. Attendance data is saved immediately
+
+Clicking **Attended** also creates the member's [certificate](../membership/certificates.md) for the class. If the class has **Sync completion to ManageRegister** ticked, the member is emailed it too. Marking the same booking attended again never sends a second email.
 
 Attendance data feeds into the [Trainer Reports](./trainer-reports.md) and is used to calculate attendance rates per trainer and per class. Consistently marking attendance helps you:
 - Identify no-show patterns (members who book but don’t show)
