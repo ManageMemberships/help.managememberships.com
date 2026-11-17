@@ -68,7 +68,7 @@ Your member portal includes an **Instructors** page at `/instructors` that displ
 
 ### Coaching clients with Training
 
-If your gym has turned on the [Training](../add-ons/training/index.md) add-on, staff with this checkbox ticked can also coach with it: build programs, flag their own clients, assign programs and follow their clients' workouts. Staff without it don't see Training.
+If your gym has turned on the [Training](../add-ons/training/index.md) add-on, staff with this checkbox ticked can also coach with it: build programs, flag their own clients, assign programs and follow their clients' workouts. Staff without it don't see Training. The checkbox isn't shown on Free and Basic (Starter) plans, so you can't mark new trainers there; staff who were already marked as trainers can still coach.
 
 ---
 

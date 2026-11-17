@@ -37,7 +37,7 @@ Coaches are:
 Only coaches see **Training** in the **Add-ons** menu.
 
 :::note
-The **Trainer/Available for Classes** checkbox isn't shown on Free and Basic (Starter) plans. On those plans, only owners and managers can coach.
+The **Trainer/Available for Classes** checkbox isn't shown on Free and Basic (Starter) plans, so you can't mark new trainers there. Staff who were already marked as trainers, for example before a plan change, can still coach.
 :::
 
 | Task | Owners and managers | Trainers | Members |

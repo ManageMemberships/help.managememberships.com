@@ -72,8 +72,8 @@ The list is worked out from what members log. **A reason goes away by itself** o
 |---|---|---|
 | **Missed workout** | A planned workout in the look-back period has nothing logged. Today doesn't count. | The member logs it, or it's older than the look-back |
 | **Partly logged** | Half or fewer of a workout's exercises were logged, or fewer sets than planned | It's fully logged, or it's older than the look-back |
-| **Unanswered reply** | The member wrote and no coach has commented since. A thumbs-up doesn't count. | A coach comments |
-| **Low readiness** | The member's latest check-in is at or below your low-readiness setting | A newer check-in isn't low |
+| **Unanswered reply** | The member wrote and no coach has commented since. A thumbs-up doesn't count. | A coach comments, or it's older than the look-back |
+| **Low readiness** | The member's latest check-in is at or below your low-readiness setting | A newer check-in isn't low, or it's older than the look-back |
 | **Hard workout** (off by default) | A workout was rated Very hard, or its average felt RPE is 9.5 or more | It's older than the look-back |
 | **No workout in N days** | Nothing has been logged for that many days since the program started | The member logs a workout |
 | **Final week or finished** | The program is in its last week, or has finished | A new program is assigned |

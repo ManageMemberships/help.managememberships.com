@@ -138,7 +138,9 @@ You can write the "x" as `x`, `×` or `*`. A weight or RPE only changes the sets
 
 ### Basing a row on a lift
 
-If you plan weights from each athlete's training max, choose a lift under **Based on** and enter a multiplier in the **×** box. The multiplier can be 0.05 to 2, for example 0.9. Each set then shows its share of the lift, such as *76.2% of Bench*, and each member sees a weight range worked out from their own max.
+If you plan weights from each athlete's training max, choose a lift under **Based on** and enter a multiplier in the **×** box. The multiplier can be 0.05 to 2, for example 0.9.
+
+To get a calculated weight, a set needs whole reps (1 to 30) and a target **RPE**. The set then shows its share of the lift, such as *76.2% of Bench*. A member who has a training max for the lift sees a weight range worked out from it. A member without one sees the share of the lift instead.
 
 A weight you type on a set always wins (**Typed weight used**). See [Training Maxes and Weight Ranges](training-maxes.md).
 
