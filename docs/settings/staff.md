@@ -49,7 +49,7 @@ Owners and Managers always have full access, so the **Permissions** checklist is
 
 If you want a staff member to be bookable or assignable to a class as a trainer, enable:
 
-**Trainer or Available for Classes**
+**Trainer/Available for Classes**
 
 Once enabled, additional fields appear:
 
@@ -68,7 +68,7 @@ Your member portal includes an **Instructors** page at `/instructors` that displ
 
 ### Coaching clients with Training
 
-If your gym has turned on the [Training](../add-ons/training.md) add-on, staff with this checkbox ticked can also coach clients with it: build programs, flag clients and assign programs. Staff without it don't see Training.
+If your gym has turned on the [Training](../add-ons/training/index.md) add-on, staff with this checkbox ticked can also coach with it: build programs, flag their own clients, assign programs and follow their clients' workouts. Staff without it don't see Training.
 
 ---
 

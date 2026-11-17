@@ -18,7 +18,7 @@ Only **owners** and **managers** can use it. Staff and accountants don't see the
 
 ## Turning an Add-on On or Off
 
-Each add-on is a card showing its **name**, a short **description**, its **version**, and an **On** or **Off** badge.
+Each add-on is a card showing its **name**, a short **description**, its **version**, and an **On** or **Off** badge. Add-ons that are still being built also show a **Beta** badge, which means things may change.
 
 1. Click **Enable** on an add-on that is Off, or **Disable** on one that is On.
 2. A confirmation box asks you to confirm, for example **Turn Training on for your gym?** Click **Turn on** (or **Turn off**), or click **Cancel** to leave it as it is.
@@ -44,4 +44,4 @@ Turning an add-on off hides its pages for everyone at your gym. **Nothing is del
 
 ## Available Add-ons
 
-- [Training](../add-ons/training.md): coaches build programs and assign them to clients, and members log their workouts.
+- [Training](../add-ons/training/index.md) (Beta): coaches build 1 to 6 week workout programs and assign them to clients, and members log their workouts.
