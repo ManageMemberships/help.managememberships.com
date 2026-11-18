@@ -228,6 +228,76 @@ The row count and per-row quantity are both capped at 10. If a membership level 
 - **Remove Items** - Cancel add-ons with immediate adjustment
 - **Pause/Resume** - Temporary subscription holds, with an optional pause fee (see [Pausing a Subscription](#pausing-a-subscription))
 - **Cancel** - End at the end of the paid period, or immediately, with or without a penalty fee
+- **Switch Level** - Move the member's subscription to another level, now or when their paid period ends (see [Switching a Member to Another Level](#-switching-a-member-to-another-level))
+
+### 🔀 Switching a Member to Another Level
+
+When a member upgrades or downgrades, you can change their subscription and their access in one step. You need the *Manage Memberships* permission.
+
+1. On the member's **Overview** tab, pick the new level in **Membership Level**. A popup opens before anything is saved, with an **Upgrade**, **Downgrade** or **Change** badge.
+2. If the member has more than one subscription that can be switched, choose the one to switch.
+3. Choose one of the three options below and click **Confirm**. **Cancel** closes the popup and puts the dropdown back.
+
+| Option | When to use it | What the member is charged |
+|---|---|---|
+| **Switch now** | The new level should start today | The current subscription ends today, and the new level's subscription starts today at its list price and is charged today. There's no credit for the unused part of the current period, and no cancellation fee. |
+| **At period end** | The member has already paid for this period | The current plan stays active until its paid-through date, shown next to the option. The new level starts then and is charged its list price on that date. Their access level changes on that date. No refund, no credit, no cancellation fee. |
+| **Change access level only** | Only what the member can access should change | Nothing changes. Their billing stays exactly as it is. |
+
+- **List price** — a custom price or coupon on the current subscription isn't carried over. The popup warns you, for example *"Currently billed at a custom $45.00 — the new subscription uses the list price."*
+- **Invoices for staff to collect** — if your gym doesn't charge cards through ManageMemberships and staff collect invoices instead, an invoice is created (today, or on the switch date) for staff to collect.
+- **Calendar billing** — **Switch now** charges a prorated amount today for the rest of the month, then the full price on the 1st.
+- **Pending invoices** — with **Switch now**, tick **Also void N pending invoice(s) for this subscription** if the current subscription has unpaid invoices. Otherwise the system keeps trying to collect them.
+- **Declined card** — **Switch now** charges the new subscription before it ends the current one. If the charge is declined, the new subscription is cancelled and the current one is unchanged, for example *"The card was declined, so the new Gold subscription was cancelled. The current subscription is unchanged."*
+- **Emails** — the member gets the usual membership-change email and no cancellation email. With **At period end** it is sent when you schedule the switch.
+- **Check-in credits** — the new level's check-in credits are added once, when the new plan starts.
+
+#### Undoing a Scheduled Switch
+After **At period end**, the member's **Subscriptions** tab shows both plans until the switch date:
+
+- The new subscription's card says **Starts [date] — replaces “[current plan]”** and has an **Undo scheduled switch** button.
+- The current subscription's card says **Switching to [new level] on [date]**.
+
+To cancel the switch, click **Undo scheduled switch**, then **Undo switch** in the *Undo scheduled switch?* dialog. The current plan keeps running and the new one is cancelled before it starts. Nothing is charged and no email is sent. You can only undo before the switch date.
+
+On the switch date the new plan starts and the member's level changes to it automatically.
+
+:::note Both subscriptions are locked while a switch is scheduled
+Until the switch happens or is undone, the two subscription cards only offer **Undo scheduled switch**. Ending or cancelling, end dates, **Edit**, **Update Next Invoice**, pausing and resuming, items and coupons are refused with *"This subscription has a scheduled switch. Use Undo scheduled switch first."* To change something, undo the switch, make the change, then schedule it again.
+:::
+
+:::warning Level changes while a switch is waiting
+If you use **Change access level only** while a switch is scheduled, the member's level is still set to the new plan's level on the switch date.
+:::
+
+#### Why an Option Is Greyed Out
+A subscription that can't be switched is greyed out in the popup with the reason, and only **Change access level only** is offered for it. Ended subscriptions aren't listed.
+
+| Reason | What the popup says |
+|---|---|
+| Not active (for example past due) | *"Only active subscriptions can be switched (this one is past_due)."* |
+| Paused | *"This subscription is paused. Resume it first, or change the access level only."* |
+| A pause is booked | *"This subscription has a pause booked for [date]. Remove it with “Cancel Scheduled Pause” first, or change the access level only."* |
+| Already set to end | *"This subscription is already set to end on [date]."* |
+| Part of a scheduled switch | *"This subscription is being replaced by a scheduled switch. Undo the scheduled switch on the Subscriptions tab first."* |
+| Cash subscription | *"Cash subscriptions aren't billed automatically, so there's nothing to switch."* Change the access level, and collect the new price at the next cash payment |
+| Sub-accounts or bundle members linked | Switch it by hand, because ending it would unlink them |
+| Add-ons or more than one seat | Switch it by hand, so nothing is dropped |
+| No card on file | *"No card on file for this member, so the new subscription can't be charged. Add a card first, or change the access level only."* |
+| The level can't be identified, or the member's billing setup doesn't match the subscription | Switch it by hand on the Subscriptions tab |
+| The new level is one-time, free, or has no price set up | It can't replace a recurring subscription |
+| Already on the new level | *"This subscription is already on [level]."* |
+
+**At period end** can be unavailable on its own while **Switch now** is still offered. The reason shows under the option:
+
+- The subscription has no future paid-through date
+- The new level runs for a fixed number of months, so it can only start now
+- The card on file expires before the switch date: *"The card on file expires before [date], so it couldn't be charged then. Update the card first, or use Switch now."*
+- Stripe already has the subscription set to end, or its billing period couldn't be read from Stripe
+
+:::info Members who pay by bank account
+**Switch now** isn't available for a Stripe member who pays by bank account. After **Confirm** you'll see *"This member pays by bank account. A bank payment takes days to clear, so Switch now can't confirm the first charge went through. Use At period end instead. Nothing was changed."*
+:::
 
 ### ❌ Cancelling a Subscription
 
