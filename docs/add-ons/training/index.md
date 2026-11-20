@@ -48,6 +48,7 @@ The **Trainer/Available for Classes** checkbox isn't shown on Free and Basic (St
 | See clients | Every coach's clients | Their own clients | No |
 | Flag clients | For any coach | For themselves | No |
 | Assign programs, edit a client's plan, open a week early, save maxes and body weight, comment | Any client | Their own clients | No |
+| See and handle performance flags | Every coach's clients | Their own clients | No |
 | Delete someone else's comment | Yes | No | No |
 | Change Training **Settings** | Yes | No (they can view them) | No |
 | Log their own workouts on **My Training** | — | — | Yes |
@@ -64,8 +65,9 @@ Go to **Add-ons → Training**. The tabs are:
 | **Clients** | Flag clients and assign programs. See [Clients and Assigning Programs](clients.md). |
 | **Recent workouts** | Workouts your clients finished or commented on. A red dot means something new. See [Recent Workouts, Comments and Needs Attention](follow-up.md). |
 | **Needs attention** | Clients who need following up, with a count. Same article. |
+| **Flags** | Sets that clearly beat their plan, so a training max may be out of date, with a count. See [Performance Flags and Flag Rules](performance-flags.md). |
 | **Exercises** | Your exercise library and demo videos. See [Exercise Library and Demo Videos](exercises.md). |
-| **Settings** | Weight ranges, readiness check-in, Needs attention and lifts. See [Training Settings](#training-settings) below. |
+| **Settings** | Weight ranges, readiness check-in, Needs attention, flag rules and lifts. See [Training Settings](#training-settings) below. |
 
 On a phone, the tabs are one row that you swipe sideways.
 
@@ -77,7 +79,7 @@ On a phone, the tabs are one row that you swipe sideways.
 2. **Build a program** on the **Programs** tab: its weeks, workout days, exercises and sets.
 3. **Flag your clients** on the **Clients** tab.
 4. **Assign the program.** Members get an email, and a **Training** link appears in their member portal.
-5. **Follow up** on **Recent workouts** and **Needs attention**, and open a client's page to see their logs and progress.
+5. **Follow up** on **Recent workouts**, **Needs attention** and **Flags**, and open a client's page to see their logs and progress.
 
 Optional: if you plan weights from each athlete's training max, set up **Lifts** and save each client's maxes. See [Training Maxes and Weight Ranges](training-maxes.md).
 
@@ -92,6 +94,7 @@ Click the **Settings** tab. Every coach can see it, but **only the gym's owner o
 | **Weight ranges** | How planned weights are worked out from a training max | [Training Maxes and Weight Ranges](training-maxes.md#weight-range-settings) |
 | **Readiness check-in** | Whether members rate how they feel before a workout | Below |
 | **Needs attention** | Which clients show on the Needs attention tab | [Recent Workouts, Comments and Needs Attention](follow-up.md#needs-attention-settings) |
+| **Flag rules** | Which saved sets raise a flag on the Flags tab | [Performance Flags and Flag Rules](performance-flags.md#flag-rules) |
 | **Lifts** | The lifts that program rows and training maxes are based on | [Training Maxes and Weight Ranges](training-maxes.md#lifts) |
 
 ### Readiness check-in
@@ -114,4 +117,5 @@ Coaches see each workout's readiness score on **Recent workouts**, on the client
 
 - [Marketplace](../../settings/marketplace.md) for turning Training on or off.
 - [Staff](../../settings/staff.md) for the **Trainer/Available for Classes** checkbox.
+- [Performance Flags and Flag Rules](performance-flags.md) for the Flags tab.
 - [For Members: My Training and My Progress](for-members.md) to share with your members.

@@ -29,13 +29,31 @@ Go to **Add-ons → Training → Exercises**.
 
 1. Click **Add exercise**.
 2. In **Add your own exercise**, enter the **Exercise name**, naming it equipment first like the defaults. You can also add the **Muscle group** and **Equipment**.
-3. Click **Add exercise**.
+3. Choose how it's **Measured by** (see below).
+4. Click **Add exercise**.
 
 If the name is already in your library, you'll see **Another exercise already has this name**. If an exercise with that name was archived, it's restored instead.
 
 You can also add an exercise straight from the program builder's picker with **+ Add custom exercise**.
 
 Exercises can't be renamed or deleted. Archive one you no longer want.
+
+---
+
+## Measured By
+
+Each exercise is measured one of four ways. This is how members log it:
+
+| Choice | For |
+|---|---|
+| **Weight: sets × reps @ weight** | Lifts such as a bench press |
+| **Reps: sets × reps, no weight** | Bodyweight moves such as push-ups or burpees |
+| **Time: sets × time** | Holds and timed work such as a plank |
+| **Distance: sets × distance** | Rows and runs, in m, km or mi |
+
+Default exercises already have the right type, for example the planks are measured by time and the rowing machine by distance. Exercises that aren't measured by weight show their type next to the name.
+
+To change it, open the exercise's **⋯** menu and click **Measured by…**, choose the type, then click **Save**. Rows already in programs don't change. Coaches can also change the type on each program row. See [Measured by](programs.md#measured-by).
 
 ---
 
@@ -48,6 +66,8 @@ Open an exercise's **⋯** menu and click **Archive**. The exercise is hidden fr
 ## Default Lift
 
 If you use [training maxes](training-maxes.md), open **⋯ → Default lift…** to choose the lift this exercise is usually **Based on**, and a **Multiplier**. When a coach adds the exercise to a program, the row starts out based on that lift. Rows already in programs don't change.
+
+Only exercises measured by **Weight** have a default lift. If you change an exercise to another type, its default lift is removed, and you're told so before you save.
 
 ---
 

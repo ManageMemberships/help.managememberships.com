@@ -52,13 +52,16 @@ Each day shows **Logged**, a count such as *2 of 5*, **Today**, **Upcoming** or 
 The workout card shows:
 
 - chips such as **All 5 logged**, **1 PR**, **Felt: Hard** and **Readiness 3.8**
-- each exercise's **Planned** sets next to what the member logged in **Set 1**, **Set 2** and so on, for example *135 lb × 8 · RPE 9*
-- reps in amber when they are below that set's plan
+- each exercise's **Planned** sets next to what the member logged in **Set 1**, **Set 2** and so on, for example *135 lb × 8 · RPE 9*, *45 sec* or *500 m*
+- reps in amber when they are below that set's plan, and a time or distance in amber when it falls short of its plan
+- *≈ 285 lb max* after an AMRAP set, the set's [estimated max](training-maxes.md#amrap-estimated-max)
 - a **PR** badge on a personal record
 - the **Member note**, if they wrote one
 - the comments and **Thumbs-up** for this workout. See [Comments and Thumbs-up](follow-up.md#comments-and-thumbs-up).
 
-On a wide screen you also see **Best weight** (with a chart), **Personal records** and **Body weight** cards.
+On a wide screen you also see **Best weight** (with a chart), **Personal records** and **Body weight** cards. For an exercise that isn't measured by weight, the first card reads **Best reps**, **Best time** or **Best distance**.
+
+Planned weights on rows based on a lift are worked out from the client's training max. A workout that's already saved keeps the max it was planned with, though changes to your rounding settings or the program's sets still apply. See [Saved workouts keep their max](training-maxes.md#saved-workouts-keep-their-max).
 
 ### Open week now
 
@@ -81,8 +84,10 @@ A **personal record (PR)** is a set that beats every earlier day in one of these
 - a heavier weight for the same number of reps
 - the heaviest weight yet
 - for exercises without weight, more reps
+- for exercises measured by time, the longest time yet
+- for exercises measured by distance, the farthest distance yet (1.5 km beats 1,400 m)
 
-The first day an exercise is logged is never a PR.
+The first day an exercise is logged is never a PR, and a tie is never a PR. Times are charted as minutes and seconds, and distances in the unit last used.
 
 ---
 
@@ -103,7 +108,9 @@ Weights can be 44 to 882 lb (20 to 400 kg). Members can also add their own weigh
 
 ## Maxes
 
-Save the client's training max for each lift here. Planned weights on rows that are based on a lift are worked out from it. See [Saving a Client's Training Max](training-maxes.md#saving-a-clients-training-max).
+Save the client's training max for each lift here. Planned weights on rows that are based on a lift are worked out from it.
+
+The **Training maxes** card shows each lift's current max, who set it and when, and a **History** of every entry, including deleted ones. A max updated from a [performance flag](performance-flags.md) is marked *from a performance flag*. See [Saving a Client's Training Max](training-maxes.md#saving-a-clients-training-max).
 
 ---
 
@@ -133,3 +140,4 @@ To keep editing the same plan later, click **Edit plan** again.
 - [Clients and Assigning Programs](clients.md)
 - [Training Maxes and Weight Ranges](training-maxes.md)
 - [Recent Workouts, Comments and Needs Attention](follow-up.md)
+- [Performance Flags and Flag Rules](performance-flags.md)
