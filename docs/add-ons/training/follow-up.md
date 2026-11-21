@@ -102,4 +102,5 @@ Low readiness uses the threshold set in **Readiness check-in**. Click **Save nee
 ## Related
 
 - [A Client's Training Page](client-page.md)
+- [Performance Flags and Flag Rules](performance-flags.md)
 - [For Members: My Training and My Progress](for-members.md)

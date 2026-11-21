@@ -41,20 +41,25 @@ The check-in is optional. You can change your answers until the end of the day.
 
 Each exercise card shows:
 
-- the **Planned** sets, for example *3 × 8 @ 135 lb* or a weight range like *300–305 lb*, plus the target RPE and rest
+- the **Planned** sets, for example *3 × 8 @ 135 lb*, a weight range like *300–305 lb*, *3 × 30 sec* or *5 × 100 m*, plus the target RPE and rest
+- **See each set**, when the sets differ, to list them one by one
 - **Last time:** what you did in the same workout last week
 - your coach's notes
 - a play button to **Watch demo**, if there's a video
 
+If your coach planned your weights from a training max you don't have yet, the card says, for example, *No Bench max yet. Ask your coach to set it.*
+
 To log an exercise:
 
-1. For each set, enter the **Weight** (optional) and **Reps**. You can also enter the **RPE**: how hard the set felt, where 10 means you had no reps left.
+1. Fill in each set. The boxes depend on the exercise:
+   - **Weight** exercises: **Weight** and **Reps**
+   - **Reps** exercises: **Reps**
+   - **Time** exercises: **Time**, in seconds (*45*) or minutes and seconds (*1:30*). If you type only seconds, a hint shows the time, for example *= 1:30* under *90*.
+   - **Distance** exercises: **Distance**, in the unit your coach chose (m, km or mi)
+
+   You can also enter the **RPE**: how hard the set felt, where 10 means you had no reps left.
 2. Use **Add set** or **✕** to change the number of sets.
 3. Tap **Save**. After saving, the button reads **Update**.
-
-Tap **lb** or **kg** to choose your unit. It changes the label, not the numbers you typed, and it's remembered.
-
-When you beat your best, you see **New PR!**
 
 If exercises are grouped as **Superset A**, do them back to back: one set of each, then the next set. You still log each exercise on its own card.
 
@@ -63,9 +68,27 @@ If exercises are grouped as **Superset A**, do them back to back: one set of eac
 | Sets | 1 to 20 |
 | Weight | 0 to 2,000 lb (907 kg), or empty |
 | Reps | 1 to 100 |
+| Time | Up to 99:59 |
+| Distance | Above 0, up to 100,000 m, 100 km or 100 mi, with up to 2 decimals |
 | RPE | 1 to 10, in half steps |
 
 If you missed a workout, you can log it later by going back to its week.
+
+### Weights from your plan
+
+When your coach plans your weights, the weight boxes **start with your planned weight**, shown in grey with *Grey weights are from your plan.* Type over a weight to change it. **If you save without changing it, the planned weight is what's logged.**
+
+On weight exercises, tap **lb** or **kg** to choose your unit. It changes the label, not the numbers you typed, and it's remembered. Grey weights from your plan are filled in again for the new unit, which usually empties them, because your coach's plan is in one unit.
+
+### AMRAP sets
+
+A set marked *As many reps as you can* is an **AMRAP**: do as many good reps as you can, and stop when your form slips. Enter the reps you did.
+
+After you save, a weighted AMRAP set shows an **estimated max**, for example *Estimated max ~285 lb*. It's a rough guess at the most you could lift for one rep, worked out from that set. It isn't a tested max and doesn't change your training max.
+
+### Personal records
+
+When you beat your best, you see **New PR!** For a timed exercise that means your longest time yet, and for a distance your farthest.
 
 ---
 
@@ -96,7 +119,7 @@ Tap **My progress** at the top of the page. It has these tabs:
 
 | Tab | What it shows |
 |---|---|
-| **Exercises** | Every exercise you've logged, with your best set and PRs. Tap one to see a chart and its history. Your **Training maxes** from your coach are shown here too. |
+| **Exercises** | Every exercise you've logged, with your best set and PRs. Tap one to see a chart and its history. Your current **Training maxes** are shown here too, for example *Bench · 165 lb · since Mon 16 Nov*. Your coach sets these, and you can't change them. |
 | **History** | Your workouts by date |
 | **Body weight** | A chart and every weigh-in. You can **Edit** or **Delete** the ones you added. |
 | **Readiness** | Your check-in scores over time, if your gym uses check-ins |

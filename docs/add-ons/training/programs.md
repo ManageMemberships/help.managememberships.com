@@ -96,6 +96,7 @@ Members' logs always stay as history when you replace, move or delete a day.
 
 On each exercise you can:
 
+- choose how it's **Measured by** (see below)
 - **Swap** it for another exercise
 - play its demo with **Play video**, if it has one
 - add a **Note (optional)** that members see, up to 255 characters
@@ -104,16 +105,33 @@ On each exercise you can:
 
 A day can have up to 30 exercises.
 
+### Measured by
+
+Each exercise row is measured one of four ways. A new row starts with the exercise's own setting from the [Exercises](exercises.md#measured-by) tab, and you can change it on the row with **Measured by**.
+
+| Measured by | Members log |
+|---|---|
+| **Weight** | Sets × reps @ weight |
+| **Reps** | Sets × reps, with no weight, for example push-ups |
+| **Time** | Sets × a time, for example a plank |
+| **Distance** | Sets × a distance, for example a row. Choose **m**, **km** or **mi** on the row. Numbers are never converted between units. |
+
+If changing a row's type would clear values you typed, you're asked **Change how \{exercise\} is measured?** first. The number of sets, rest and RPE always stay. Between Weight and Reps, the reps stay too.
+
+Lifts and percentages work on **Weight** rows only, and the day's **lb / kg** switch only changes Weight rows.
+
 ---
 
 ## Sets
 
-Each set is its own row, so one set can differ from the others, for example a heavier last set.
+Each set is its own row, so one set can differ from the others, for example a heavier last set. The columns depend on how the row is measured.
 
 | Column | What you can enter |
 |---|---|
-| **Reps** | A whole number from 1 to 100, or short text such as *amrap*, *10 each side*, *30 sec* or *8-12* (up to 20 characters) |
-| **Weight** | A number up to 2,000 lb (907 kg) with up to 2 decimals, or short text such as *bw*, *70%* or *light*. Leave it empty for no weight. |
+| **Reps** | Weight and Reps rows. A whole number from 1 to 100, or short text such as *amrap*, *10 each side* or *8-12* (up to 20 characters). |
+| **Weight** | Weight rows. A number up to 2,000 lb (907 kg) with up to 2 decimals, or short text such as *bw*, *70%* or *light*. Leave it empty for no weight. On a row based on a lift, *70%* means 70% of the member's training max (see [Basing a row on a lift](#basing-a-row-on-a-lift)). |
+| **Time** | Time rows. Seconds (*45*) or minutes and seconds (*1:30*), up to 99:59. Members see it as *45 sec* or *1:30*. |
+| **Distance** | Distance rows. A number above 0 with up to 2 decimals, up to 100,000 m, 100 km or 100 mi. |
 | **Rest** | A time like *2:00*, or a number of seconds, up to 60:00 |
 | **RPE** | The target effort, from 1 to 10 in half steps (like 7.5), where 10 means no reps left. Optional. |
 
@@ -133,16 +151,33 @@ Type the sets in the **Quick fill** box and click **Fill**, or press Enter:
 | `5x5 @60kg` | 5 sets of 5 at 60 kg |
 | `3 x amrap @ bw` | 3 sets of amrap at bodyweight |
 | `5x5 @135 rpe8` | 5 sets of 5 at 135, RPE 8 |
+| `3x15` | On a Reps row: 3 sets of 15 reps |
+| `3x0:45` | On a Time row: 3 sets of 45 seconds |
+| `5x100m` | On a Distance row: 5 sets of 100 m |
+| `3x1.5km` | On a Distance row: 3 sets of 1.5 km |
 
 You can write the "x" as `x`, `×` or `*`. A weight or RPE only changes the sets when you type one. `@0` clears the weight.
+
+### AMRAP sets
+
+To plan a set as **AMRAP** (as many reps as possible), type *amrap*, *amrap+*, *max* or *max reps* in its **Reps** box. Upper and lower case don't matter. For example, Quick fill `3 x amrap @ 135`.
+
+The member enters the reps they did. On a Weight row, a saved AMRAP set also shows an **estimated max**. See [AMRAP estimated max](training-maxes.md#amrap-estimated-max).
 
 ### Basing a row on a lift
 
 If you plan weights from each athlete's training max, choose a lift under **Based on** and enter a multiplier in the **×** box. The multiplier can be 0.05 to 2, for example 0.9.
 
-To get a calculated weight, a set needs whole reps (1 to 30) and a target **RPE**. The set then shows its share of the lift, such as *76.2% of Bench*. A member who has a training max for the lift sees a weight range worked out from it. A member without one sees the share of the lift instead.
+A set gets a calculated weight in one of two ways:
 
-A weight you type on a set always wins (**Typed weight used**). See [Training Maxes and Weight Ranges](training-maxes.md).
+- **Reps and RPE:** whole reps (1 to 30) and a target **RPE**. The set shows its share of the lift, such as *76.2% of Bench*. A member with a training max for the lift sees a **weight range** worked out from it.
+- **A typed percent:** a weight such as *70%* or *72.5%*. The set shows its share of the lift with the multiplier, for example *63% of Bench* for 70% at × 0.9. A member with a training max sees **one weight** worked out from it.
+
+A member without a max for the lift sees the share of the lift instead.
+
+If a set has neither, the row says *Sets with no RPE or % get no calculated weight.*
+
+Any other weight you type on a set always wins (**Typed weight used**). See [Training Maxes and Weight Ranges](training-maxes.md).
 
 ### Supersets
 

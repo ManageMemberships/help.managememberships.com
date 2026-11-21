@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Clients and Assigning Programs
 
-Your **clients** are the members you coach. You flag members as clients, then assign them a program. A member can have one current program at a time.
+Your **clients** are the people you coach: usually members, but staff can be clients too. You flag them as clients, then assign them a program. A client can have one current program at a time.
 
 :::note Beta
 Training is marked **Beta** in the app, so things may change.
@@ -42,10 +42,12 @@ Each row has:
 
 1. Click **Flag clients**.
 2. Owners and managers choose the **Coach**. A trainer always flags clients for themselves, so they don't see this.
-3. Search for and pick one or more active **Members**. Anyone who is already that coach's client shows **Already a client**.
+3. Under **Members**, search your active members and staff by name or email, and pick one or more. Anyone who is already that coach's client shows **Already a client**.
 4. Click **Flag clients**.
 
 A member can be a client of more than one coach.
+
+Owners, managers, staff and accountants can be clients too, for example a coach's colleague or an owner trying out a program. A staff client can be assigned a program and uses **My Training** and **My progress** in the member portal, like a member. Staff clients don't get the program email, comment emails or push notifications.
 
 ### Unflagging
 
