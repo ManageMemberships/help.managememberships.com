@@ -4,7 +4,7 @@ sidebar_position: 6.5
 
 # Performance Flags and Flag Rules
 
-When a member saves a workout, Training checks each set against its plan. If a set **clearly beat the plan**, it gets a **flag**, so you know that member's training max may be out of date.
+When a member saves a workout, Training checks each set against your gym's flag rules that are turned on: the built-in rules and your own. A set gets a **flag** only when it matches one of those rules, so you know that member's training max may be out of date.
 
 - A flag never changes a training max by itself. A max only changes when a coach updates it.
 - Members never see flags, and nobody is emailed or notified about them.
