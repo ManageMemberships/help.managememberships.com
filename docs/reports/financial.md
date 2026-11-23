@@ -39,6 +39,8 @@ Payments taken on a [Stripe Terminal](/docs/stripe-terminal) reader appear here 
 
 [Pause fees](/docs/membership/members#pause-fee) charged to paused members appear here too, with a description that starts with **Pause fee** (for example, "Pause fee - Gold - October 2026").
 
+Fees from [triggers that create invoices](/docs/settings/triggers#create-invoice) appear here as well. A paid fee shows the description you gave it (for example, "Annual maintenance fee"). A failed attempt shows as a $0 row that starts with **Automated fee**, followed by the reason.
+
 Alternating row colors (gray/white) improve readability for large transaction lists.
 
 ### Cancel with Penalty / Cancel without Penalty

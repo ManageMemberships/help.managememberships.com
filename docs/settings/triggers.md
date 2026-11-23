@@ -4,7 +4,7 @@ sidebar_position: 14
 
 # Triggers
 
-The **Triggers** section allows you to set up automated actions that respond to member behavior or run on a schedule. Triggers can send text messages or emails based on conditions you define.
+The **Triggers** section allows you to set up automated actions that respond to member behavior or run on a schedule. Triggers can send text messages or emails, award points, or create and charge invoices, based on conditions you define.
 
 ---
 
@@ -169,6 +169,7 @@ A scheduled trigger checks your **active** members once a day, in the early morn
 | **Custom field date** | have a date in that custom field that is that many days away |
 | **Birthday is today** | have their birthday today, in your gym's time zone. Someone born on February 29 matches on February 28 in other years |
 | **Membership level is** | are on any of the levels you pick |
+| **Date is (every year)** | are active, on the month and day you pick, in your gym's [time zone](./portal-settings.md#timezone). On its own it matches once a year. February 29 matches on February 28 in other years, and a date that doesn't exist, such as February 30, can't be saved |
 
 Members with no phone number, or who have opted out of texts, are skipped for text messages.
 
@@ -206,6 +207,63 @@ Messages can include variables, which are filled in for each member: `{{ first_n
 - Points are credited instantly, with the trigger's name recorded as the reason in the member's point history
 - See [Points & Leaderboard](../membership/points-leaderboard.md) for how points work
 
+### Create Invoice
+Creates one invoice for each matched member and can charge it to their card on file. Use it for a fee that comes around once a year, such as a $50 maintenance fee every July 1.
+
+- **Amount** - From $1.00 to $9,999.99
+- **Description on the invoice** - What the member sees on the invoice, for example "Annual maintenance fee"
+- **Charge card now** - On by default. Charges the member's card on file through your gym's payment processor (Stripe or CardPointe) as soon as the invoice is created. When it's off, or when your gym bills manually, the invoice is left unpaid and the member gets the usual invoice email so they can pay it
+
+**Create invoice** is offered only to people who can manage membership levels. See [Who Can Use Triggers](#who-can-use-triggers).
+
+#### Rules for triggers that create invoices
+
+- **Scheduled triggers only.** **Create invoice** isn't offered when **When It Runs** is set to **The moment something happens**.
+- **A date is required.** The trigger must include the **Date is (every year)** condition, either on its own or together with other conditions under **ALL of these are true**. Otherwise it can't be saved, and you'll see: *A trigger that creates invoices needs a "Date is (every year)" condition, and any other conditions must be combined with "ALL of these are true".*
+- **When it runs.** Invoices are created in the daily trigger run at 8:00 AM UTC, on the date you picked in your gym's time zone. Each member gets one invoice per trigger and date, so a second run on the same day doesn't invoice anyone twice.
+- **Sending limit and Cooldown.** **At most once a day**, **At most once a week** and **At most once a year** don't hold a fee back, so a yearly fee is charged again next year. **Only ever once per member** still applies (each member is invoiced once, ever), and so does **Cooldown**: keep it under 365 days for a yearly fee.
+
+#### A fee never changes the member's standing
+
+Paying a fee, a failed charge or a retry never changes the member's **Active** status, failed payments or months in arrears. A fee never marks anyone inactive or reactivates them, doesn't count toward [Failed Payments Before Inactive](./portal-settings.md#failed-payments-before-inactive), and never gets a late fee.
+
+#### If a charge fails
+
+- **Retries.** The fee is retried automatically on the same schedule as your other failed payments.
+- **Email to the member.** After each failed attempt the member gets *"\{your gym\}: Your payment for \{description\} didn't go through"*, with a **Pay now or update your card** link. This email follows your [Email on Payment Failure](./portal-settings.md#email-on-payment-failure) setting, and it isn't one of your dunning templates.
+- **Email to you.** On the first failure only, you and your [Additional Payment Notification Recipients](./portal-settings.md#additional-payment-notification-recipients) get one short email. Retries don't email you again.
+- **Where to find it.** Unpaid fees are listed on **Reports → Failed Payments** with your other unpaid invoices.
+
+#### If a charge can't be confirmed
+
+Sometimes Stripe or CardPointe can't tell whether a charge went through, for example after a lost connection or an error at the processor. The fee is then held:
+
+- the invoice stays pending and isn't retried automatically;
+- the member isn't told it failed, since it may not have;
+- you and your Additional Payment Notification Recipients get an email titled *"\{member\}: fee charge needs checking"*.
+
+Look up the payment in Stripe or CardPointe. If it went through, open the member's page, go to **Financial** and use **Mark Paid** on the invoice. **Mark Paid** doesn't add the payment to [Financial Transactions](../reports/financial.md). If nothing was charged, use **Charge Card**.
+
+#### In your reports
+
+- **[Financial Transactions](../reports/financial.md):** a paid fee shows the description you gave it. A failed attempt shows as a $0 row that starts with **Automated fee**, followed by the reason.
+- **[Collected MRR](./dashboard-widgets.md#collected-mrr):** fees aren't counted.
+
+#### Deleting the trigger or voiding a fee
+
+- Deleting a trigger keeps the invoices it already created.
+- Marking a member inactive and choosing to void their pending invoices also voids an unpaid fee.
+
+#### Example: a yearly maintenance fee
+
+1. Click **New automation trigger** and give it a **Name**, such as "Annual maintenance fee".
+2. Under **When It Runs**, choose **On a schedule**.
+3. Under **Who It Targets**, click **Add condition**, choose **Date is (every year)**, and pick **July** and **1**.
+4. Under **What It Sends**, click **Add an action** and choose **Create invoice**. Set **Amount** to 50 and **Description on the invoice** to "Annual maintenance fee". Leave **Charge card now** on.
+5. Turn **Active** on and save.
+
+Every active member is then invoiced and charged $50 on July 1 each year.
+
 ---
 
 ## Managing Triggers
@@ -215,3 +273,8 @@ Test your trigger conditions against members to see who would match before activ
 
 ### Existing Triggers
 All triggers are listed in a table showing their name, type, active status, and last run time. You can edit or delete triggers from this list.
+
+### Who Can Use Triggers
+- Opening **Settings → Triggers** needs the **Manage Portal Settings** permission, including when someone types the page's address directly.
+- Creating, editing, deleting or switching off a trigger that creates invoices also needs **Manage Membership Levels**. Without it, those triggers are still listed but can't be changed, and **Create invoice** isn't offered.
+- Owners and managers have both permissions. **Staff** and **Accountant** users don't by default; you can give them either one under [Staff](./staff.md).
