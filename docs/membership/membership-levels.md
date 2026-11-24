@@ -93,9 +93,15 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 
 #### **Billing Interval**
 - How often this membership bills:
-  - `Day`, `Week`, `Month`, `Quarter`, `Semi-Annual`, or `Yearly`
+  - `Day`, `Week`, `Every 2 weeks`, `Month`, `Quarter`, `Semi-Annual`, or `Yearly`
 - ❗ Once created, this cannot be changed.
 - Only shown if the membership is not marked as free.
+- **Every 2 weeks** levels:
+  - **Billing:** Stripe charges the member every 2 weeks. On manual billing and CardPointe, a new invoice is made every 14 days.
+  - **Cash:** one cash payment covers 14 days. **Collect Cash** asks for the **Number of 2-week periods**.
+  - **What members see:** "Every 2 weeks" and "/ 2 weeks" wherever the price is shown, such as the register page, the plan picker, their dashboard and emails.
+  - **Reports:** revenue, MRR and Average LTV count the price as 26 charges a year (price × 26 / 12 a month), so a $40 price counts as $86.67 a month. The Collected MRR widget counts monthly memberships only, so these levels aren't in it.
+  - **Can't be combined with:** **Calendar Month Billing** (see [Portal Settings](/docs/settings/portal-settings#calendar-month-billing)), an **Additional Price Options** period, or a pause with a fee on a Stripe subscription (see [Pause Fee](/docs/membership/members#pause-fee)).
 
 #### **Is Recurring**
 - Indicates whether this membership auto-renews (i.e., subscription).
@@ -134,6 +140,7 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 - Optional field that limits how many times the member is billed.
 - Example: if set to `6` on a $30/month plan, the member will be billed **$30 monthly for 6 months**, then the subscription will **automatically cancel**.
 - Useful for limited-term memberships without requiring manual cancellation.
+- On an **Every 2 weeks** level it's the number of charges: `3` ends the subscription after 3 charges (6 weeks). For other billing intervals it still counts months.
 - Only shown for recurring, paid levels.
 
 #### **Additional Price Options**
@@ -143,6 +150,7 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
   - Price in USD
   - Promotional text (optional, e.g. : 1 month free)
 - Great for encouraging **longer commitments with discounts**.
+- An extra price option can't be **Every 2 weeks**. Every 2 weeks is only available as the level's main **Billing Interval**.
 
 ---
 
@@ -249,6 +257,8 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 - This is useful for legal compliance in environments like gyms or schools.
 - When checked, an optional field appears:
   - **Months Penalty** – Number of months to penalize if a user cancels early.
+    - It's always counted in months. On an **Every 2 weeks** level, a month counts as 26/12 of the price, so a $25 every 2 weeks price with a 3-month penalty is $162.50.
+    - A **Cancellation Fee** set on the level is charged instead of the Months Penalty.
 
 #### **Pause Fee ($)**
 - The fee charged each billing period while a member on this level is **paused**. Leave it **blank or 0** for a free pause.

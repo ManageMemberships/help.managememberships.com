@@ -53,7 +53,7 @@ Widgets marked **Hidden** by default are opt-in — they won't appear until you 
 
 ## Collected MRR
 
-Shows your Monthly Recurring Revenue (MRR) due this billing period, from monthly-recurring memberships only — annual, quarterly, semi-annual, and weekly memberships aren't included. A pie chart breaks that total into what's already been collected this period and what's still outstanding.
+Shows your Monthly Recurring Revenue (MRR) due this billing period, from monthly-recurring memberships only — annual, quarterly, semi-annual, weekly and every 2 weeks memberships aren't included. A pie chart breaks that total into what's already been collected this period and what's still outstanding.
 
 - "This billing period" is the current calendar month to date.
 - Collected reflects net revenue actually received this period from monthly-recurring members, with any refunds already netted out.
@@ -70,7 +70,7 @@ Use it to gauge collection health at a glance during the month — a large outst
 Estimates the average lifetime value of a member: the average monthly-normalized recurring subscription value multiplied by the average membership length in months. For example, if your average member pays the equivalent of $120/month and stays 14 months, Average LTV shows $1,680.
 
 - Includes Stripe, CardPointe, and manually billed recurring subscriptions. One-time cash sales are not included.
-- Weekly, quarterly, semi-annual, and annual plans are normalized to a monthly rate before averaging, so mixed billing intervals compare fairly.
+- Weekly, every 2 weeks, quarterly, semi-annual, and annual plans are normalized to a monthly rate before averaging, so mixed billing intervals compare fairly. An every 2 weeks price counts as 26 charges a year, so $40 every 2 weeks counts as $86.67 a month.
 - Still-active members count their duration so far (from signup to today), so the number keeps growing as members stay subscribed.
 - Subscription data is compiled nightly, so recent changes may not be reflected until the next day.
 

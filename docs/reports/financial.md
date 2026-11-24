@@ -19,6 +19,7 @@ Use the **Membership Filter** dropdown to focus on specific transaction types:
 - **All Transactions** - Shows every transaction (default)
 - **Include Monthly Only** - Shows only transactions with "monthly" in the description
 - **Exclude Monthly** - Hides all transactions containing "monthly" in the description
+- **Every 2 weeks Memberships** - Shows only transactions from memberships billed every 2 weeks
 
 ### Hide $0 Transactions
 Check the **Hide $0 Transactions** checkbox to remove any transactions with zero amounts from your view. This helps focus on revenue-generating activities.

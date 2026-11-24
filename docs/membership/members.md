@@ -226,6 +226,7 @@ The row count and per-row quantity are both capped at 10. If a membership level 
 ### 🔧 Subscription Modifications
 - **Add Items** - Attach recurring services with prorated billing
 - **Remove Items** - Cancel add-ons with immediate adjustment
+- **Edit price** - Click the pencil on a subscription item to change its price. On a Stripe subscription, the new price keeps the subscription's own billing period
 - **Pause/Resume** - Temporary subscription holds, with an optional pause fee (see [Pausing a Subscription](#pausing-a-subscription))
 - **Cancel** - End at the end of the paid period, or immediately, with or without a penalty fee
 - **Switch Level** - Move the member's subscription to another level, now or when their paid period ends (see [Switching a Member to Another Level](#-switching-a-member-to-another-level))
@@ -385,6 +386,7 @@ When a member resumes, either way, billing continues on their **original billing
 If you charge a pause fee (set on each membership level and turned on in Portal Settings; see [Membership Levels](/docs/membership/membership-levels) and [Portal Settings](/docs/settings/portal-settings#charge-a-pause-fee)), a paused member is charged it while they're paused. Their regular membership charge stops for the whole pause, and nothing is billed later to make up for it.
 
 - **When:** on the member's normal billing day, once each billing period (not every day). A monthly plan is charged every month, a quarterly plan every 3 months.
+- **Every 2 weeks plans:** a pause with a fee isn't available on a Stripe subscription that bills every 2 weeks. Pauses on manual billing work.
 - **How:** as its own invoice, charged to the member's saved card through your gym's payment processor.
 - **How much:** the **Pause Fee ($)** of the level the subscription is on, locked in on the day the pause starts. Changing the level's fee or the Portal Settings later does not change a pause that has already started.
 - **One fee per subscription**, not per person. A paused subscription is charged one fee however many people or units it covers.
@@ -657,6 +659,7 @@ Streamlined cash transaction recording:
 - **Receipt Generation** - Automatic payment confirmations
 - **Tax Handling** - Proper tax calculation and reporting
 - **Balance Updates** - Immediate account credit application
+- **Every 2 weeks levels** - One payment covers 14 days, and the form asks for the **Number of 2-week periods**
 
 ### 📥 Export CSV
 Download member contact info as a spreadsheet.
