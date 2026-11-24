@@ -39,6 +39,8 @@ https://yourdomain/squeeze/{slug}
 
 The **slug** and **title** can be edited directly in the builder toolbar, or from **Settings** on the list page.
 
+The slug only has to be unique within your gym. Another gym can use the same slug, and it never affects your pages or links. Within your gym, two pages can't share a slug, and a deleted page keeps its slug, so you can't give it to another page. If you pick a slug that's taken, the builder shows "That URL is already taken." and puts the old slug back, and **Settings** shows "The slug has already been taken."
+
 ---
 
 ## The Page Builder
@@ -48,7 +50,7 @@ The builder is a drag-and-drop editor. Drag blocks from the right-hand panel ont
 ### Toolbar
 
 - **Title** - Edit the page title inline
-- **Slug** - Edit the page URL inline (must be unique)
+- **Slug** - Edit the page URL inline (must be unique within your gym)
 - **Preview** - Opens the public page in a new tab (shows the last *saved* version)
 - **Load Template** - Start from a pre-built layout: Gym Free Trial, Class Registration, Membership Promo, or General Lead Capture. Loading a template replaces your current content.
 - **Save** - Publishes your changes
