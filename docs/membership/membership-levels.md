@@ -97,8 +97,8 @@ Most levels only need a name, price, signup fee, billing interval, agreements an
 - ❗ Once created, this cannot be changed.
 - Only shown if the membership is not marked as free.
 - **Every 2 weeks** levels:
-  - **Billing:** Stripe charges the member every 2 weeks. On manual billing and CardPointe, a new invoice is made every 14 days.
-  - **Cash:** one cash payment covers 14 days. **Collect Cash** asks for the **Number of 2-week periods**.
+  - **Billing:** For recurring levels, Stripe charges the member every 2 weeks. On manual billing and CardPointe, a new invoice is made every 14 days.
+  - **Cash:** each 2-week period covers 14 days. In **Collect Cash**, the number you enter in **Number of 2-week periods** sets how long the payment covers.
   - **What members see:** "Every 2 weeks" and "/ 2 weeks" wherever the price is shown, such as the register page, the plan picker, their dashboard and emails.
   - **Reports:** revenue, MRR and Average LTV count the price as 26 charges a year (price × 26 / 12 a month), so a $40 price counts as $86.67 a month. The Collected MRR widget counts monthly memberships only, so these levels aren't in it.
   - **Can't be combined with:** **Calendar Month Billing** (see [Portal Settings](/docs/settings/portal-settings#calendar-month-billing)), an **Additional Price Options** period, or a pause with a fee on a Stripe subscription (see [Pause Fee](/docs/membership/members#pause-fee)).

@@ -659,7 +659,7 @@ Streamlined cash transaction recording:
 - **Receipt Generation** - Automatic payment confirmations
 - **Tax Handling** - Proper tax calculation and reporting
 - **Balance Updates** - Immediate account credit application
-- **Every 2 weeks levels** - One payment covers 14 days, and the form asks for the **Number of 2-week periods**
+- **Every 2 weeks levels** - Each 2-week period covers 14 days, and the number you enter in **Number of 2-week periods** sets how long the payment covers
 
 ### 📥 Export CSV
 Download member contact info as a spreadsheet.
