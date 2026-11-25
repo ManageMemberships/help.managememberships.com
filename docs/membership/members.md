@@ -633,7 +633,7 @@ The invoice total goes down by that item's amount.
 An item also can't be removed when:
 - It's the only item left on the invoice. Use **Void** instead
 - Removing it would bring the total below what has already been paid, for example with **Record Payment**
-- The invoice has tax, a processing fee or a discount on it. **Void** the invoice and create a new one instead
+- The invoice has tax, a processing fee or a discount on it. **Void** the invoice and create a new one instead. A payment already recorded on it stays with the voided invoice and isn't moved to the new one, so create the new invoice for the remaining balance only
 
 If a removal brings the remaining balance to zero, the invoice is marked paid. A member who was deactivated because of failed payments is reactivated once they have no other unpaid invoices; a member deactivated by staff stays inactive.
 
@@ -643,7 +643,7 @@ If a removal brings the remaining balance to zero, the invoice is marked paid. A
 - **Editing a one-item invoice** — using **Edit** on an invoice with one item also sets that item's quantity to 1
 
 :::info After you change an invoice
-The member's next charge, a retry, or the member's **Pay** button uses the new total. Reminder or dunning messages that were already sent still show the old amount.
+The member's next charge, a retry, or the member's **Pay** button collects the remaining balance (the new total minus anything already paid). Reminder or dunning messages that were already sent still show the old amount.
 :::
 
 ### 💳 Payment Methods
