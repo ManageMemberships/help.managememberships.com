@@ -216,6 +216,8 @@ Configuration for payment processing and membership enforcement.
 
 When enabled, billing aligns to calendar months rather than the member's signup date.
 
+It can't be used with levels billed **Every 2 weeks**. You can't turn it on while any membership level bills every 2 weeks, and while it's on you can't create an Every 2 weeks level. See [Membership Levels](/docs/membership/membership-levels#billing-interval).
+
 ### Split Processing Fees
 
 When checked, a **small processing surcharge** is added to member payments to share payment processing fees with them.
