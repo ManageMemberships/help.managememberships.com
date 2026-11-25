@@ -602,6 +602,49 @@ Delivery failures (e.g., invalid numbers, carrier blocks) also automatically opt
 - **Record Payment** - Log a partial cash payment against an invoice's remaining balance; the invoice shows the updated balance still owed until it's paid in full
 - **Void** - Stop collection on a pending invoice; it's marked "Voided" and the system no longer tries to collect it. You can void one directly, or choose to void them when marking a member Inactive or cancelling a subscription (see above)
 - **Refund Processing** - Handle payment reversals
+- **Add Item / Remove** - Add an item to a pending invoice or remove one, and the invoice total changes to match. See [Adding and Removing Items on a Pending Invoice](#adding-and-removing-items-on-a-pending-invoice)
+
+#### Adding and Removing Items on a Pending Invoice
+Open the member (**Members** → the member), click **Financial** in the sidebar and expand **Invoices**. Each pending invoice lists its items: the description, the quantity × unit price when the quantity is more than 1, and the amount.
+
+You need the *Manage Memberships* permission to see the **Add Item** button and the **Remove** links (owners and managers always have it).
+
+**To add an item:**
+1. Click **Add Item** next to the invoice's other actions
+2. Enter an item description, a unit amount ($) and a quantity
+3. Click **Save**
+
+The invoice total goes up by the item's amount. Items added this way don't get tax or a processing fee.
+
+:::tip Manual invoices with no items
+A manual invoice may have no items yet. The first time you add an item to it, the original charge becomes the first item, so it stays visible next to the new one.
+:::
+
+**To remove an item:**
+1. Click **Remove** next to the item
+2. Confirm
+
+The invoice total goes down by that item's amount.
+
+- **Can be removed:** add-ons, setup fees, pause fees, trigger fees and items added with **Add Item**
+- **Can't be removed:** membership items, credits, discounts, tax and processing fees
+- **Late fees:** still removed with the **Remove Late Fee** button
+
+An item also can't be removed when:
+- It's the only item left on the invoice. Use **Void** instead
+- Removing it would bring the total below what has already been paid, for example with **Record Payment**
+- The invoice has tax, a processing fee or a discount on it. **Void** the invoice and create a new one instead
+
+If a removal brings the remaining balance to zero, the invoice is marked paid. A member who was deactivated because of failed payments is reactivated once they have no other unpaid invoices; a member deactivated by staff stays inactive.
+
+**Invoices that can't be edited:** cancellation penalty invoices, invoices billed directly through Stripe, an invoice whose earlier payment is still being confirmed, and paid or voided invoices.
+
+- **Audit logged** — every add and remove is recorded under **Activity & History → Change History**, with the old and new totals
+- **Editing a one-item invoice** — using **Edit** on an invoice with one item also sets that item's quantity to 1
+
+:::info After you change an invoice
+The member's next charge, a retry, or the member's **Pay** button uses the new total. Reminder or dunning messages that were already sent still show the old amount.
+:::
 
 ### 💳 Payment Methods
 - **Credit Card Management** - Add, update, delete payment methods
